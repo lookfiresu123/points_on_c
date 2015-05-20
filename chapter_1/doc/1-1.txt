@@ -1,0 +1,35 @@
+1、 C语言中, NULL被定义为(void *)0和值0, 但在C++中它只被定义为值0:
+    一种解释:
+    In C, NULL expands to an implementation-defined "null pointer constant". A null pointer constant is either an integer constant expression with the value 0, or such an expression cast to void*. So a C implementation may define NULL either as 0 or as ((void*)0).
+    In C++, the rules for null pointer constants are different. In particular, ((void*)0) is not a C++ null pointer constant, so a C++ implementation can't define NULL that way.
+    另一种解释:
+    In C++, the null pointer is defined by the ISO specification as "A null pointer constant is an integral constant expression rvalue of integer type that evaluates to zero."
+    In C, this rule is similar, but is a bit different --> "An integer constant expression with the value 0, or such an expression cast to type  void *, is called a null pointer constant.55) If a null pointer constant is converted to a pointer type, the resulting pointer, called a null pointer, is guaranteed to compare unequal to a pointer to any object or function."
+
+2、 在C中，字符串就是一串以NUL字符（字节模式为全0的字节，类似'\0'这样的字符常量）结尾的字符。NUL是作为字符串终止符，它本身并不被看做是字符串的一部分。
+    例如：字符串常量"hello"，在内存中占据6个字节，顺序分别是'h','e','l','l','o','NUL'。
+
+3、 NUL是ASCII字符集中'\0'的名字，它的字节模式为全0，NULL指一个值为0的指针（(void*)0 ），他们都是整型值，值也相同，可以互换使用。默认NUL是'\0'，但也可以用#define自己定义。
+
+4、 #if 0
+        statements
+    #endif
+    等同于注释statements
+
+5、 数组参数是引用传递的，而标量和变量参数是值传递的。
+
+6、 用const修饰的变量，函数不会对其进行修改。
+
+7、 预处理器用名叫stdio.h的库函数头文件中的内容在相同位置替换#include<stdio.h>指令。
+
+8、 不论数组参数的长度是多少，函数都将照收不误，但函数没法知道该数组参数的具体长度，如果确实需要知道长度，则该长度的值必须作为一个单独的参数传递给函数。
+
+9、 若一个变量没有被初始化，则它的初始值是一个不可预料的值，也就是垃圾值。
+
+10、scanf：使用所有格式码（除%c之外）时，输入值之前的空白（空格等）会被跳过，值后面的空白标识改值的结束，因此输入%s时，中间不能包含空白。
+
+
+
+
+
+
