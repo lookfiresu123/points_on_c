@@ -1,4 +1,4 @@
-objects = main.o test_1.o test.o 
+objects = main.o test_1.o test.o practice.o 
 
 vpath %.c source
 vpath %.h header
@@ -9,7 +9,8 @@ main : $(objects)
 	cc -g -Wall $(objects) -o main
 main.o : test_1.h test.h 
 test_1.o :
-test.o :
+test.o : test.h
+practice.o : practice.h
  
 .PHONY : clean
 clean :

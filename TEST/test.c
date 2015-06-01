@@ -17,7 +17,11 @@ int main(){
     char *p = "abc";//创建栈，并为p、q压栈
     char *q = "edf";
 #endif
+#if 0
     char *p;//创建栈，但不为p、q压栈
     char *q;
+#endif
+    int a = sizeof(float);
+    int b = sizeof(double);
     return 1;
 }

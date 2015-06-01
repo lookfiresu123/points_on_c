@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<math.h>
 #include<stdlib.h>
+#include"../header/test.h"
 
 //#define lol "lol"
 
@@ -28,11 +29,28 @@ int practice_problem_const(){
     return 0;
 }
 
+static int sizeof_enum(){
+    enum Day yesterday,today,tomorrow; //光声明只能申请到栈，待函数结束后栈就自然被释放了
+    int a = 1; //想要压入栈中必须给局部变量赋初值
+    #if 0
+    yesterday = Monday;
+    today = Tuesday;
+    tomorrow = Wednesday;
+    int a = sizeof(yesterday);
+    int b = sizeof(today);
+    int c = sizeof(tomorrow);
+    #endif
+    return 0;
+}
+
 /* external function */
 int test_test(){
+    #if 0
     practice_problem_225();
     practice_problem_226();
     practice_problem_const();
+    #endif
+    sizeof_enum();
     #if 0
     char a[] = "abcd";
     char *b = "abcd";
