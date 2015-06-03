@@ -72,11 +72,72 @@ int test_4(){ //每个函数的开始都要创建栈，结束都要消除栈
         i++;
     }while(1); //while这一行最后要有;（分号）
 #endif
+#if 0
     int i = 0;
     do{
         i++;
     }while(i<10);
-
+#endif
+#if 0
+    int i = 0;
+    //cmp 2,je,cmp 3,je,cmp 1,jne --> i+=1,i+=2,i+=3,i+=4（执行顺序）
+    switch(i){
+    case 1: //除default外（default不比较，直接执行），最后一个比较的
+        i += 1;
+    case 2: //第一个比较
+        i += 2;
+    case 3: //第二个比较
+        i += 3;
+    default: //最后一项，default字符本身不对应代码，直接执行i+=4（汇编）
+        i += 4;
+    }
+#endif
+#if 0
+    int i = 0;
+    //cmp 2,je,cmp 3,je,cmp 1,jne --> i+=1,i+=2,i+=3,i+=4（执行顺序）
+    switch(i){
+    case 1: //除default外（default不比较，直接执行），最后一个比较的
+        i += 1;
+        break;  //相当于jmp到return 0
+    case 2: //第一个比较
+        i += 2;
+        break;
+    case 3: //第二个比较
+        i += 3;
+        break;
+    default: //最后一项，default字符本身不对应代码，直接执行i+=4（汇编）
+        i += 4;
+        break;
+    }
+#endif
+#if 0
+    int i = 0;
+    switch(i){
+    case 1:
+    case 2:
+    case 3: //直接和3比（分别和min、max比）
+        i += 3;
+        break;
+    default: 
+        i += 4;
+        break;
+    }
+#endif
+    int i,j,k,a; //查看汇编代码
+    i = j = k = a = 0;
+    while(i<5){
+        while(j<7){
+            while(k<9){
+                a++;
+                if(a == 100)
+                    goto exit;
+                k++;
+            }
+            j++;
+        }
+        i++;
+    }
+exit:
     return 0;
 }
 
