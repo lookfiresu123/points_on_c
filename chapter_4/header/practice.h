@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+#include<string.h>
+
+int practice_1();
+int practice_2();
+int practice_3();
+int Sqrt(int parameter);
+int practice_4();
+void copy_n(char dst[],char src[],int n);
+int practice_5();
+void test_practice();

@@ -141,10 +141,44 @@ exit:
     return 0;
 }
 
+void test_5(){
+    // char *a = "abc";
+    // char *b = "abc";
+}
+
+int practice_5(){
+    char *input[20];
+    char *buf[20];
+    int i,k,j;
+    for(i=0;i<20;i++)
+        buf[i] = (char *)malloc(100*sizeof(char));
+    gets(buf[0]);
+    input[0] = buf[0];
+    i = k = 1;
+    while(gets(buf[i]) && *buf[i] != '\0'){   
+        if(buf[i] != buf[i-1]){
+            input[k] = buf[i];
+            k++;
+        }
+        //free(buf[i]);
+        i++;
+    }
+    //free(buf[i]);
+    for(j=0;j<k;j++)
+        puts(input[j]);
+    return 0;
+}
+
 int main(){
 #if 0
     test_3();
-#endif
     test_4();
+    test_5();
+#endif
+    // char *ch = malloc(10);
+    // gets(ch);
+    // free(ch);
+    practice_5();
+
     return 0;
 }

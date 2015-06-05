@@ -39,3 +39,10 @@
     g)  `C-x 1' 单窗口模式。
     h)  `C-x 2' 双窗口模式。
     i)  `C-x a' 回到传统模式。
+13、makefile中加入调试信息:
+    main : $(objects)
+        cc -g -Wall $(objects) -o main
+    main.o : practice.h
+        cc -c -g -Wall source/main.c -o main.o
+    practice.o :
+        cc -c -g -Wall source/practice.c -o practice.o
