@@ -5,7 +5,7 @@
 #include"../header/practice.h"
 
 #define length_dst 10
-// #define length_src 20
+#define length_src 10
 
 int practice_1(){
 	double n,new,old;
@@ -69,17 +69,17 @@ int practice_3(){
 
 void copy_n(char dst[],char src[],int n){
 	int i = 0;
-	int length_src;
+	int Length_src;
 	i = 0;
 	while(src[i] != '\0')
 		i++;
-	length_src = i+1;
-	if(n <= length_src){
+    Length_src = i+1;
+	if(n <= Length_src){
 		for(i=0;i<n;i++)
 			dst[i] = src[i];
 	}
 	else{
-		for(i=0;i<length_src;i++)
+		for(i=0;i<Length_src;i++)
 			dst[i] = src[i];
 		while(i < n){
 			dst[i] = 0;
@@ -121,12 +121,68 @@ int practice_5(){
     return 0;
 }
 
+int substr(char dst[],char src[],int start,int len){
+    int ret;
+    if(start < 0 || len < 0 || start > length_src-1){
+        dst[0] = '\0';
+        ret = 0;
+    }
+    else{
+        int i;
+        for(i=0;i<len;i++)
+            dst[i] = src[start+i]; 
+        ret = len;
+        dst[len] = '\0';
+    }
+    return ret;
+}
+
+int practice_6(){
+    char dst[length_dst],src[length_src];
+    int start,len;
+    int i=0;
+#if 0
+/*  the first method  */
+    printf("input start\n");
+    scanf("%d",&start);
+    printf("\n");
+    printf("input len\n");
+    scanf("%d",&len);//输入一个阿拉伯数字后要用EOF（ctrl+d）结尾，不能用换行符或其他字符，因为在后面的scanf-->%c中会从len的stdin后扫描第一个匹配格式的字符，若不用EOF结尾，则该非EOF的结尾字符会成为后面的第一个%c
+    printf("\n");
+    printf("input src\n");
+    while(i<10){
+        scanf("%c",&src[i]);//scanf --> %c 要特别注意
+        i++;
+    }
+    printf("\n");
+    i=0;
+    while(i<10){
+        printf("%c",src[i]);
+        i++;
+    }
+    printf("\n");
+#endif
+    printf("input src about %d numbers\n",length_src);
+    while(i<length_src){
+        scanf("%c",&src[i]);
+        i++;
+    }
+    printf("input start\n");
+    scanf("%d",&start);
+    printf("input len\n");
+    scanf("%d",&len);
+    substr(dst,src,start,len);
+    puts(dst);
+    return 0;    
+}
+
 void test_practice(){
 #if 0
 	practice_1();
 	practice_2();
 	practice_3();
 	practice_4();
-#endif
 	practice_5();
+#endif
+    practice_6();
 }

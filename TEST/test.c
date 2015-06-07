@@ -166,7 +166,45 @@ int practice_5(){
     //free(buf[i]);
     for(j=0;j<k;j++)
         puts(input[j]);
+    free(buf);
     return 0;
+}
+
+int test_6(){
+    int i;
+    char a[10];
+    for(i=0;i<10;i++)
+        scanf("%c",&a[i]);
+    return 0;
+}
+
+int practice_6(){
+    char src[10];
+    int i=0;
+    int start,len;
+    printf("input start\n");
+    scanf("%d",&start);
+    printf("\n");
+    printf("input len\n");
+    scanf("%d",&len);//输入一个阿拉伯数字后要用EOF（ctrl+d）结尾，不能用换行符或其他字符，因为在后面的scanf-->%c中会从len的stdin后扫描第一个匹配格式的字符，若不用EOF结尾，则该非EOF的结尾字符会成为后面的第一个%c
+    printf("\n");
+    printf("input src\n");
+    while(i<10){
+        scanf("%c",&src[i]);//scanf --> %c 要特别注意
+        i++;
+    }
+    printf("\n");
+    i=0;
+    while(i<10){
+        printf("%c",src[i]);
+        i++;
+    }
+    printf("\n");
+    // printf("input start\n");
+    // scanf("%d",&start);
+    // printf("input len\n");
+    // scanf("%d",&len);
+    return 0;    
 }
 
 int main(){
@@ -178,7 +216,9 @@ int main(){
     // char *ch = malloc(10);
     // gets(ch);
     // free(ch);
-    practice_5();
+    //practice_5();
+    //test_6();
+    practice_6();
 
     return 0;
 }
