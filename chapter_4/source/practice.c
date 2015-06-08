@@ -176,6 +176,29 @@ int practice_6(){
     return 0;    
 }
 
+void delete(char string[],int pos){
+    int i = pos;
+    while(string[i] != '\0'){
+        string[i] = string[i+1];
+        i++;
+    }
+}
+
+void deblank(char string[]){
+    int i=0;
+    while(string[i+1] != '\0'){
+        if(string[i] == ' ' && string[i+1] == ' ')
+            delete(string,i+1);
+        i++;
+    }
+}
+
+int practice_7(){
+    char string[] = "hello  world   !";
+    deblank(string);
+    return 0;
+}
+
 void test_practice(){
 #if 0
 	practice_1();
@@ -183,6 +206,7 @@ void test_practice(){
 	practice_3();
 	practice_4();
 	practice_5();
-#endif
     practice_6();
+#endif
+    practice_7();
 }
