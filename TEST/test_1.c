@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h> // include malloc function
 
 int test_3(){ //每个函数的开始都要创建栈，结束都要消除栈
 #if 0
@@ -152,10 +153,10 @@ int practice_5(){
     int i,k,j;
     for(i=0;i<20;i++)
         buf[i] = (char *)malloc(100*sizeof(char));
-    gets(buf[0]);
+    fgets(buf[0],sizeof(buf[0]),stdin);
     input[0] = buf[0];
     i = k = 1;
-    while(gets(buf[i]) && *buf[i] != '\0'){   
+    while(fgets(buf[i],sizeof(buf[i]),stdin) && *buf[i] != '\0'){   
         if(buf[i] != buf[i-1]){
             input[k] = buf[i];
             k++;
@@ -165,8 +166,10 @@ int practice_5(){
     }
     //free(buf[i]);
     for(j=0;j<k;j++)
-        puts(input[j]);
-    free(buf);
+        fputs(input[j],stdin); //puts(input[j]) is also fine
+    //free(buf); //buf is not a  heap, should free heap arraged by malloc
+    for(i=0;i<20;i++)
+        free(buf[i]);
     return 0;
 }
 
@@ -207,18 +210,43 @@ int practice_6(){
     return 0;    
 }
 
+/* chapter_5 */
+int test_7(){
+#if 0
+    int a = -17;
+    int i;
+    int b = a >> 1;// a has not changed
+#endif
+    char a = getchar();//getchar()返回整型，当其值为(int)EOF = ctrl+D = (int)-1 = (char)'\377'时，循环终止（while(ch = getchar())!=EOF）
+    unsigned value = 98;
+    int ones;
+    for(ones = 0;value != 0;value >>= 1){
+        if(value % 2 != 0)
+            ones++;
+    }
+    return 0;
+}
+
+int test_8(){
+    int a = 1;
+    int b = a;
+    int *c = &a;    
+    return 0;
+}
+
 int main(){
 #if 0
     test_3();
     test_4();
     test_5();
-#endif
-    // char *ch = malloc(10);
-    // gets(ch);
-    // free(ch);
-    //practice_5();
-    //test_6();
+    char *ch = malloc(10);
+    gets(ch);
+    free(ch);
+    practice_5();
+    test_6();
     practice_6();
-
+    test_7();
+#endif
+    test_8();
     return 0;
 }

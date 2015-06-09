@@ -104,10 +104,10 @@ int practice_5(){
     /* 指针变量存放在堆栈中，需要使用malloc函数为该堆栈中的指针变量制定一块文字常量区的地址，并将输入的字符串
      * 放到该区域中，并将该区域的地址存放在该变量所对应的堆栈位置里，free函数用于将该指针指向的文字常量区域中
      * 的字符串清空，但指针变量的值（即该文字常量区域的地址或相应堆栈中的值）不变。*/
-    gets(buf[0]);
+    fgets(buf[0],sizeof(buf[0]),stdin);
     input[0] = buf[0];
     i = k = 1;
-    while(gets(buf[i]) && *buf[i] != '\0'){   
+    while(fgets(buf[i],sizeof(buf[i]),stdin) && *buf[i] != '\0'){   
         if(strcmp(buf[i],buf[i-1])){
             input[k] = buf[i];
             k++;
@@ -117,7 +117,9 @@ int practice_5(){
     }
     //free(buf[i]);
     for(j=0;j<k;j++)
-        puts(input[j]);
+        fputs(input[j],stdin);//fputs(input[j]) is also fine
+    for(i=0;i<20;i++)
+        free(buf[i]);
     return 0;
 }
 

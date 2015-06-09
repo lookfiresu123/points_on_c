@@ -11,9 +11,9 @@ int practice_6(){
 int practice_7(){
     enum Liquid  jar;
     jar = QUART;
-    printf("%s\n",jar); //此时，实际上jar在堆栈中是0x20，不能用%s输出
+    printf("%s\n",jar); //此时，实际上jar在堆栈中是0x20(int)，不能用%s输出
     jar += PINT;
-    printf("%s\n",jar); //此时，实际上jar在堆栈中是0x30，不能用%s输出
+    printf("%s\n",jar); //此时，实际上jar在堆栈中是0x30(int)，不能用%s输出
     return 0;
 }
 
