@@ -1,0 +1,42 @@
+int problem_4():比较函数if_else()和expression()（即？：表达式）的运行效率，从汇编代码中可以看到前者比后者多了一行“mov  %eax,-0x4(%rbp)”，即前者有两次存储i的汇编代码，二后者只有一次，但在实际运行中，前者也只会运行其中的一个存储代码，故两者在实际运行中并无快慢效率。
+	int if_else():
+		Dump of assembler code for function if_else:
+   		0x00000000004005b8 <+0>:	push   %rbp
+   		0x00000000004005b9 <+1>:	mov    %rsp,%rbp
+   		0x00000000004005bc <+4>:	movl   $0x0,-0x10(%rbp)
+   		0x00000000004005c3 <+11>:	movl   $0x0,-0xc(%rbp)
+   		0x00000000004005ca <+18>:	movl   $0x0,-0x8(%rbp)
+   		0x00000000004005d1 <+25>:	cmpl   $0x3,-0x10(%rbp)
+   		0x00000000004005d5 <+29>:	jle    0x4005e2 <if_else+42>
+   		0x00000000004005d7 <+31>:	mov    -0xc(%rbp),%eax
+   		0x00000000004005da <+34>:	add    $0x1,%eax
+   		0x00000000004005dd <+37>:	mov    %eax,-0x4(%rbp)
+   		0x00000000004005e0 <+40>:	jmp    0x4005ef <if_else+55>
+   		0x00000000004005e2 <+42>:	mov    -0x8(%rbp),%edx
+   		0x00000000004005e5 <+45>:	mov    %edx,%eax
+   		0x00000000004005e7 <+47>:	shl    $0x2,%eax
+  		0x00000000004005ea <+50>:	add    %edx,%eax
+   		0x00000000004005ec <+52>:	mov    %eax,-0x4(%rbp)
+   		0x00000000004005ef <+55>:	mov    $0x0,%eax
+   		0x00000000004005f4 <+60>:	pop    %rbp
+   		0x00000000004005f5 <+61>:	retq
+	int expression():
+		Dump of assembler code for function expression:
+   		0x00000000004005f6 <+0>:	push   %rbp
+   		0x00000000004005f7 <+1>:	mov    %rsp,%rbp
+   		0x00000000004005fa <+4>:	movl   $0x0,-0x10(%rbp)
+   		0x0000000000400601 <+11>:	movl   $0x0,-0xc(%rbp)
+   		0x0000000000400608 <+18>:	movl   $0x0,-0x8(%rbp)
+   		0x000000000040060f <+25>:	cmpl   $0x3,-0x10(%rbp)
+   		0x0000000000400613 <+29>:	jle    0x40061d <expression+39>
+   		0x0000000000400615 <+31>:	mov    -0xc(%rbp),%eax
+   		0x0000000000400618 <+34>:	add    $0x1,%eax
+   		0x000000000040061b <+37>:	jmp    0x400627 <expression+49>
+   		0x000000000040061d <+39>:	mov    -0x8(%rbp),%edx
+   		0x0000000000400620 <+42>:	mov    %edx,%eax
+   		0x0000000000400622 <+44>:	shl    $0x2,%eax
+   		0x0000000000400625 <+47>:	add    %edx,%eax
+   		0x0000000000400627 <+49>:	mov    %eax,-0x4(%rbp)
+   		0x000000000040062a <+52>:	mov    $0x0,%eax
+   		0x000000000040062f <+57>:	pop    %rbp
+   		0x0000000000400630 <+58>:	retq 

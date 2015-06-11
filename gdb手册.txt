@@ -46,3 +46,6 @@
         cc -c -g -Wall source/main.c -o main.o
     practice.o :
         cc -c -g -Wall source/practice.c -o practice.o
+14、查看practice.c的预编译c文件:
+	gcc -std=c99 -O0 -E practice.c | indent -linux
+

@@ -73,11 +73,28 @@ int test_13(){
 	return 0;
 }
 
+int test_14(){
+#if 0
+	char str1[100];
+	char str2[100];
+	fputs("hello world",stdout);//去掉'\0'，但后面不加换行符，之后输出
+	puts("hello world");//将'\0'换成'\n'，之后输出
+	fgets(str1,100,stdin);//对最后的'\0'不做任何操作
+	gets(str2);//讲最后的'\n'换成'\0'
+	str1[0] = '\0';
+#endif
+	char str3[] = "hello world\000you";
+	int length_string = strlen(str3);//从字符串头字符开始，直到遇到第一个'\0'（即八进制'\000'）结束，计算这段子字符串的长度（不包括'\0'），即为该字符串的strlen长度（除了关心空间外，还关心内容）
+	int length_sizeof = sizeof(str3);//从字符串头字符开始，直到遇到最后一个'\0'（即八进制'\000'）结束，计算这段字符串的长度（包括所有的'\0'），即为该字符串的空间大小（只关心空间，不关心内容）
+	return 0;
+}
+
 int main(){
 	//test_9();
 	//test_10();
 	//test_11();
 	//test_12();
-	test_13();
+	//test_13();
+	test_14();
 	return 0;
 }
