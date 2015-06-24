@@ -16,4 +16,9 @@ int practice_3();
 void Eratosthenes(char string[],char result[]);
 int practice_4();
 
+int practice_5();
+
+int count_prime(int start, int end);
+int practice_6();
+
 int test_practice();

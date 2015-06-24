@@ -2,7 +2,14 @@
 #include<stdlib.h>
 #include<string.h>
 #include<math.h>
+#include <limits.h>/*for CHAR_BIT*/ 
 
+#define BITMASK(b) (1 << ((b) % CHAR_BIT)) 
+#define BITSLOT(b) ((b) / CHAR_BIT) //分配存储b位的字节数
+#define BITSET(a, b) ((a)[BITSLOT(b)] |= BITMASK(b)) 
+#define BITCLEAR(a, b) ((a)[BITSLOT(b)] &= ~BITMASK(b)) 
+#define BITTEST(a, b) ((a)[BITSLOT(b)] & BITMASK(b)) //测试第b位上的数据是否为1（true）
+#define BITNSLOTS(nb) ((nb + CHAR_BIT - 1) / CHAR_BIT)
 #define SUCCESS 1
 #define FAILURE 0
 #define LEN 100
@@ -140,12 +147,61 @@ int practice_4(){
 	return 0;
 }
 
+/*practice 5*/
+int practice_5(){
+    char bitarray[BITNSLOTS(MAX)]; 
+    int i,j; 
+
+    memset(bitarray,0, BITNSLOTS(MAX)); 
+
+    for(i =2; i < MAX; i++) { 
+        if(!BITTEST(bitarray, i)) { 
+            printf("%d, ", i); 
+            for(j = i + i; j < MAX; j +=i) 
+                BITSET(bitarray, j); 
+        } 
+    } 
+    return 0;
+}
+
+/*practice 6*/
+int count_prime(int start, int end){
+	int count = 0;
+	char bitarray[BITNSLOTS(MAX)]; 
+    int i,j; 
+
+    memset(bitarray,0, BITNSLOTS(MAX)); 
+
+    for(i = start; i < end; i++) { 
+        if(!BITTEST(bitarray, i)) { 
+            //printf("%d, ", i); 
+            count++;
+            for(j = i + i; j < MAX; j +=i) 
+                BITSET(bitarray, j); 
+        } 
+    } 
+	return count;
+}
+
+int practice_6(){
+	int count[10];
+	int i;
+	count[0] = count_prime(2,999);
+	for(i=1;i<10;i++)
+		count[i] = count_prime(i*MAX,(i+1)*MAX-1);
+	return 0;
+}
+
+
+
 int test_practice(){
 #if 0
 	practice_1();
 	practice_2();
 	practice_3();
+    practice_4();
+    practice_5();
 #endif
-	practice_4();
+	practice_6();
 	return 0;
 }
