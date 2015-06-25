@@ -5,7 +5,7 @@
 #define MAX_NUM 10
 
 #if 1
-void test_practice_2(){
+void test_practice_2(void){
     char input[MAX_NUM][MAX];
     //char output[MAX+2];
     int i = 0;

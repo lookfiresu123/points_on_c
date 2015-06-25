@@ -7,7 +7,7 @@
 #define length_dst 10
 #define length_src 10
 
-int practice_1(){
+int practice_1(void){
 	double n,new,old;
 	printf("input a num\n");
 	scanf("%lf",&n);
@@ -27,7 +27,7 @@ int Sqrt(int parameter){
 	return i-1;
 }
 
-int practice_2(){
+int practice_2(void){
 	int i,k,j;
 	for(i=1;i<=100;i++){
 		k = Sqrt(i);
@@ -43,7 +43,7 @@ out:
 	return 0;
 }
 
-int practice_3(){
+int practice_3(void){
 	int line[3];
 	printf("input three num\n");
 	int i;
@@ -88,14 +88,14 @@ void copy_n(char dst[],char src[],int n){
 	}
 }
 
-int practice_4(){
+int practice_4(void){
 	char src[] = "Hello China";
 	char dst[length_dst];
 	copy_n(dst,src,length_dst);
 	return 0;
 }
 
-int practice_5(){
+int practice_5(void){
     char *input[20];
     char *buf[20];
     int i,k,j;
@@ -139,7 +139,7 @@ int substr(char dst[],char src[],int start,int len){
     return ret;
 }
 
-int practice_6(){
+int practice_6(void){
     char dst[length_dst],src[length_src];
     int start,len;
     int i=0;
@@ -195,13 +195,13 @@ void deblank(char string[]){
     }
 }
 
-int practice_7(){
+int practice_7(void){
     char string[] = "hello  world   !";
     deblank(string);
     return 0;
 }
 
-void test_practice(){
+void test_practice(void){
 #if 0
 	practice_1();
 	practice_2();

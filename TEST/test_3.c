@@ -3,13 +3,13 @@
 
 #define microsoft cp
 
-int test_15(){
+int test_15(void){
     int *a;//此时地址a = <_start>
     *a = 12;//程序在执行的时候会出现segmentation fault，表示程序试图访问一个未被分配给程序的内存位置
     return 0;
 }
 
-int test_16(){
+int test_16(void){
     int *a = NULL;//此时地址a = 0x0
     char ch = 'a';//开辟了一个内存（地址为&ch，且在栈中），用于存储ch的值，且该值被初始化为'a'
     // char *cp;//cp = <_start>
@@ -22,7 +22,7 @@ int test_16(){
     return 0;
 }
 
-int test_17(){
+int test_17(void){
 	char **strings;//在&strings的位置上定义strings（为赋值），&string处于内存的栈中
 	char *string1 = "hello world";
 	char *string2 = "you are welcome";
@@ -35,7 +35,7 @@ int test_17(){
 	return 0;
 }
 
-int test_18(){
+int test_18(void){
 	
 	char **strings = {	"sina",\
 						"google",\
@@ -43,7 +43,7 @@ int test_18(){
 	return 0;
 }
 
-int test_19(){
+int test_19(void){
     char a[10] = {'0','1','2','3','4','5','6','7','8','9'};//声明一块10字节大小的栈空间给a数组，并从低地址到高地址一次将0~9赋值到该块栈空间中，数值上a=&a
     char b[10];//声明一块10字节大小的栈空间给b数组，数值上b=&b
     char *p;//申明一块1字节大小的栈空间（空间地址为&p），用于存放地址p的值，&p!=p
@@ -53,7 +53,7 @@ int test_19(){
 
 
 
-int main(){
+int main(void){
     //test_15();
     //test_16();
     //test_17();

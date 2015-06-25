@@ -5,7 +5,7 @@
 #define MAX 1000
 #define NUM 10
 
-void test_practice_4(){
+void test_practice_4(void){
 	char str[NUM][MAX];
 	int result;
 	int i=0;

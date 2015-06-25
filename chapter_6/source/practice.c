@@ -42,7 +42,7 @@ char *find_char(char const *source, char const *chars){
 }
 
 
-int practice_1(){
+int practice_1(void){
 	char const *source = "hello world";
 	char const *chars = "word";
 	char *result;
@@ -78,7 +78,7 @@ int del_substr(char *str, char const *substr){
 	}
 }
 
-int practice_2(){
+int practice_2(void){
 	char *str = "hello world";
 	char *substr = "hello";
 	del_substr(str,substr);
@@ -99,7 +99,7 @@ void reserse_string(char *string){
 	}
 }
 
-int practice_3(){
+int practice_3(void){
 	char string[] = "hello world";
 	reserse_string(string);
 	printf("%s\n",string);
@@ -130,7 +130,7 @@ void Eratosthenes(char string[],int result[]){//筛选出MAX个质数
 }
 
 
-int practice_4(){
+int practice_4(void){
 	char string[MAX];
 	int result[MAX];
 	char *p = string;
@@ -148,7 +148,7 @@ int practice_4(){
 }
 
 /*practice 5*/
-int practice_5(){
+int practice_5(void){
     char bitarray[BITNSLOTS(MAX)]; 
     int i,j; 
 
@@ -183,7 +183,7 @@ int count_prime(int start, int end){
 	return count;
 }
 
-int practice_6(){
+int practice_6(void){
 	int count[10];
 	int i;
 	count[0] = count_prime(2,999);
@@ -194,7 +194,7 @@ int practice_6(){
 
 
 
-int test_practice(){
+int test_practice(void){
 #if 0
 	practice_1();
 	practice_2();

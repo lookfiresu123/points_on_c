@@ -4,7 +4,7 @@
 
 #define MAX 30
 
-void test_practice_3(){
+void test_practice_3(void){
 	char checksum = -1;
 	char str[MAX];
 	int i;

@@ -4,21 +4,21 @@
 
 int compare(char source_one,char const *chars);
 char *find_char(char const *source, char const *chars);
-int practice_1();
+int practice_1(void);
 
 void delete(char *str, char const *substr,char *address);
 int del_substr(char *str, char const *substr);
-int practice_2();
+int practice_2(void);
 
 void reserse_string(char *string);
-int practice_3();
+int practice_3(void);
 
 void Eratosthenes(char string[],char result[]);
-int practice_4();
+int practice_4(void);
 
-int practice_5();
+int practice_5(void);
 
 int count_prime(int start, int end);
-int practice_6();
+int practice_6(void);
 
-int test_practice();
+int test_practice(void);

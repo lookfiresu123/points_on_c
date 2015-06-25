@@ -5,7 +5,7 @@
 #define str "hello world!"
 
 #if 1
-void test_practice_1(){
+void test_practice_1(void){
     printf("%s%c",str,line_end);
     puts(str);
 }

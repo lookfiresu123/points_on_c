@@ -4,20 +4,20 @@
 #include<string.h>
 
 
-int func(){
+int func(void){
 	static int counter = 1;//存储于静态存储区
 	//printf("&counter = %p, counter = %d\n",&counter,counter);
 	return ++counter;
 }
 
-int problem_2(){
+int problem_2(void){
 	int answer;
 	answer = func() - func() * func();//func函数从左到右以此执行，然后将三个结果按表达式计算，每个func函数的counter都指向同一个静态存储区的同一位置，调用完后更新(update)回去。
 	printf("%d\n",answer);
 	return 0;
 }
 
-int if_else(){
+int if_else(void){
 	int a = 0, b =0, c = 0, i;
 	if(a > 3)
 		i = b + 1;
@@ -26,13 +26,13 @@ int if_else(){
 	return 0;
 }
 
-int expression(){
+int expression(void){
 	int a = 0, b =0, c = 0, i;
 	i = a>3 ? b+1 : c*5;
 	return 0;
 }
 
-int problem_4(){
+int problem_4(void){
 	if_else();
 	expression();
 	return 0;
@@ -87,7 +87,7 @@ int problem_9(int array[],int array_size){
 
 
 
-int test_problem(){
+int test_problem(void){
 	//problem_2();
 	//problem_4();
 	//problem_5(2014);

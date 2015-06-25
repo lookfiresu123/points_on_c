@@ -3,13 +3,13 @@
 #include <stdbool.h>
 
 /* problem_2 */
-int func();
-int problem_2();
+int func(void);
+int problem_2(void);
 
 /* problem_4 */
-int if_else();
-int expression();
-int problem_4();
+int if_else(void);
+int expression(void);
+int problem_4(void);
 
 /* problem_5 */
 bool problem_5(int year);
@@ -20,4 +20,4 @@ int f2(int x);
 int f3(int x,int y);
 int problem_8(int x);
 
-int test_problem();
+int test_problem(void);

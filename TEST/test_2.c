@@ -5,7 +5,7 @@
 /* 
  * 测试malloc函数和free函数在内存中的表现
  * */
-int test_9(){
+int test_9(void){
 	int *ptr1 = (int *)malloc(10 * sizeof(int));//malloc函数在堆空间中找到一个空闲的堆，并将该空闲堆的首地址赋值给ptr1，指针变量ptr1的值存储在栈中
 	int *p = ptr1;
 	int i;
@@ -23,7 +23,7 @@ int fx(int *a){
 	return 0;
 }
 
-int test_10(){
+int test_10(void){
 	int a = 0;
 	int array[10] = {0,0,0,0,0,0,0,0,0,0};
 	array[fx(&a)] ++; // execute fx once
@@ -33,7 +33,7 @@ int test_10(){
 	return 0;
 }
 
-int test_11(){
+int test_11(void){
 #if 0
 	int a = 1,b = 2;
 	int c = a++; // a-->%eax, a++, %eax-->c <==> int c = a; a++
@@ -45,7 +45,7 @@ int test_11(){
 	return 0;
 }
 
-int test_12(){
+int test_12(void){
 	int a = 1,b = 0,c;
 	(a==1) ? (b++) : (b--);
 	c = (b==0) ? (a+b) : (a-b);
@@ -60,7 +60,7 @@ int output(char str[],int length){
 	return 0;
 }
 
-int test_13(){
+int test_13(void){
 	char str[] = "hello world";
 	int i=0;
 	while(str[i++]!='\0' && fputc(str[i-1],stdout))//当'&&'符号左边为假时，不用计算右边的真假，直接判断整个表达式为假即可；符号'||'以此类推。
@@ -73,7 +73,7 @@ int test_13(){
 	return 0;
 }
 
-int test_14(){
+int test_14(void){
 #if 0
 	char str1[100];
 	char str2[100];
@@ -89,7 +89,7 @@ int test_14(){
 	return 0;
 }
 
-int main(){
+int main(void){
 	//test_9();
 	//test_10();
 	//test_11();

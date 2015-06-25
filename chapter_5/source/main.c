@@ -3,7 +3,7 @@
 #include"../header/problem.h"
 #include"../header/practice.h"
 
-int main(){
+int main(void){
 	//test_problem();
 	test_practice();
 	return 0;

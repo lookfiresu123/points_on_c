@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h> // include malloc function
 
-int test_3(){ //每个函数的开始都要创建栈，结束都要消除栈
+int test_3(void){ //每个函数的开始都要创建栈，结束都要消除栈
 #if 0
     printf("%d\n",1);  //将字符值0x1赋值到esi寄存器中
 #define f 4  //无任何汇编代码
@@ -27,7 +27,7 @@ int test_3(){ //每个函数的开始都要创建栈，结束都要消除栈
     return 1;
 }
 
-int test_4(){ //每个函数的开始都要创建栈，结束都要消除栈
+int test_4(void){ //每个函数的开始都要创建栈，结束都要消除栈
 #if 0
     if(1)  //在汇编语言中，不比较，直接执行return 1后结束函数，因为表达式 1 是必然事件
         return 1;
@@ -142,12 +142,12 @@ exit:
     return 0;
 }
 
-void test_5(){
+void test_5(void){
     // char *a = "abc";
     // char *b = "abc";
 }
 
-int practice_5(){
+int practice_5(void){
     char *input[20];
     char *buf[20];
     int i,k,j;
@@ -173,7 +173,7 @@ int practice_5(){
     return 0;
 }
 
-int test_6(){
+int test_6(void){
     int i;
     char a[10];
     for(i=0;i<10;i++)
@@ -181,7 +181,7 @@ int test_6(){
     return 0;
 }
 
-int practice_6(){
+int practice_6(void){
     char src[10];
     int i=0;
     int start,len;
@@ -211,7 +211,7 @@ int practice_6(){
 }
 
 /* chapter_5 */
-int test_7(){
+int test_7(void){
 #if 0
     int a = -17;
     int i;
@@ -227,14 +227,14 @@ int test_7(){
     return 0;
 }
 
-int test_8(){
+int test_8(void){
     int a = 1;
     int b = a;
     int *c = &a;    
     return 0;
 }
 
-int main(){
+int main(void){
 #if 0
     test_3();
     test_4();

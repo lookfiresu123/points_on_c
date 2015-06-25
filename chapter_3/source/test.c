@@ -6,14 +6,14 @@
 //#define lol "lol"
 
 /* external function */
-static int practice_problem_225(){
+static int practice_problem_225(void){
     unsigned length = -1;
     printf("%u\n",length);
     return 0;
 }
 
 /* external function */
-int practice_problem_226(){
+int practice_problem_226(void){
     size_t a = 1,b = 2;
     a = a - b;
 //    printf("%d\n",size_of(size_t));
@@ -22,14 +22,14 @@ int practice_problem_226(){
 }
 
 /* external function */
-int practice_problem_const(){
+int practice_problem_const(void){
     const char *s = "hello";
     s = "world";
     printf("%s\n",s);//if have not this code, you will see "set but not used for s, [-Wunused-but-set-variable]"
     return 0;
 }
 
-static int sizeof_enum(){
+static int sizeof_enum(void){
     enum Day yesterday,today,tomorrow; //光声明只能申请到栈，待函数结束后栈就自然被释放了
     int a = 1; //想要压入栈中必须给局部变量赋初值
     #if 0
@@ -44,7 +44,7 @@ static int sizeof_enum(){
 }
 
 /* external function */
-int test_test(){
+int test_test(void){
     #if 0
     practice_problem_225();
     practice_problem_226();

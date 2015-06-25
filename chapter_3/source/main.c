@@ -5,7 +5,7 @@
 #include"../header/test_1.h"
 #include"../header/practice.h"
 
-int main(){
+int main(void){
 #if 0
 	test_test();
 	test_test_1();

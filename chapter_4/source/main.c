@@ -3,7 +3,7 @@
 #include<math.h>
 #include"../header/practice.h"
 
-int main(){
+int main(void){
 	test_practice();
 	return 0;
 }

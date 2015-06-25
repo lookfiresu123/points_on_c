@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-void test_practice_2(){
+void test_practice_2(void){
 	int ch;
 	int braces = 0;
 	while((ch = getchar()) != EOF){

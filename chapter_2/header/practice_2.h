@@ -1,3 +1,3 @@
 #include<stdio.h>
 
-test_practice_2();
+void test_practice_2(void);

@@ -1,9 +1,9 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-int practice_1();
+int practice_1(void);
 
-int practice_2();
+int practice_2(void);
 
 unsigned int reverse_bits(unsigned int value_D,unsigned int value_B[]);
 unsigned int *practice_3(unsigned int value);
@@ -17,6 +17,6 @@ int practice_4();
 unsigned int Switch(unsigned int value_D,unsigned int value_B[]);
 void left_move(unsigned int value[],int step);
 int store_bit_field(int original_value,int value_to_store,unsigned starting_bit,unsigned ending_bit);
-int practice_5();
+int practice_5(void);
 
-int test_practice();
+int test_practice(void);

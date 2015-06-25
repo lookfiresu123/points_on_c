@@ -5,7 +5,7 @@
 #include"../header/practice_3.h"
 #include"../header/practice_4.h"
 
-void main(){
+void main(void){
 	//test_1_1();
     //test_practice_1();
     //test_practice_2();

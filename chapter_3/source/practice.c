@@ -3,12 +3,12 @@
 #include<math.h>
 #include"../header/practice.h"
 
-int practice_6(){
+int practice_6(void){
     enum coin RMB = PENNY, dollor = NICKEL;
     return 0;
 }
 
-int practice_7(){
+int practice_7(void){
     enum Liquid  jar;
     jar = QUART;
     printf("%s\n",jar); //此时，实际上jar在堆栈中是0x20(int)，不能用%s输出
@@ -17,14 +17,14 @@ int practice_7(){
     return 0;
 }
 
-int practice_12(){
+int practice_12(void){
     const int a = 16;
     const int b;
 //    b = 32;
     return 1;
 }
 
-int practice_14(){ //查看汇编代码，发现共4个局部变量入栈，第一个a位于栈顶
+int practice_14(void){ //查看汇编代码，发现共4个局部变量入栈，第一个a位于栈顶
     int a = 1;
     {
         int b = a;
@@ -34,7 +34,7 @@ int practice_14(){ //查看汇编代码，发现共4个局部变量入栈，第�
     return 0;
 }
 
-int test_practice(){
+int test_practice(void){
 #if 0
     practice_6();
     practice_7();

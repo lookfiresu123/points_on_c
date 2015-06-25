@@ -22,7 +22,7 @@
 		y = temp; \
 
 
-int practice_1(){
+int practice_1(void){
 	char str[100];
 	fgets(str,100,stdin);
 	//int length = strlen(str);
@@ -36,7 +36,7 @@ int practice_1(){
 	return 0;
 }
 
-int practice_2(){
+int practice_2(void){
 	char str[100];
 	fgets(str,100,stdin);
 	int i=0;
@@ -110,7 +110,7 @@ bool test_bit(char bit_array[],unsigned bit_number){
 }
 
 
-int practice_4(){
+int practice_4(void){
 	char bit_array[bit_size] = {'a','b','c','d','e','f','g','h','i','j'};
 	unsigned bit_number = 8;
 	int value = 1;
@@ -185,7 +185,7 @@ int store_bit_field(int original_value,int value_to_store,unsigned starting_bit,
 	return value_stored_int;
 }
 
-int practice_5(){
+int practice_5(void){
 	int original_value,value_to_store;
 	int result;
 	unsigned starting_bit,ending_bit;
@@ -202,7 +202,7 @@ int practice_5(){
 	return result;
 }
 
-int test_practice(){
+int test_practice(void){
 	//practice_1();
 	//practice_2();
 	//practice_3(25);
