@@ -88,13 +88,3 @@ int test_14(void){
 	int length_sizeof = sizeof(str3);//从字符串头字符开始，直到遇到最后一个'\0'（即八进制'\000'）结束，计算这段字符串的长度（包括所有的'\0'），即为该字符串的空间大小（只关心空间，不关心内容）
 	return 0;
 }
-
-int main(void){
-	//test_9();
-	//test_10();
-	//test_11();
-	//test_12();
-	//test_13();
-	test_14();
-	return 0;
-}

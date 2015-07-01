@@ -50,14 +50,3 @@ int test_19(void){
     p = b;//将数组b的首地址b赋值给p
     return 0;
 }
-
-
-
-int main(void){
-    //test_15();
-    //test_16();
-    //test_17();
-    //test_18();
-    test_19();
-    return 0;
-}

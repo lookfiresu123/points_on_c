@@ -1,5 +1,5 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-int *func();
-int *func1(void);
+int func(void);
+int func1(void);
