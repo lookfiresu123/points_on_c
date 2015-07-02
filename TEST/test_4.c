@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<stdarg.h>
 //#include"test.h"
 #include"test_a.h"
 
@@ -73,11 +74,70 @@ void test_24(int *x,int *y){
     *y = temp;
 }
 
+/*
+ * 利用递归函数将整型值转化为字符并打印
+ */
+void test_25(unsigned int value){
+    printf("%u -> %p\n",value,&value);
+    int temp = value % 10;
+    if((value /= 10) != 0)
+        test_25(value);
+    printf("%c",temp+'0');
+}
+
+void test_26(){
+    int i = 1;
+    //i = (++i) + (++i) + (++i) + (++i);
+    //i = (++i) + (++i);
+    i = (++i) + (++i) + (++i) + (++i) + (++i);
+    /*
+     * 观察反汇编代码后发现上述表达式类似于：
+     * ++i;
+     * ++i;
+     * sum = i + i;
+     * while(n-2>0){ //n表示表达式右值中i的个数
+     *      ++i;
+     *      sum = sum + i;
+     *      n--;
+     * }
+     * i = sum;
+     */
+    //printf("%d\n",i);
+}
+
+/*
+ * 计算输入参数的平均值
+ */
+float test_27(int n_value, ...){
+    float sum = 0;
+    va_list var_arg;
+    int count;
+    
+    //初始化要访问的参数
+    va_start(var_arg,n_value);
+    //顺序访问参数
+    for(count = 0;count < n_value;count++){
+        sum += va_arg(var_arg,int);
+    }
+    //结束访问参数
+    va_end(var_arg);
+
+    return sum/n_value;
+}
+
 int main(void){
+#if 0
     int x=1,y=2;
     //printf("main: &x = %p, &y = %p\n",&x,&y);
     test_23(x,y);
     test_24(&x,&y);
+    unsigned int value = 9876;
+    test_25(value);
+#endif
+    //test_26();
+    int n_value = 5;
+    int args[5] = {1,2,3,4,5};
+    test_27(n_value,args[0],args[1],args[2],args[3],args[4]);
     return 0;
 }
 
