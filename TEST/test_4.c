@@ -108,16 +108,16 @@ void test_26(){
 /*
  * 计算输入参数的平均值
  */
-float test_27(int n_value, ...){
+float test_27(int n_value, ...){//在这个参数格式中，n_value为第一个参数
     float sum = 0;
     va_list var_arg;
     int count;
     
     //初始化要访问的参数
-    va_start(var_arg,n_value);
+    va_start(var_arg,n_value);//n_value为第一个参数
     //顺序访问参数
     for(count = 0;count < n_value;count++){
-        sum += va_arg(var_arg,int);
+        sum += va_arg(var_arg,int);//返回下一个参数（其中，int为下一个参数的类型）
     }
     //结束访问参数
     va_end(var_arg);
@@ -137,7 +137,7 @@ int main(void){
     //test_26();
     int n_value = 5;
     int args[5] = {1,2,3,4,5};
-    test_27(n_value,args[0],args[1],args[2],args[3],args[4]);
+    printf("%f\n",test_27(n_value,args[0],args[1],args[2],args[3],args[4]));
     return 0;
 }
 
