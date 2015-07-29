@@ -119,7 +119,7 @@ int test_4(void){ //每个函数的开始都要创建栈，结束都要消除栈
     case 3: //直接和3比（分别和min、max比）
         i += 3;
         break;
-    default: 
+    default:
         i += 4;
         break;
     }
@@ -156,7 +156,7 @@ int practice_5(void){
     fgets(buf[0],sizeof(buf[0]),stdin);
     input[0] = buf[0];
     i = k = 1;
-    while(fgets(buf[i],sizeof(buf[i]),stdin) && *buf[i] != '\0'){   
+    while(fgets(buf[i],sizeof(buf[i]),stdin) && *buf[i] != '\0'){
         if(buf[i] != buf[i-1]){
             input[k] = buf[i];
             k++;
@@ -207,7 +207,7 @@ int practice_6(void){
     // scanf("%d",&start);
     // printf("input len\n");
     // scanf("%d",&len);
-    return 0;    
+    return 0;
 }
 
 /* chapter_5 */
@@ -230,8 +230,18 @@ int test_7(void){
 int test_8(void){
     int a = 1;
     int b = a;
-    int *c = &a;    
+    int *c = &a;
     return 0;
+}
+
+/*
+ * 数组名实际上是一种符号替换，在编译阶段由首地址数值替换数组名到汇编代码中，本身运行时不占内存（代码段不考虑）
+ */
+void test_9(void){
+    char a[10];
+    int i;
+    for(i = 0; i < 10; i++)
+        a[i] = 'a';
 }
 
 int main(void){
@@ -247,6 +257,7 @@ int main(void){
     practice_6();
     test_7();
 #endif
-    test_8();
+    //test_8();
+    test_9();
     return 0;
 }
