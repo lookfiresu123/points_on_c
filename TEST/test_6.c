@@ -12,7 +12,8 @@
 #define SIZE 10000
 
 #define DO_COMPARE_ARRAY_POINT 0
-#define DO_DISASEMBLE_SWITCH 1
+#define DO_DISASEMBLE_SWITCH 0
+#define DO_DOUBLE_ARRAY 1
 
 int compare_array_point(int x[],int y[],int numSize){
     int result;
@@ -54,7 +55,7 @@ int compare_array_point(int x[],int y[],int numSize){
    0x0000000000400656 <+29>:	addl   $0x2,-0x4(%rbp)
    0x000000000040065a <+33>:	addl   $0x3,-0x4(%rbp)
    0x000000000040065e <+37>:	pop    %rbp
-   0x000000000040065f <+38>:	retq 
+   0x000000000040065f <+38>:	retq
 */
 
 /* have "break"
@@ -74,7 +75,7 @@ int compare_array_point(int x[],int y[],int numSize){
    0x000000000040065e <+37>:	addl   $0x3,-0x4(%rbp)
    0x0000000000400662 <+41>:	nop
    0x0000000000400663 <+42>:	pop    %rbp
-   0x0000000000400664 <+43>:	retq 
+   0x0000000000400664 <+43>:	retq
 */
 
 /* "case" looks like "goto" this line */
@@ -93,6 +94,23 @@ void disasemble_switch(void){
     }
 }
 
+void double_array(){
+    char test[2][3][4];
+    int i,j,k;
+    //for(i = 0 ; i < 2 ; i++)
+      //  for(j = 0 ; j < 5 ; j++)
+        //    test[i][j] = 'a';// *(i * 5 + j + test) = 'a'
+    for(i = 0 ; i < 2 ; i++)
+        for(j = 0 ; j < 3 ; j++)
+            for(k = 0 ; k < 4 ; k++)
+                test[i][j][k] = 'a';// *((i * 3 + j) * 4 + k + test) = 'a'
+    //the same as *((i * length_j + j) * length_k + k + address_of_test) = 'a'
+    i = 1;
+    j = 1;
+    k = 1;
+    test[i][j][k] = 'b';
+}
+
 int main(void){
 #if DO_COMPARE_ARRAY_POINT
     int x[SIZE],y[SIZE];
@@ -107,6 +125,9 @@ int main(void){
 #endif
 #if DO_DISASEMBLE_SWITCH
     disasemble_switch();
+#endif
+#if DO_DOUBLE_ARRAY
+    double_array();
 #endif
     return 0;
 }
