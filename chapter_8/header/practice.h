@@ -8,8 +8,8 @@
 #include<stdbool.h>
 
 struct MATRIX {
-    int length_x;
-    int length_y;
+    int length_x;//row
+    int length_y;//column
 };
 
 int practice_1(void);
@@ -23,6 +23,7 @@ bool practice_3(void);
 bool identity_matrix_extern(int *pos,struct MATRIX matrix_size);
 bool practice_4(void);
 
+void matrix_mutiply(int *m1,int *m2,int *r,int x,int y,int z);
 int practice_5(void);
 
 int practice_6(void);

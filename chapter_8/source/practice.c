@@ -11,8 +11,8 @@
 #define DO_PRACTICE_1 0
 #define DO_PRACTICE_2 0
 #define DO_PRACTICE_3 0
-#define DO_PRACTICE_4 1
-#define DO_PRACTICE_5 0
+#define DO_PRACTICE_4 0
+#define DO_PRACTICE_5 1
 #define DO_PRACTICE_6 0
 #define DO_PRACTICE_7 0
 #define DO_PRACTICE_8 0
@@ -184,7 +184,45 @@ bool practice_4(void) {
     return result;
 }
 
+void matrix_mutiply(int *m1,int *m2,int *r,int x,int y,int z) {
+    int i,j,k;
+    int temp;
+    for(i = 0 ; i < x ; i++) {
+        for(k = 0 ; k < z ; k++) {
+            temp = 0;
+            for(j = 0 ; j < y ; j++) {
+                temp += *(m1 + i * y + j) * *(m2 + j * z + k);
+            }
+            *(r + i * z + k) = temp;
+        }
+    }
+}
+
 int practice_5(void) {
+    struct MATRIX matrix_A_size = {
+        .length_x = 3,
+        .length_y = 2
+    };
+    struct MATRIX matrix_B_size = {
+        .length_x = 2,
+        .length_y = 4
+    };
+    struct MATRIX matrix_C_size = {
+        .length_x = matrix_A_size.length_x,
+        .length_y = matrix_B_size.length_y
+    };
+    int matrix_A[3][2] = {
+        {2,-6},
+        {3,5},
+        {1,-1}
+    };
+    int matrix_B[2][4] = {
+        {4,-2,-4,-5},
+        {-7,-3,6,7}
+    };
+    int matrix_C[3][4];
+    matrix_mutiply(&matrix_A[0][0],&matrix_B[0][0],&matrix_C[0][0],
+                matrix_A_size.length_x,matrix_B_size.length_x,matrix_B_size.length_y);
     return 0;
 }
 int practice_6(void) {
