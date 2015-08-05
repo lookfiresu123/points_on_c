@@ -6,6 +6,7 @@
 #include<stdlib.h>
 #include<string.h>
 #include<stdbool.h>
+#include<stdarg.h>
 
 struct MATRIX {
     int length_x;//row
@@ -26,6 +27,7 @@ bool practice_4(void);
 void matrix_mutiply(int *m1,int *m2,int *r,int x,int y,int z);
 int practice_5(void);
 
+int array_offset(int arrayinfo[], ...);
 int practice_6(void);
 
 int practice_7(void);
