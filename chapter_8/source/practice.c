@@ -14,8 +14,8 @@
 #define DO_PRACTICE_3 0
 #define DO_PRACTICE_4 0
 #define DO_PRACTICE_5 0
-#define DO_PRACTICE_6 1
-#define DO_PRACTICE_7 0
+#define DO_PRACTICE_6 0
+#define DO_PRACTICE_7 1
 #define DO_PRACTICE_8 0
 
 int practice_1(void) {
@@ -268,8 +268,44 @@ int practice_6(void) {
     int loc = array_offset(arrayinfo,6,3,1);
     return loc;
 }
+
+int array_offset2(int arrayinfo[], ...) {
+    va_list var_arg;
+    va_start(var_arg, arrayinfo);
+    /* Determine an array dimension is between 1 and 10 */
+    int dimension = arrayinfo[0];
+    if(dimension > 10 || dimension < 1)
+        return -1;
+    else{
+        /* store the index to low array and high array */
+        int *low_index = (int *)malloc(dimension * sizeof(int));
+        int *high_index = (int *)malloc(dimension * sizeof(int));
+        int i,j;
+        for(i = 0 , j = 1 ; i < dimension ; i++) {
+            low_index[i] = arrayinfo[j++];
+            high_index[i] = arrayinfo[j++];
+        }
+        int *index = (int *)malloc(dimension * sizeof(int));
+        /* determine whether the index overflow  */
+        for(i = 0 ; i < dimension ; i++) {
+            index[i] = va_arg(var_arg, int);
+            if(index[i] < low_index[i] || index[i] > high_index[i])
+                return -1;
+        }
+        va_end(var_arg);
+        /* calculate the loc */
+        int loc = 0;
+        for(i = dimension - 1 ; i >= 0 ; i--) {
+            loc = loc * (high_index[i] - low_index[i] + 1) + index[i] -low_index[i];
+        }
+        return loc;
+    }
+}
+
 int practice_7(void) {
-    return 0;
+    int arrayinfo[] = {3,4,6,1,5,-3,3};
+    int loc = array_offset2(arrayinfo,6,5,3);
+    return loc;
 }
 int practice_8(void) {
     return 0;

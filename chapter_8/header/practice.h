@@ -30,6 +30,7 @@ int practice_5(void);
 int array_offset(int arrayinfo[], ...);
 int practice_6(void);
 
+int array_offset2(int arrayinfo[], ...);
 int practice_7(void);
 
 int practice_8(void);
