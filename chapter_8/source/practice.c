@@ -15,8 +15,10 @@
 #define DO_PRACTICE_4 0
 #define DO_PRACTICE_5 0
 #define DO_PRACTICE_6 0
-#define DO_PRACTICE_7 1
-#define DO_PRACTICE_8 0
+#define DO_PRACTICE_7 0
+#define DO_PRACTICE_8 1
+
+//#define NUMS_QUEEN 8
 
 int practice_1(void) {
     char char_value[3][6][4][5] = {
@@ -307,7 +309,126 @@ int practice_7(void) {
     int loc = array_offset2(arrayinfo,6,5,3);
     return loc;
 }
+
+bool is_valid_row(int panic[][NUMS_QUEEN],int index_row,int index_column) {
+    int i;
+    for(i = 0 ; i < NUMS_QUEEN ; i++) {
+        if(panic[index_row][i] == 1 && i != index_column)
+            return false;
+    }
+    return true;
+}
+
+bool is_valid_column(int panic[][NUMS_QUEEN],int index_row,int index_column) {
+    int i;
+    for(i = 0 ; i < NUMS_QUEEN ; i++) {
+        if(panic[i][index_column] == 1 && i != index_row)
+            return false;
+    }
+    return true;
+}
+
+bool is_valid_oblique_left(int panic[][NUMS_QUEEN],int index_row,int index_column) {
+    int current_index_row = index_row;
+    int current_index_column = index_column;
+    while(--current_index_row >= 0 && --current_index_column >= 0) {
+        if(panic[current_index_row][current_index_column] == 1)
+            return false;
+    }
+    current_index_row = index_row;
+    current_index_column = index_column;
+    while(++current_index_row < NUMS_QUEEN && ++current_index_column < NUMS_QUEEN) {
+        if(panic[current_index_row][current_index_column] == 1)
+            return false;
+    }
+    return true;
+}
+
+bool is_valid_oblique_right(int panic[][NUMS_QUEEN],int index_row,int index_column) {
+    int current_index_row = index_row;
+    int current_index_column = index_column;
+    while(++current_index_row < NUMS_QUEEN && --current_index_column >= 0) {
+        if(panic[current_index_row][current_index_column] == 1)
+            return false;
+    }
+    current_index_row = index_row;
+    current_index_column = index_column;
+    while(--current_index_row >= 0 && ++current_index_column < NUMS_QUEEN) {
+        if(panic[current_index_row][current_index_column] == 1)
+            return false;
+    }
+    return true;
+}
+
+bool is_valid(int panic[][NUMS_QUEEN],int index_row,int index_column) {
+    if( is_valid_row(panic,index_row,index_column) &&
+        is_valid_column(panic,index_row,index_column) &&
+        is_valid_oblique_left(panic,index_row,index_column) &&
+        is_valid_oblique_right(panic,index_row,index_column) ) {
+        int current_index_row;
+        int current_index_column;
+        if((current_index_row = index_row + 1) < NUMS_QUEEN) {
+            current_index_column = 0;
+            while(current_index_column < NUMS_QUEEN) {
+                panic[current_index_row][current_index_column] = 1;
+                if(is_valid(panic,current_index_row,current_index_column)) {
+                    //panic[current_index_row][current_index_column] = 0;
+                    return true;
+                }
+                else
+                    panic[current_index_row][current_index_column] = 0;
+                current_index_column++;
+            }
+            return false;
+        }
+        else
+            return true;
+    }
+    return false;
+}
+
+void print_out(int panic[][NUMS_QUEEN]) {
+    int i,j;
+    for(i = 0 ; i < NUMS_QUEEN ; i++) {
+        for(j = 0 ; j < NUMS_QUEEN ; j++) {
+            printf("%d ", panic[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+void initialize(int panic[][NUMS_QUEEN]) {
+    int i,j;
+    for(i = 0 ; i < NUMS_QUEEN ; i++)
+        for(j = 0 ; j < NUMS_QUEEN ; j++)
+            panic[i][j] = 0;
+}
+
+/*
+ * determine where one queen should be put
+ */
+void make_result(int panic[][NUMS_QUEEN],int index_row,int index_column) {
+    int current_index_column = index_column;
+    while(current_index_column < NUMS_QUEEN) {
+        panic[index_row][current_index_column] = 1;
+        if(is_valid(panic,index_row,current_index_column)) {
+            print_out(panic);
+            printf("<------------------------------------------->\n");
+        }
+        initialize(panic);
+        current_index_column++;
+    }
+}
+
 int practice_8(void) {
+    int panic[NUMS_QUEEN][NUMS_QUEEN];
+    int i,j;
+    for(i = 0 ; i < NUMS_QUEEN ; i++)
+        for(j = 0 ; j < NUMS_QUEEN ; j++)
+            panic[i][j] = 0;
+    int index_row = 0;
+    int index_column = 0;
+    make_result(panic,index_row,index_column);
     return 0;
 }
 
