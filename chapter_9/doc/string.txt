@@ -1,0 +1,63 @@
+1. strcpy:
+    the first '\0' in string src will be copied to dest too.
+
+    char *strcpy (char *dest, char *src) {
+        return memcpy(dest, src, strlen(src + 1));
+    }
+
+
+2. strcat:
+    the first '\0' in string dest will be covered by the first character of src and
+    the first '\0' in string src will be copied to dest too.
+
+    char *strcat (char *dest, const char *src) {
+        strcpy(dest + strlen(dest), src);
+        return dest;
+    }
+
+
+3. strcmp:
+    @char const *s1: the first parameter
+    @char const *s2: the second parameter
+
+    int strcmp (char const *s1, char const *s2) {
+        if (strlen(s1) < strlen(s2))
+            return (int)(*(s2 + strlen(s1)) - '\0');
+
+        if (strlen(s1) > strlen(s2))
+            return (int)(*(s1 + strlen(s2)) - '\0');
+
+        if (strlen(s1) == strlen(s2))
+            return (int)(*(s1 + strlen(s1)) - *(s2 + strlen(s2)));
+    }
+
+
+4. strncat:
+    @char *s1: the first parameter -- char *dest
+    @char *s2: the second parameter -- char *src
+    @size_t n: the third parameter -- unsigned int len
+
+    char *strncat (char *s1, char *s2, size_t n) {
+        char *s = s1;
+        s1 += strlen(s1);
+        size_t ss = min {strlen(s2), n};
+        s1[ss] = '\0';
+        memcpy(s1, s2, ss);
+        return s;
+    }
+
+
+5. strncpy:
+    @char *s1: the first parameter -- char *dest
+    @char *s2: the second parameter -- char *src
+    @size_t n: the third parameter -- unsigned int len
+
+    char *strncpy (char *s1, char *s2, size_t n) {
+        if (strlen(s2) < n) {
+            strcpy(s1, s2);
+            fill in string s1 with '\0' until the cat length up to n;
+        }
+        else {
+            fill in string s1 with s2 until the cat length up to n;
+        }
+    }
