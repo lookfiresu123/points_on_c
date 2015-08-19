@@ -61,3 +61,140 @@
             fill in string s1 with s2 until the cat length up to n;
         }
     }
+
+
+6. strchr:
+    find the first character c_in in the string s.
+    @const char *s: the string where we search.
+    @int c_in: the character we search.
+
+    char *strchr (const char *s, int c_in) {
+        {
+            Search in the first 4/8-bytes:
+                if find:
+                    return the pointer of this c_in; 
+                otherwise:
+                    if there is a '\0':
+                        return NULL;
+                    otherwise:
+                        goto out1;
+        }
+out1:
+        {
+            Search for a character c_in or a character '\0' per 4/8-bytes:
+                if find '\0' before find c_in:
+                    return NULL;
+                otherwise:
+                    return the pointer of this c_in;
+        }
+    }
+
+
+7. strrchr:
+    find the last character c in the string s.
+    @const char *s: the string where we search.
+    @int c: the character we search.
+
+    char *strrchr (const char *s, int c) {
+        if (c == '\0')
+            return strchr(s, '\0');
+        char *found = NULL;
+        while ((p = strchr(s, c)) != NULL) {
+            found = p;
+            s = p + 1;
+        }
+        return found;
+    }
+
+
+8. strpbrk:
+    find the first occurrence in string s of any character in string accept
+    @const char *s: the string where we search
+    @const char *accept: the string which contains any character that we want to search for
+
+    char *strpbrk (const char *s, const char *accept) {
+        char chr;
+        for (chr : from s->head to s->tail):
+            if string accept contains this chr:
+                return the pointer of this chr;
+        return NULL;
+    }
+
+
+9. strstr:
+    return the first occurrence of string s2 in string s1. return the pointer of s1 if s2 is
+    empty, otherwise NULL if s2 is not found in s1.
+    @const char *s1: the string where we search.
+    @const char *s2: the string which we want to search for
+
+    char *strstr (const char *s1, const char *s2) {
+        if s2 is prefix of s1 or s2 is NULL:
+            return the pointer of s1;
+        else
+            use two-way algorithm to find the pointer.
+    }
+
+
+10. strspn:
+    return the length of the maxinum initial segment of string str which contains only characters in string group.
+    @char const *str: the string where we search
+    @char const *group: the string which provide the characters
+
+    size_t strspn (char const *str, char const *group) {
+        char chr;
+        int count = 0;
+        for (chr : from str->head to str->tail) {
+            if string group contains chr:
+                count++;
+            else
+                break;
+        }
+        return count;
+    }
+
+
+11. strcspn:
+    return the length of the maxinum initial segment of string str which not contains characters in string group.
+    @char const *str: the string where we search
+    @char const *group: the string which provide the characters
+
+    size_t strcspn (char const *str, char const *group) {
+        char chr;
+        int count = 0;
+        for (chr : from str->head to str->tail) {
+            if string group not contains chr:
+                count++;
+            else
+                break;
+        }
+        return count;
+    }
+
+
+12. strtok:
+    parse string s into tokens separated by characters in delim. if s is NULL, the last string strtok() was called with is used.
+    For example:
+        char *s = "-abc-=-def";
+        x = strtok(s, "-");         // x = "abc"
+        x = strtok(NULL, "-=");     // x = "def"
+        x = strtok(NULL, "-=");     // x = NULL
+        // s = "abc\0=-def\0"
+
+    static char *olds;       // global variable
+    char *strtok (char *s, char *delim) {
+        char *token;
+        if (s == NULL) {
+            s = olds;       // use string olds to replace the string s
+            return NULL;
+        }
+        token = s;
+        s = strpbrk (token, delim);     // find the first charater contained by delim after pointer token -- in other word, find the end of the token
+
+        if (s == NULL) 
+            olds = token + '\0';       // add '\0' at the end of string token, this means if there is no character contained by delim in the end of string s, olds will be the last token
+        else {
+            *s = '\0';      // so that x = "abc" instead of x = "abc-=-def" in the example
+            olds = s + 1;   // this means if there is at least one character contained by delim in the end of string token now, the olds will be the other part of last strtok()
+        }
+        return token;
+    }

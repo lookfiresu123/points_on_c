@@ -14,14 +14,19 @@ CUP	chapter_3/header/practice.h	/^enum Liquid { OUNCE = 1, CUP = 8, PINT = 16,QU
 DO_COMPARE_ARRAY_POINT	TEST/test_6.c	14;"	d	file:
 DO_DISASEMBLE_SWITCH	TEST/test_6.c	15;"	d	file:
 DO_DOUBLE_ARRAY	TEST/test_6.c	16;"	d	file:
-DO_PRACTICE_1	chapter_8/source/practice.c	11;"	d	file:
-DO_PRACTICE_2	chapter_8/source/practice.c	12;"	d	file:
-DO_PRACTICE_3	chapter_8/source/practice.c	13;"	d	file:
-DO_PRACTICE_4	chapter_8/source/practice.c	14;"	d	file:
-DO_PRACTICE_5	chapter_8/source/practice.c	15;"	d	file:
-DO_PRACTICE_6	chapter_8/source/practice.c	16;"	d	file:
-DO_PRACTICE_7	chapter_8/source/practice.c	17;"	d	file:
-DO_PRACTICE_8	chapter_8/source/practice.c	18;"	d	file:
+DO_IMPLEMENT_STRRPBRK	chapter_9/source/problem.c	24;"	d	file:
+DO_IMPLEMENT_STRRSTR	chapter_9/source/problem.c	23;"	d	file:
+DO_IMPLEMENT_STRSTR	chapter_9/source/problem.c	22;"	d	file:
+DO_PRACTICE	chapter_9/source/main.c	23;"	d	file:
+DO_PRACTICE_1	chapter_8/source/practice.c	12;"	d	file:
+DO_PRACTICE_2	chapter_8/source/practice.c	13;"	d	file:
+DO_PRACTICE_3	chapter_8/source/practice.c	14;"	d	file:
+DO_PRACTICE_4	chapter_8/source/practice.c	15;"	d	file:
+DO_PRACTICE_5	chapter_8/source/practice.c	16;"	d	file:
+DO_PRACTICE_6	chapter_8/source/practice.c	17;"	d	file:
+DO_PRACTICE_7	chapter_8/source/practice.c	18;"	d	file:
+DO_PRACTICE_8	chapter_8/source/practice.c	19;"	d	file:
+DO_PROBLEM	chapter_9/source/main.c	22;"	d	file:
 DO_TEST_PRACTICE	chapter_8/source/main.c	13;"	d	file:
 DO_TEST_PROBLEM	chapter_8/source/main.c	12;"	d	file:
 Day	chapter_3/header/test.h	/^enum Day { Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday };/;"	g
@@ -44,6 +49,7 @@ MAX_NUM	chapter_1/source/practice_2.c	5;"	d	file:
 Monday	chapter_3/header/test.h	/^enum Day { Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday };/;"	e	enum:Day
 NICKEL	chapter_3/header/practice.h	/^enum coin { PENNY,NICKEL };$/;"	e	enum:coin
 NUM	chapter_1/source/practice_4.c	6;"	d	file:
+NUMS_QUEEN	chapter_8/header/practice.h	11;"	d
 OUNCE	chapter_3/header/practice.h	/^enum Liquid { OUNCE = 1, CUP = 8, PINT = 16,QUART = 32, GALLON = 128 };$/;"	e	enum:Liquid
 PENNY	chapter_3/header/practice.h	/^enum coin { PENNY,NICKEL };$/;"	e	enum:coin
 PINT	chapter_3/header/practice.h	/^enum Liquid { OUNCE = 1, CUP = 8, PINT = 16,QUART = 32, GALLON = 128 };$/;"	e	enum:Liquid
@@ -61,6 +67,8 @@ TRUE	chapter_6/source/practice.c	17;"	d	file:
 Thursday	chapter_3/header/test.h	/^enum Day { Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday };/;"	e	enum:Day
 Tuesday	chapter_3/header/test.h	/^enum Day { Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday };/;"	e	enum:Day
 Wednesday	chapter_3/header/test.h	/^enum Day { Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday };/;"	e	enum:Day
+array_offset	chapter_8/source/practice.c	/^int array_offset(int arrayinfo[], ...) {$/;"	f
+array_offset2	chapter_8/source/practice.c	/^int array_offset2(int arrayinfo[], ...) {$/;"	f
 ascii_to_integer	chapter_7/source/practice.c	/^int ascii_to_integer(char *string){$/;"	f
 assign_bit	chapter_5/source/practice.c	/^void assign_bit(char bit_array[],unsigned bit_number,int value){$/;"	f
 bit_16	chapter_5/source/practice.c	8;"	d	file:
@@ -98,7 +106,16 @@ hermite	chapter_7/source/practice.c	/^int hermite(int n,int x){$/;"	f
 identity_matrix	chapter_8/source/practice.c	/^bool identity_matrix(int matrix[][10]) {$/;"	f
 identity_matrix_extern	chapter_8/source/practice.c	/^bool identity_matrix_extern(int *pos,struct MATRIX matrix_size) {$/;"	f
 if_else	chapter_5/source/problem.c	/^int if_else(void){$/;"	f
+implement_strrpbrk	chapter_9/source/problem.c	/^char *implement_strrpbrk (const char *s1, const char *s2) {$/;"	f
+implement_strrstr	chapter_9/source/problem.c	/^char *implement_strrstr (const char *s1, const char *s2) {$/;"	f
+implement_strstr	chapter_9/source/problem.c	/^char *implement_strstr (const char *s1, const char *s2) {$/;"	f
+initialize	chapter_8/source/practice.c	/^void initialize(int panic[][NUMS_QUEEN]) {$/;"	f
 int_size	chapter_5/source/practice.c	10;"	d	file:
+is_valid	chapter_8/source/practice.c	/^bool is_valid(int panic[][NUMS_QUEEN],int index_row,int index_column) {$/;"	f
+is_valid_column	chapter_8/source/practice.c	/^bool is_valid_column(int panic[][NUMS_QUEEN],int index_row,int index_column) {$/;"	f
+is_valid_oblique_left	chapter_8/source/practice.c	/^bool is_valid_oblique_left(int panic[][NUMS_QUEEN],int index_row,int index_column) {$/;"	f
+is_valid_oblique_right	chapter_8/source/practice.c	/^bool is_valid_oblique_right(int panic[][NUMS_QUEEN],int index_row,int index_column) {$/;"	f
+is_valid_row	chapter_8/source/practice.c	/^bool is_valid_row(int panic[][NUMS_QUEEN],int index_row,int index_column) {$/;"	f
 left_move	chapter_5/source/practice.c	/^void left_move(unsigned int value[],int step){$/;"	f
 length_dst	chapter_4/source/practice.c	7;"	d	file:
 length_src	chapter_4/source/practice.c	8;"	d	file:
@@ -108,6 +125,7 @@ line_end	chapter_1/source/practice_1.c	4;"	d	file:
 main	TEST/test_1.c	/^int main(void){$/;"	f
 main	TEST/test_4.c	/^int main(void){$/;"	f
 main	TEST/test_6.c	/^int main(void){$/;"	f
+main	TEST/test_7.c	/^int main(void) {$/;"	f
 main	chapter_1/source/main.c	/^void main(void){$/;"	f
 main	chapter_2/source/main.c	/^void main(void){$/;"	f
 main	chapter_3/source/main.c	/^int main(void){$/;"	f
@@ -116,6 +134,8 @@ main	chapter_5/source/main.c	/^int main(void){$/;"	f
 main	chapter_6/source/main.c	/^int main(void){$/;"	f
 main	chapter_7/source/main.c	/^int main(){$/;"	f
 main	chapter_8/source/main.c	/^int main(void) {$/;"	f
+main	chapter_9/source/main.c	/^int main (void) {$/;"	f
+make_result	chapter_8/source/practice.c	/^void make_result(int panic[][NUMS_QUEEN],int index_row,int index_column) {$/;"	f
 matrix_mutiply	chapter_8/source/practice.c	/^void matrix_mutiply(int *m1,int *m2,int *r,int x,int y,int z) {$/;"	f
 max_list	chapter_7/source/practice.c	/^int max_list(int first,...){$/;"	f
 microsoft	TEST/test_3.c	4;"	d	file:
@@ -127,6 +147,8 @@ objects	chapter_5/makefile	/^objects = main.o practice.o problem.o$/;"	m
 objects	chapter_6/makefile	/^objects = main.o practice.o$/;"	m
 objects	chapter_7/makefile	/^objects = main.o practice.o problem.o$/;"	m
 objects	chapter_8/makefile	/^objects = main.o practice.o problem.o$/;"	m
+objects_practice	chapter_9/makefile	/^objects_practice = main.o practice.o$/;"	m
+objects_problem	chapter_9/makefile	/^objects_problem = main.o problem.o$/;"	m
 output	TEST/test_2.c	/^int output(char str[],int length){$/;"	f
 practice_1	chapter_4/source/practice.c	/^int practice_1(void){$/;"	f
 practice_1	chapter_5/source/practice.c	/^int practice_1(void){$/;"	f
@@ -170,6 +192,7 @@ practice_problem_225	chapter_3/source/test_1.c	/^static int practice_problem_225
 practice_problem_226	chapter_3/source/test.c	/^int practice_problem_226(void){$/;"	f
 practice_problem_const	chapter_3/source/test.c	/^int practice_problem_const(void){$/;"	f
 print_integer	chapter_7/source/practice.c	/^void print_integer(int integer){$/;"	f
+print_out	chapter_8/source/practice.c	/^void print_out(int panic[][NUMS_QUEEN]) {$/;"	f
 problem_10	chapter_7/source/problem.c	/^void problem_10(int i){$/;"	f
 problem_18	chapter_8/source/problem.c	/^void problem_18(void) {$/;"	f
 problem_2	chapter_5/source/problem.c	/^int problem_2(void){$/;"	f
@@ -232,5 +255,6 @@ test_practice_4	chapter_1/source/practice_4.c	/^void test_practice_4(void){$/;"	
 test_problem	chapter_5/source/problem.c	/^int test_problem(void){$/;"	f
 test_problem	chapter_7/source/problem.c	/^void test_problem(void){$/;"	f
 test_problem	chapter_8/source/problem.c	/^int test_problem(void) {$/;"	f
+test_problem	chapter_9/source/problem.c	/^void test_problem (void) {$/;"	f
 test_test	chapter_3/source/test.c	/^int test_test(void){$/;"	f
 test_test_1	chapter_3/source/test_1.c	/^int test_test_1(void){$/;"	f
