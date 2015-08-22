@@ -30,3 +30,20 @@ void practice_4 (void);
 
 void my_strncat (char *dest, char *src, int dest_len);
 void practice_5 (void);
+
+char *my_strcpy_end(char *dest, char *src);
+void practice_6 (void);
+
+char *my_strrchr (char const *str, int ch);
+void practice_7 (void);
+
+char *my_strnchr (char const *str, int ch, int which);
+void practice_8 (void);
+
+char *count_chars (char const *str, char const *chars);
+void practice_9 (void);
+
+int palindrome (char *string);
+void practice_10 (void);
+
+int practice_11 (void);

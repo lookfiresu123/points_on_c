@@ -183,8 +183,11 @@ out1:
     static char *olds;       // global variable
     char *strtok (char *s, char *delim) {
         char *token;
-        if (s == NULL) {
+        if (s == NULL)
             s = olds;       // use string olds to replace the string s
+        s += strspn (s, delim); // find the first character which is not contained by delim.
+        if (*s == '\0') { // there is no other characters which is not contained by delim.
+            old = s;
             return NULL;
         }
         token = s;

@@ -25,13 +25,13 @@
 #define DO_PRACTICE_2 0
 #define DO_PRACTICE_3 0
 #define DO_PRACTICE_4 0
-#define DO_PRACTICE_5 1
+#define DO_PRACTICE_5 0
 #define DO_PRACTICE_6 0
 #define DO_PRACTICE_7 0
 #define DO_PRACTICE_8 0
 #define DO_PRACTICE_9 0
 #define DO_PRACTICE_10 0
-#define DO_PRACTICE_11 0
+#define DO_PRACTICE_11 1
 #define DO_PRACTICE_12 0
 #define DO_PRACTICE_13 0
 #define DO_PRACTICE_14 0
@@ -200,6 +200,136 @@ void practice_5 (void) {
     my_strncat(dest, str2, dest_len);
 }
 
+char *my_strcpy_end (char *dest, char *src) {
+    char *current = dest;
+    memcpy(dest, src, strlen(src) + 1);
+    current = dest + strlen(dest) + 1;
+    return current;
+}
+
+void practice_6 (void) {
+    char dest[10];
+    char *src = "hello";
+    char *current = dest;
+    current = my_strcpy_end(dest, src);
+}
+
+char *my_strrchr (char const *str, int ch) {
+    char *last = NULL;
+    while (*str != '\0') {
+        if (*str == (char) ch)
+            last = str;
+        str++;
+    }
+    return last;
+}
+
+void practice_7 (void) {
+    char const *str = "hello world";
+    char ch = 'l';
+    char *result;
+    result = my_strrchr(str, (int) ch);
+}
+
+char *my_strnchr (char const *str, int ch, int which) {
+    char *result = NULL;
+    int count;
+    while (*str != '\0') {
+        if (*str == (char) ch)
+            count++;
+        if (count == which) {
+            result = str;
+            break;
+        }
+        str++;
+    }
+    return result;
+}
+
+void practice_8 (void) {
+    char const *str = "hello world";
+    char ch = 'l';
+    int which = 2;
+    char *result;
+    result = my_strnchr(str, (int) ch, which);
+}
+
+int count_chars (char const *str, char const *chars) {
+    int count = 0;
+    //char *gap;
+    while (*str != '\0') {
+        if (str = strpbrk(str, chars)) {
+            //str = gap;
+            count++;
+            str++;
+        }
+        else
+            break;
+    }
+    return count;
+}
+
+void practice_9 (void) {
+    char const *str = "hello world";
+    char const *chars = "else";
+    int count;
+    count = count_chars(str, chars);
+}
+
+int palindrome (char *string) {
+    /* delete unalpha character */
+    char *temp = (char *)malloc((strlen(string) + 1) * sizeof(char));
+    char *current = temp;
+    while (*string != '\0') {
+        if (isalpha(*string))
+            *current++ = *string;
+        string++;
+    }
+    *current = '\0';
+    current = temp;
+    /* change lower to upper */
+    while (*current != '\0') {
+        if (islower(*current))
+            *current = toupper(*current);
+        current++;
+    }
+    current = temp;
+    char *first = temp;
+    char *last = temp + strlen(temp) - 1;
+    while (first <= last) {
+        if (*first != *last)
+            return 0;
+        else {
+            first++;
+            last--;
+        }
+    }
+    return 1;
+}
+
+void practice_10 (void) {
+    char *string = "ab98iA,A.7iBA";
+    if(palindrome(string))
+        printf("true\n");
+    else
+        printf("false\n");
+}
+
+int practice_11 (void) {
+    char str1[100];
+    printf("input a sentence !\n");
+    gets(str1);
+    char *str2 = "the";
+    int count = 0;
+    char *token = NULL;
+    char *current = str1;
+    while (token = strtok(current, " ")) {
+        if (strcmp(token, str2) == 0)
+            count++;
+        current = current + strlen(token) + 1;
+    }
+    return count;
+}
 
 void test_practice (void) {
 #if DO_PRACTICE_1
