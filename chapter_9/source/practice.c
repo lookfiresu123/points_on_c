@@ -31,11 +31,11 @@
 #define DO_PRACTICE_8 0
 #define DO_PRACTICE_9 0
 #define DO_PRACTICE_10 0
-#define DO_PRACTICE_11 1
+#define DO_PRACTICE_11 0
 #define DO_PRACTICE_12 0
 #define DO_PRACTICE_13 0
 #define DO_PRACTICE_14 0
-#define DO_PRACTICE_15 0
+#define DO_PRACTICE_15 1
 #define DO_PRACTICE_16 0
 #define DO_PRACTICE_17 0
 
@@ -329,6 +329,202 @@ int practice_11 (void) {
         current = current + strlen(token) + 1;
     }
     return count;
+}
+
+int prepare_key (char *key) {
+    if (! key)
+        return 0;
+    char *current_key = key;
+    while (*current_key != '\0') {
+        if (! isalpha(*current_key))
+            return 0;
+        current_key++;
+    }
+    current_key = key;
+
+    /* change all lower alpha to upper */
+    while (*current_key != '\0') {
+        *current_key = toupper(*current_key);
+        current_key++;
+    }
+    current_key = key;
+
+    /* delete the repeat alpha */
+    char temp[27];
+    temp[0] = '\0';
+    int count_temp = 0;
+    char *alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    while (*current_key != '\0') {
+        if (! strchr(temp, *current_key)) {
+            temp[count_temp++] = *current_key;
+            temp[count_temp] = '\0';
+        }
+        current_key++;
+    }
+    current_key = key;
+
+    /* fill the remaining alpha */
+    char *current_alpha = alpha;
+    while (*current_alpha != '\0') {
+        if (! strchr(temp, *current_alpha)) {
+            temp[count_temp++] = *current_alpha;
+            temp[count_temp] = '\0';
+        }
+        current_alpha++;
+    }
+    current_alpha = alpha;
+    char *current_temp = temp;
+
+    /* copy temp to key */
+    while (*current_temp != '\0')
+        *current_key++ = *current_temp++;
+    *current_key = '\0';
+
+    current_key = key;
+    current_temp = temp;
+
+    return 1;
+}
+
+void practice_12 (void) {
+    char *keyword = "TRAILblazers";
+    char *key = (char *)malloc(27 * sizeof(char));
+    char *current_keyword = keyword;
+    char *current_key = key;
+    while (*current_keyword != '\0')
+        *current_key++ = *current_keyword++;
+    *current_key = '\0';
+    prepare_key(key);
+}
+
+void encrypt (char *data, char const *key) {
+    char *current_data = data;
+    while (*current_data != '\0') {
+        if (isalpha(*current_data)) {
+            if (isupper(*current_data))
+                *current_data = key[*current_data - 'A'];
+            else {
+                *current_data = toupper(*current_data);
+                *current_data = key[*current_data - 'A'];
+                *current_data = tolower(*current_data);
+            }
+        }
+        current_data++;
+    }
+    current_data = data;
+}
+
+void practice_13 (void) {
+    char *keyword = "TRAILblazers";
+    char *key = (char *)malloc(27 * sizeof(char));
+    char *current_keyword = keyword;
+    char *current_key = key;
+    while (*current_keyword != '\0')
+        *current_key++ = *current_keyword++;
+    *current_key = '\0';
+    prepare_key(key);
+    current_key = key;
+    char *origin_data = "ATTACK at DAWN";
+    char data[100];
+    strcpy(data, origin_data);
+    encrypt(data, (char const *) key);
+}
+
+void decrypt (char *data, char const *key) {
+    char *current_data = data;
+    while (*current_data != '\0') {
+        if (isalpha(*current_data)) {
+            if (isupper(*current_data))
+                *current_data = strchr(key, *current_data) - key + 'A';
+            else {
+                *current_data = toupper(*current_data);
+                *current_data = strchr(key, *current_data) - key + 'A';
+                *current_data = tolower(*current_data);
+            }
+        }
+        current_data++;
+    }
+    current_data = data;
+}
+
+void practice_14 (void) {
+    char *keyword = "TRAILblazers";
+    char *key = (char *)malloc(27 * sizeof(char));
+    char *current_keyword = keyword;
+    char *current_key = key;
+    while (*current_keyword != '\0')
+        *current_key++ = *current_keyword++;
+    *current_key = '\0';
+    prepare_key(key);
+    current_key = key;
+    char *origin_data = "ATTACK at DAWN";
+    char data[100];
+    strcpy(data, origin_data);
+    encrypt(data, (char const *) key);
+    decrypt(data, (char const *) key);
+}
+
+void dollars (char *dest, char const *src) {
+    char *current_dest = dest;
+    if (! src) {
+        *current_dest++ = '$';
+        *current_dest++ = '0';
+        goto out1;
+    }
+    int length_src = strlen(src);
+    int length_before_src = length_src - 2; // the length before point '.'
+    *current_dest++ = '$';
+    if (length_before_src <= 0) {
+        *current_dest++ = '0';
+        goto out1;
+    }
+
+    int temp;
+    int consult;
+    int count = length_before_src;
+    while (count > 0) {
+        temp = count % 3;
+        consult = count / 3;
+        switch (temp) {
+        case 0:
+            *current_dest++ = *(src + length_before_src - count);
+            count--;
+        case 2:
+            *current_dest++ = *(src + length_before_src - count);
+            count--;
+        case 1:
+            *current_dest++ = *(src + length_before_src - count);
+            if (consult > 1)
+                *current_dest++ = ',';
+            count--;
+        }
+    }
+
+out1:
+    /* do the data after point '.' */
+    *current_dest++ = '.';
+    if (! src || length_src == 0) {
+        *current_dest++ = '0';
+        *current_dest++ = '0';
+        *current_dest++ = '\0';
+    }
+    else if (length_src == 1) {
+        *current_dest++ = '0';
+        *current_dest++ = *src;
+        *current_dest++ = '\0';
+    }
+    else {
+        *current_dest++ = *(src + length_src - 2);
+        *current_dest++ = *(src + length_src - 1);
+        *current_dest++ = '\0';
+    }
+
+}
+
+void practice_15 (void) {
+    char *dest = (char *)malloc(100 * sizeof(char));
+    char const *src = "123456789";
+    dollars(dest, src);
 }
 
 void test_practice (void) {

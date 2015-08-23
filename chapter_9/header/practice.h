@@ -47,3 +47,15 @@ int palindrome (char *string);
 void practice_10 (void);
 
 int practice_11 (void);
+
+int prepare_key (char *key);
+void practice_12 (void);
+
+void encrypt (char *data, char const *key);
+void practice_13 (void);
+
+void decrypt (char *data, char const *key);
+void practice_14 (void);
+
+void dollars (char *dest, char const *src);
+void practice_14 (void);
