@@ -27,3 +27,10 @@ typedef struct Ex {
     Ex2 c;
     struct Ex *d;
 } Ex;
+
+typedef struct {
+	short b;
+	int c;
+	long int d;
+	char a;
+} Ex3;

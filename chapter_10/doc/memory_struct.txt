@@ -1,0 +1,44 @@
+1. Data structure alignment and padding:
+        Data structure alignment is the way data is arranged and accessed in computer memory.
+    It consists of two separate but related issues: data alignment and data structure padding.
+    When a modern computer reads from or writes to a memory address, it will do this in word
+    sized chunks (e.g. 4 byte chunks on a 32-bit system) or larger. Data alignment means putting
+    the data at a memory address equal to some multiple of the word size, which increases the
+    system's performance due to the way the CPU handles memory. To align the data, it may be
+    necessary to insert some meaningless bytes between the end of the data structure and the
+    start of the next, which is data structure padding.
+        For example, when the computer's word size is 4 bytes, the data to be read should be at
+    a memory address which is some multiple of 4. Even though the previous data structure end is
+    at address 13, the next data structure should start at address 16, and two padding bytes are
+    inserted between the two data structures at addresses 14 and 15 to align the next data structure
+    at address 16.
+        Alignment: if a word size is 8 bytes
+            char: 1 byte , start at some multiple of 1
+            short: 2 bytes, start at some multiple of 2
+            int: 4 bytes, start at some multiple of 4
+            long int: 8 bytes, start at some multiple of 8
+            double: 8 bytes, start at some multiple of 8
+
+        For example: if a word size is 4 bytes
+        struct ALIGN {
+            char a;     // start at x multiple of 4 (because the alignment of this structure is 4 bytes due to 
+                        // the highest alignment type is int here), take 1 bytes and padding 3 bytes because the
+                        // next element (int) should start at some multiple of 4.
+            int b;      // start at (x+1) multiple of 4, because of padding 3 bytes before, and take 4 bytes
+            char c;     // start at (x+2) multiple of 4, because of int b taking 4 bytes, and padding 3 bytes
+                        // the next data should start at (x+3) multiple of 4 ,assume the next data is also struct ALIGN.
+        };
+
+        a data structure's alignment depends on the highest alignment among the element in it.
+    For example, if a structure A has a element (long long int type whose alignment is 8 bytes),
+    even though the word size is 4 bytes, the data structure's alignment is 8 bytes and the
+    start address of the data structure should at some multiple of 8.
+        so that, if we want to reduce the memory, we should rearrange the order of elements in the
+    data structure from high alignment to low alignment.
+    For example: if a word size is 4 bytes
+    struct ALIGN2 {
+        int b;      // start at x multiple of 4, take 4 bytes
+        char a;     // start at address of x*(4+1)+1, and take 1 byte
+        char c;     // start at address of x*(4+1)+2, and take 1 byte, padding 2 bytes because the next
+                    // data should start at x+3 multiple of 4 ,assume the next data is also struct ALIGN.
+    };

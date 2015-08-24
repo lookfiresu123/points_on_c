@@ -21,13 +21,20 @@
 
 #define DO_PROBLEM_1 1
 
-Ex problem_1 (void) {
-    Ex x = {
+Ex3 problem_1 (void) {
+    Ex y = {
         .a = 10,
         .b = { 'H', 'i', '\0' },
         .c.a = 5,
         .c.b = { -1, 25 },
         .d = 0x0
+    };
+    char s = 'b';
+    Ex3 x = {
+    	.b = -1,
+    	.c = 1,
+    	.d = -1,
+    	.a = 'a'
     };
     return x;
 }
