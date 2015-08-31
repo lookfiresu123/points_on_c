@@ -19,4 +19,9 @@
 #include "types.h"
 
 Ex problem_1 (void);
+
+void problem_2 (void);
+
+void problem_3 (void);
+
 void test_problem (void);

@@ -17,9 +17,12 @@
  */
 #include <stdlib.h>
 #include <stdio.h>
+#include <time.h>
 #include "../header/types.h"
 
-#define DO_PROBLEM_1 1
+#define DO_PROBLEM_1 0
+#define DO_PROBLEM_2 0
+#define DO_PROBLEM_3 1
 
 Ex3 problem_1 (void) {
     Ex y = {
@@ -39,9 +42,43 @@ Ex3 problem_1 (void) {
     return x;
 }
 
+void problem_2 (void) {
+    int count = 10;
+    int result[10];
+    while(count-- > 0) {
+    /* linux system use Linear congruential algorithm to generate random numbers
+     * Linear congruential:
+     * use the old random number to be the random seed of the new one.
+     * for example:
+     *  {
+     *      for (i = 0 ; i < n ; i++) {
+                random[i] = (p * seed + q) mod m;
+                seed = random[i];
+            }
+     *  }
+     * the same seed may generate different random numbers in different operating system (because p,q,m is different)
+     */
+        result[count] = rand();
+    }
+}
+
+void problem_3 (void) {
+    /* the value of enum should suit with integer , integer contains long, int, short, char and unsigned ... */
+    enum X {A = -0xffffffff, B = 0xffffffffffffffff} x;
+    //enum X {A = -0xffffffff, B = 0x10000000000000000} x;
+    //enum X {A = -0.1, B = 0xffffffffffffffff} x;
+    x = A;
+}
+
 void test_problem (void) {
 #if DO_PROBLEM_1
     problem_1();
+#endif
+#if DO_PROBLEM_2
+    problem_2();
+#endif
+#if DO_PROBLEM_3
+    problem_3();
 #endif
 }
 
