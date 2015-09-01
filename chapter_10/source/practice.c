@@ -17,6 +17,7 @@
  */
 #include <stdlib.h>
 #include <stdio.h>
+#include <assert.h>
 #include "../header/types.h"
 
 #define DO_PRACTICE_1 0
@@ -29,6 +30,8 @@ Long_way_call *practice_1 (void) {
     Telephone_info *telephone_use = malloc(sizeof(*telephone_use));
     Telephone_info *telephone_call = malloc(sizeof(*telephone_call));
     Telephone_info *telephone_pay = malloc(sizeof(*telephone_pay));
+
+    assert(long_way_call && telephone_use && telephone_call && telephone_pay);
 
     /* initialize telephone_use */
     telephone_use->area_num = 0x1;
@@ -57,6 +60,7 @@ Long_way_call *practice_1 (void) {
 
 Sale *practice_2 (void) {
     Sale *sale = malloc(sizeof(*sale));
+    assert(sale);
     strcpy(sale->customer_name, "chensu");
     strcpy(sale->customer_address, "nanjing, china");
     strcpy(sale->model, "BMW");
