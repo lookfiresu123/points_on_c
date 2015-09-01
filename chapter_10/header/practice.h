@@ -17,3 +17,11 @@
  */
 
 #include "types.h"
+
+Long_way_call *practice_1 (void);
+
+Sale *practice_2 (void);
+
+machine_inst practice_3 (void);
+
+void test_practice (void);

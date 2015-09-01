@@ -22,7 +22,19 @@
 
 #define DO_PROBLEM_1 0
 #define DO_PROBLEM_2 0
-#define DO_PROBLEM_3 1
+#define DO_PROBLEM_3 0
+#define DO_PROBLEM_4 0
+#define DO_PROBLEM_5 1
+
+struct {
+    int a:2;
+} x;
+
+union {
+    int a;
+    float b;
+    char c;
+} y;
 
 Ex3 problem_1 (void) {
     Ex y = {
@@ -64,10 +76,28 @@ void problem_2 (void) {
 
 void problem_3 (void) {
     /* the value of enum should suit with integer , integer contains long, int, short, char and unsigned ... */
-    enum X {A = -0xffffffff, B = 0xffffffffffffffff} x;
+    /* the value stored in the memory will be expanded to 4 bytes or 8 bytes, it depends to the value you input */
+    enum X {A = (short)0x1, B = (long int)0xffffffffffffffff} x;
+    //enum X {A = -0xffffffff, B = 0xffffffffffffffff} x;
     //enum X {A = -0xffffffff, B = 0x10000000000000000} x;
     //enum X {A = -0.1, B = 0xffffffffffffffff} x;
     x = A;
+}
+
+void problem_4 (void) {
+    /* binary:
+     * x = 0 --> x = 01 --> x = 10 (-2 for decimal)
+     */
+    x.a = 1;
+    x.a += 1;
+    printf("%d\n",x.a);
+}
+
+void problem_5 (void) {
+    y.a = 25;       // occupy 4 bytes, change: 0x00 0x00 0x00 0x00 --> 0x19 0x00 0x00 0x00
+    y.b = 3.14;     // occupy 4 bytes, change: 0x19 0x00 0x00 0x00 --> 0xc3 0xf5 0x48 0x40
+    y.c = 'x';      // occupy 1 byte,  change: 0xc3 0xf5 0x48 0x40 --> 0x78 0xf5 0x48 0x40
+    printf("%d, %g, %c\n", y.a, y.b, y.c);      // output: y.a != (25||3.14||'x') , y.b != (25||3.14||'x') , y.c = 'x'
 }
 
 void test_problem (void) {
@@ -79,6 +109,12 @@ void test_problem (void) {
 #endif
 #if DO_PROBLEM_3
     problem_3();
+#endif
+#if DO_PROBLEM_4
+    problem_4();
+#endif
+#if DO_PROBLEM_5
+    problem_5();
 #endif
 }
 
