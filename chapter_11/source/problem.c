@@ -23,9 +23,9 @@
 #define DO_PROBLEM_2 0
 #define DO_PROBLEM_3 0
 #define DO_PROBLEM_4 0
-#define DO_PROBLEM_5 0
+#define DO_PROBLEM_5 1
 #define DO_PROBLEM_6 0
-#define DO_PROBLEM_7 1
+#define DO_PROBLEM_7 0
 
 #define ORDER_INCREMENT 1
 #define ORDER_DECREMENT 0

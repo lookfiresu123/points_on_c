@@ -16,3 +16,7 @@
  * =====================================================================================
  */
 
+int *practice_1 (void);
+void practice_2 (void);
+char *practice_3 (void);
+void test_practice (void);
