@@ -19,8 +19,14 @@
 #include <sys/resource.h>
 
 int main (void) {
-    struct rlimit rl;
-    int result = getrlimit(RLIMIT_STACK, &rl);
-    return result;
+//    struct rlimit rl;
+//    int result = getrlimit(RLIMIT_STACK, &rl);
+#if 0
+    int i = 0;
+    int j = 0;
+    int x = i++ + ++i;
+    int y = ++j + ++j;
+#endif
+    return 0;
 }
 

@@ -20,8 +20,8 @@
 #include <assert.h>
 #include "../header/problem.h"
 
-#define DO_PROBLEM_1 1
-#define DO_PROBLEM_2 0
+#define DO_PROBLEM_1 0
+#define DO_PROBLEM_2 1
 #define DO_PROBLEM_3 0
 #define DO_PROBLEM_4 0
 #define DO_PROBLEM_5 0
@@ -110,13 +110,76 @@ int sll_insert_final (register Node **linkp, int new_value) {
     return TRUE;
 }
 
+/* two-way list */
+int dll_insert (Node_two_way *root, int value) {
+    Node_two_way *current, *next, *new;
+
+    /* check whether there is already a node with this value in the list
+     * if yes, then return FALSE; else, malloc memory for the new node,
+     * initialize it, and the current node should be the previous node of
+     * the new node, and the next node should be the next node of the new
+     * node. */
+    for (current = root ; (next = current->next) != NULL ; current = next) {
+        if (next->value == value)
+            return FALSE;
+        if (next->value > value)
+            break;
+    }
+    new = malloc(sizeof(*new));
+    if (new == NULL)
+        return FALSE;
+    new->value = value;
+
+    /* insert the new node to the list */
+    if (next != NULL) {
+        /*
+         * situation 1: the correct position is not the tail of list
+         */
+        /* situation 1.1: the correct position is not the head of list, in other words, the current is not the root */
+        if (current != root) {
+            current->next = new;
+            new->prev = current;
+            new->next = next;
+            next->prev = new;
+        }
+        /* situation 1.2: the correct position is the head of list, in other words, the current is not the root */
+        else {
+             root->next = new;
+             new->prev = NULL;
+             new->next = next;
+             next->prev = new;
+        }
+    }
+    else {
+        /*
+         * situation 2: the correct position is the tail of list
+         */
+        /* situation 2.1: the correct position is not the head of list, in other words, the current is not the root. */
+        if (current != root) {
+            current->next = new;
+            new->prev = current;
+            new->next = NULL;
+            root->prev = new;
+        }
+        /* situation 2.2: the correct position is the head of list, in other words, the current is not the root. */
+        else {
+            new->next = NULL;
+            new->prev = NULL;
+            root->next = new;
+            root->prev = new;
+        }
+    }
+    root->value ++;
+    return TRUE;
+}
+
 Node *create_list (int *point_array, int length_array) {
     Node *root, *current, *new;
     if (length_array == 0)
         return NULL;
     int i;
     for (i = 0 ; i < length_array ; i++) {
-        /* melloc memory for the new node */
+        /* malloc memory for the new node */
         new = malloc(sizeof(*new));
         assert(new);
         new->value = point_array[i];
@@ -130,6 +193,40 @@ Node *create_list (int *point_array, int length_array) {
             current = new;
         }
     }
+    return root;
+}
+
+Node_two_way *create_list_two_way (int *point_array, int length_array) {
+    Node_two_way *root, *current, *new;
+    /* malloc memory for the root node, and initialize it */
+    root = malloc(sizeof(*root));
+    root->prev = NULL;
+    root->next = NULL;
+    root->value = length_array;
+    current = root;
+
+    int i;
+    for (i = 0 ; i < length_array ; i++) {
+        /* malloc memory for the new node, and initialize it */
+        new = malloc(sizeof(*new));
+        new->value = point_array[i];
+        /* the operation for initializing the first node */
+        if (i == 0) {
+            new->prev = NULL;
+            root->next = new;
+        }
+        /* the operation for initializing the node which is not the first node */
+        else {
+            current->next = new;
+            new->prev = current;
+        }
+        current = new;
+    }
+
+    /* the operation for initializing the last node */
+    new->next = NULL;
+    root->prev = new;
+
     return root;
 }
 
@@ -154,9 +251,29 @@ void problem_1 (void) {
     }
 }
 
+void problem_2 (void) {
+    int array[10] = { 2, 4, 7, 1, 9, 0, 3, 5, 8, 6 };
+    int length_array = 10;
+    int new_value = 12;
+    Node_two_way *root = create_list_two_way(array, length_array);
+    Node_two_way *current;
+    for (current = root->next ; current != NULL ; current = current->next) {
+        printf("%d ", current->value);
+    }
+    printf("\n");
+    dll_insert(root, new_value);
+    for (current = root->next ; current != NULL ; current = current->next) {
+        printf("%d ", current->value);
+    }
+}
+
 void test_problem (void) {
 #if DO_PROBLEM_1
     problem_1();
 #endif
+#if DO_PROBLEM_2
+    problem_2();
+#endif
+
 }
 
