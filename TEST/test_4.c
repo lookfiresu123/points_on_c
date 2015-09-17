@@ -108,16 +108,23 @@ void test_26(){
 /*
  * 计算输入参数的平均值
  */
-float test_27(int n_value, ...){//在这个参数格式中，n_value为第一个参数
+float test_27(int n_value, ...){//在这个参数格式中，n_value为可变参数的前一个参数
     float sum = 0;
     va_list var_arg;
     int count;
-    
+
     //初始化要访问的参数
-    va_start(var_arg,n_value);//n_value为第一个参数
+    va_start(var_arg,n_value);// var_arg = &n_value + 1
     //顺序访问参数
     for(count = 0;count < n_value;count++){
-        sum += va_arg(var_arg,int);//返回下一个参数（其中，int为下一个参数的类型）
+        sum += va_arg(var_arg,int); // 返回接下去要访问的参数（即当前var_arg指向的参数，int为该参数的类型）
+                                    // 访问完后，最后将var_arg的指针指向下一个要访问的参数。
+        /*
+         * @1：get *var_arg
+         * @2：cast *var_arg to int
+         * @3：return *var_arg
+         * @4：var_arg++
+         * */
     }
     //结束访问参数
     va_end(var_arg);
