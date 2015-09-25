@@ -18,13 +18,12 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <assert.h>
+#include <string.h>
 #include "../header/problem.h"
 
 #define DO_PROBLEM_1 0
-#define DO_PROBLEM_2 1
-#define DO_PROBLEM_3 0
-#define DO_PROBLEM_4 0
-#define DO_PROBLEM_5 0
+#define DO_PROBLEM_2 0
+#define DO_PROBLEM_3 1
 
 #define FALSE 0
 #define TRUE 1
@@ -377,6 +376,7 @@ void problem_2 (void) {
     }
     printf("\n");
     enum METHOD { DO_DLL_INSERT, DO_DLL_INSERT_ADVANCED, DO_DLL_INSERT_FINAL } method;
+    method = DO_DLL_INSERT_FINAL;
     switch(method) {
     case DO_DLL_INSERT:
         dll_insert(root, new_value);
@@ -394,6 +394,77 @@ void problem_2 (void) {
     }
 }
 
+void Init_index_table (Node_char **table) {
+    int i;
+    for (i = 0 ; i < 26 ; i++) {
+        *table = malloc(sizeof(**table));
+        (*table)->index = 'a' + i;
+        (*table)->list = NULL;
+        table = &(*table)->next;
+    }
+    *table = NULL;
+}
+
+static int EXISTED = 0;
+static int SUCCESS = 1;
+
+/*
+ * insert a string to a correct position in the index table
+ * */
+// @table: index table which store strings
+// @string: the string which to be inserted
+int Insert_string (Node_char *table, char *string) {
+    // find the list that match the first character of string
+    Node_char *pos_node_char = table;
+    while (pos_node_char) {
+        if (pos_node_char->index == *string)
+            break;
+        pos_node_char = pos_node_char->next;
+    }
+
+    // find the correct position to insert into
+    Node_string **pos_node_string = &pos_node_char->list;
+    int temp = 1;
+    while( *pos_node_string && (temp = strcmp((*pos_node_string)->string, string)) < 0)
+        pos_node_string = &(*pos_node_string)->next;
+
+    if (temp == 0)
+        return EXISTED;
+    else {
+        // insert into there
+        Node_string *new = malloc(sizeof(*new));
+        new->string = string;
+        new->next = *pos_node_string; // maybe NULL
+        *pos_node_string = new;
+        return SUCCESS;
+    }
+}
+
+void problem_3 (void) {
+    Node_char *table;
+    Init_index_table(&table);
+    char *string[10] = { "tencent" , "google", "sina", "baidu", "apple", 
+                         "htc", "sansung", "yahoo", "ebay", "microsoft" };
+    int i;
+    for (i = 0 ; i < 10 ; i++)
+        Insert_string(table, string[i]);
+
+    // display table
+    Node_char *p = table;
+    Node_string *q;
+    while (p) {
+        printf("%c: ", p->index);
+        q = p->list;
+        while (q) {
+            printf("%s ", q->string);
+            q = q->next;
+        }
+        printf("\n");
+        p = p->next;
+    }
+
+}
+
 void test_problem (void) {
 #if DO_PROBLEM_1
     problem_1();
@@ -401,6 +472,8 @@ void test_problem (void) {
 #if DO_PROBLEM_2
     problem_2();
 #endif
-
+#if DO_PROBLEM_3
+    problem_3();
+#endif
 }
 
