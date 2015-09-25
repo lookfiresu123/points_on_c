@@ -110,7 +110,7 @@ int sll_insert_final (register Node **linkp, int new_value) {
     return TRUE;
 }
 
-/* two-way list */
+/* two-way list insert normal code */
 int dll_insert (Node_two_way *root, int value) {
     Node_two_way *current, *next, *new;
 
@@ -122,9 +122,12 @@ int dll_insert (Node_two_way *root, int value) {
     for (current = root ; (next = current->next) != NULL ; current = next) {
         if (next->value == value)
             return FALSE;
-        if (next->value > value)
+        else if (next->value > value)
             break;
     }
+
+    /* the current node is the correct position to insert into */
+
     new = malloc(sizeof(*new));
     if (new == NULL)
         return FALSE;
@@ -137,6 +140,7 @@ int dll_insert (Node_two_way *root, int value) {
          */
         /* situation 1.1: the correct position is not the head of list, in other words, the current is not the root */
         if (current != root) {
+            // none is NULL
             current->next = new;
             new->prev = current;
             new->next = next;
@@ -144,6 +148,7 @@ int dll_insert (Node_two_way *root, int value) {
         }
         /* situation 1.2: the correct position is the head of list, in other words, the current is not the root */
         else {
+            // make the prev NULL
              root->next = new;
              new->prev = NULL;
              new->next = next;
@@ -156,6 +161,7 @@ int dll_insert (Node_two_way *root, int value) {
          */
         /* situation 2.1: the correct position is not the head of list, in other words, the current is not the root. */
         if (current != root) {
+            // make the next NULL
             current->next = new;
             new->prev = current;
             new->next = NULL;
@@ -163,12 +169,121 @@ int dll_insert (Node_two_way *root, int value) {
         }
         /* situation 2.2: the correct position is the head of list, in other words, the current is not the root. */
         else {
+            // both make the prev and next NULL
             new->next = NULL;
             new->prev = NULL;
             root->next = new;
             root->prev = new;
         }
     }
+    root->value ++;
+    return TRUE;
+}
+
+/* two-way list insert advanced and reduced code */
+int dll_insert_advanced (Node_two_way *root, int value) {
+    Node_two_way *current, *next, *new;
+
+    /* check whether there is already a node with this value in the list
+     * if yes, then return FALSE; else, malloc memory for the new node,
+     * initialize it, and the current node should be the previous node of
+     * the new node, and the next node should be the next node of the new
+     * node. */
+    for (current = root ; (next = current->next) != NULL ; current = next) {
+        if (next->value == value)
+            return FALSE;
+        else if (next->value > value)
+            break;
+    }
+
+    /* the current node is the correct position to insert into */
+
+    new = malloc(sizeof(*new));
+    if (new == NULL)
+        return FALSE;
+    new->value = value;
+
+    /* insert the new node to the list */
+    if (next != NULL) {
+        /*
+         * situation 1: the correct position is not the tail of list
+         */
+        /* situation 1.1: the correct position is not the head of list, in other words, the current is not the root */
+        if (current != root) {
+            // none is NULL
+            current->next = new;
+            new->prev = current;
+        }
+        /* situation 1.2: the correct position is the head of list, in other words, the current is not the root */
+        else {
+            // make the prev NULL
+             root->next = new;
+             new->prev = NULL;
+        }
+        new->next = next;
+        next->prev = new;
+    }
+    else {
+        /*
+         * situation 2: the correct position is the tail of list
+         */
+        /* situation 2.1: the correct position is not the head of list, in other words, the current is not the root. */
+        if (current != root) {
+            // make the next NULL
+            current->next = new;
+            new->prev = current;
+        }
+        /* situation 2.2: the correct position is the head of list, in other words, the current is not the root. */
+        else {
+            // both make the prev and next NULL
+            new->prev = NULL;
+            root->next = new;
+        }
+        new->next = NULL;
+        root->prev = new;
+    }
+    root->value ++;
+    return TRUE;
+}
+
+/* two-way list insert final and most-reduced code */
+int dll_insert_final (Node_two_way *root, int value) {
+    register Node_two_way *current, *next, *new;
+
+    /* check whether there is already a node with this value in the list
+     * if yes, then return FALSE; else, malloc memory for the new node,
+     * initialize it, and the current node should be the previous node of
+     * the new node, and the next node should be the next node of the new
+     * node. */
+    for (current = root ; (next = current->next) != NULL ; current = next) {
+        if (next->value == value)
+            return FALSE;
+        else if (next->value > value)
+            break;
+    }
+
+    /* the current node is the correct position to insert into */
+
+    new = malloc(sizeof(*new));
+    if (new == NULL)
+        return FALSE;
+    new->value = value;
+
+    /* insert the new node to the list */
+    new->next = next;
+    current->next = new;
+
+    if (current != root)
+        new->prev = current;
+    else
+        new->prev = NULL;
+
+    if (next != NULL)
+        next->prev = new;
+    else
+        root->prev = new;
+
+
     root->value ++;
     return TRUE;
 }
@@ -261,7 +376,19 @@ void problem_2 (void) {
         printf("%d ", current->value);
     }
     printf("\n");
-    dll_insert(root, new_value);
+    enum METHOD { DO_DLL_INSERT, DO_DLL_INSERT_ADVANCED, DO_DLL_INSERT_FINAL } method;
+    switch(method) {
+    case DO_DLL_INSERT:
+        dll_insert(root, new_value);
+        break;
+    case DO_DLL_INSERT_ADVANCED:
+        dll_insert_advanced(root, new_value);
+        break;
+    case DO_DLL_INSERT_FINAL:
+    dll_insert_final(root, new_value);
+        break;
+    }
+    //dll_insert(root, new_value);
     for (current = root->next ; current != NULL ; current = current->next) {
         printf("%d ", current->value);
     }
