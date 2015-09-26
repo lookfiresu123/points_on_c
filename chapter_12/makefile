@@ -1,5 +1,5 @@
 objects_problem = main.o problem.o
-objects_practice = main.o practice.o
+objects_practice = main.o practice.o problem.o
 
 vpath %.c source
 vpath %.h header
@@ -9,8 +9,8 @@ main : $(objects_practice)
 main.o : problem.h practice.h
 	gcc -c -g -Wall source/main.c -o main.o
 # problem.c
-# problem.o : problem.h
-# 	gcc -c -g -Wall source/problem.c -o problem.o
+problem.o : problem.h
+	gcc -c -g -Wall source/problem.c -o problem.o
 # practice.c
 practice.o : problem.h
 	gcc -c -g -Wall source/practice.c -o practice.o

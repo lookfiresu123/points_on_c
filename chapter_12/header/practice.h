@@ -25,4 +25,8 @@ void practice_1 (void);
 Node *search_for_value (Node *root, int value);
 void practice_2 (void);
 
+
+int dll_insert_practice (register Node_two_way **first_ptr, register Node_two_way **last_ptr, int value);
+void practice_3 (void);
+
 void test_practice (void);
