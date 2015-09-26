@@ -15,4 +15,9 @@
  *
  * =====================================================================================
  */
+#include "../header/problem.h"
 
+int Count_nodes (Node *root);
+Node **tail_insert_node (Node **pos_tail, int value);
+void practice_1 (void);
+void test_practice (void);

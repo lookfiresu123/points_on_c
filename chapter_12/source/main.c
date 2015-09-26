@@ -18,8 +18,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#define DO_PROBLEM 1
-#define DO_PRACTICE 0
+#define DO_PROBLEM 0
+#define DO_PRACTICE 1
 
 #if DO_PROBLEM
 #include "../header/problem.h"
