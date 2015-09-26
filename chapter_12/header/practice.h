@@ -20,4 +20,9 @@
 int Count_nodes (Node *root);
 Node **tail_insert_node (Node **pos_tail, int value);
 void practice_1 (void);
+
+
+Node *search_for_value (Node *root, int value);
+void practice_2 (void);
+
 void test_practice (void);

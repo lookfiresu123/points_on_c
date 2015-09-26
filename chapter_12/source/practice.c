@@ -20,7 +20,8 @@
 #include <string.h>
 #include "../header/problem.h"
 
-#define DO_PRACTICE_1 1
+#define DO_PRACTICE_1 0
+#define DO_PRACTICE_2 1
 
 int Count_nodes (Node *root) {
     int count = 0;
@@ -50,10 +51,36 @@ void practice_1 (void) {
     pos_tail = tail_insert_node(pos_tail, 4);
     pos_tail = tail_insert_node(pos_tail, 5);
     count = Count_nodes(root);
+    printf("%d\n",count);
+}
+
+Node *search_for_value (Node *root, int value) {
+    Node *current = root;
+    while (current && current->value != value)
+        current = current->next;
+    return current;
+}
+
+void practice_2 (void) {
+    Node *result;
+    Node *root;
+    Node **pos_tail = &root;
+    pos_tail = tail_insert_node(pos_tail, 3);
+    pos_tail = tail_insert_node(pos_tail, 2);
+    pos_tail = tail_insert_node(pos_tail, 5);
+    pos_tail = tail_insert_node(pos_tail, 1);
+    pos_tail = tail_insert_node(pos_tail, 4);
+    int value = 1;
+    result = search_for_value(root, value);
+    printf("%p\n",result);
 }
 
 void test_practice (void) {
 #if DO_PRACTICE_1
     practice_1();
 #endif
+#if DO_PRACTICE_2
+    practice_2();
+#endif
 }
+
