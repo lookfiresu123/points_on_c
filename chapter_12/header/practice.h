@@ -32,4 +32,6 @@ void practice_3 (void);
 int sll_remove (Node **rootp, Node *node);
 void practice_5 (void);
 
+int sll_remove (Node **rootp, Node *node);
+void practice_5 (void);
 void test_practice (void);

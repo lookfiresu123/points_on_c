@@ -24,8 +24,8 @@
 #define DO_PRACTICE_2 0
 #define DO_PRACTICE_3 0
 #define DO_PRACTICE_4 0
-#define DO_PRACTICE_5 1
-#define DO_PRACTICE_6 0
+#define DO_PRACTICE_5 0
+#define DO_PRACTICE_6 1
 #define DO_PRACTICE_7 0
 
 #define NODE_SIZE 10000
@@ -227,6 +227,59 @@ void practice_5 (void) {
     int length_array = 5;
     Node *first = create_list(array, length_array);
     sll_remove(&first, first->next);
+}
+
+int dll_remove (Node_two_way *rootp, Node_two_way *node) {
+    // find the head and tail of the list
+    Node_two_way *head = rootp->next;
+    Node_two_way *tail = rootp->prev;
+
+    Node_two_way *current = head;
+    // search for the "node" in the list
+    while (current) {
+        if (current == node)
+            break;
+        current = current->next;
+    }
+
+    if (! current)      // if there is no "none" in the list
+        return FALSE;
+
+    // if the "node" exist, remove it
+    if (current == head && current != tail) {
+        // if the "node" is the head but not the tail of the list
+        rootp->next = current->next;
+        current->next->prev = NULL;
+    }
+    else if (current == tail && current != head) {
+        // if the "node" is the tail but not the head of the list
+        rootp->prev = current->prev;
+        current->prev->next = NULL;
+    }
+    else if (current == tail && current == head) {
+        // if the "node" is either the head or the tail of the list
+        rootp->prev = current->prev;
+        rootp->next = current->next;
+        current->prev->next = NULL;
+        current->next->prev = NULL;
+    }
+    else {
+        // if the "node" is at middle in the list
+        current->prev->next = current->next;
+        current->next->prev = current->prev;
+    }
+
+    free(current);
+    rootp->value --;
+    return TRUE;
+}
+
+void practice_6 (void) {
+    int array[] = { 1, 2, 3, 4, 5 };
+    int length_array = 5;
+    int *array_ptr = array;
+    Node_two_way *rootp = create_list_two_way (array_ptr, length_array);
+    dll_remove(rootp, rootp->next);
 }
 
 void test_practice (void) {
