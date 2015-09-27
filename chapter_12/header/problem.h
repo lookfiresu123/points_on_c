@@ -55,4 +55,7 @@ void Init_index_table (Node_char **table);
 int Insert_string (Node_char *table, char *string);
 void problem_3 (void);
 
+Node *sll_reverse (Node *first);
+void practice_4 (void);
+
 void test_problem (void);

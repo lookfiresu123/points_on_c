@@ -29,4 +29,7 @@ void practice_2 (void);
 int dll_insert_practice (register Node_two_way **first_ptr, register Node_two_way **last_ptr, int value);
 void practice_3 (void);
 
+int sll_remove (Node **rootp, Node *node);
+void practice_5 (void);
+
 void test_practice (void);
