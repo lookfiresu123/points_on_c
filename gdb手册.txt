@@ -48,4 +48,18 @@
         cc -c -g -Wall source/practice.c -o practice.o
 14、查看practice.c的预编译c文件:
 	gcc -std=c99 -O0 -E practice.c | indent -linux
+15、查看全局符号表的信息（其中symbol_table为存储信息的文件）:
+    nm -s -p a.out > symbol_table   （按遇到的字符顺序显示）
+    nm -s -n a.out > symbol_table   （按字符的地址顺序显示）
+16、查看全局符号表的详细信息：
+    readelf -s a.out > symbol_table
+17、objdump：
+    查看对象文件所有的节section：
+    objdump -h a.out/a.o > objdump
+    查看对象文件所有的符号：
+    objdump -t a.out/a.o > objdump
+    查看对象文件的汇编代码：
+    objdump -Sl --no-show-raw-insn a.out/a.o > objdump
+18、查看链接信息：
+    gcc -M a.c b.c c.c > main.linker.map
 
