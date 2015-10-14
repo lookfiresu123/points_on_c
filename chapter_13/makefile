@@ -15,7 +15,7 @@ main.o : problem.h practice.h node.h
 # function.o :
 # 	gcc -c -g -Wall source/function.c -o function.o
 # practice.c
-practice.o :
+practice.o : practice.h
 	gcc -c -g -Wall source/practice.c -o practice.o
 .PHONY : clean
 clean :

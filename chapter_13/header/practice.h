@@ -15,6 +15,7 @@
  *
  * =====================================================================================
  */
+#include "node.h"
 
 typedef struct Count_Character {
     int count_cntrl;
@@ -36,5 +37,21 @@ typedef struct Rate_Character {
     double rate_print;
 } Type_Rate;
 
+typedef enum { NEW, DELETE, FORWARD, BACKWARD, SEARCH, EDIT } Trans_type;
+
+typedef struct TRANSACTION {
+    Trans_type type;
+} Transaction;
+
 void practice_1 (void);
+
+int Getnode_Int (Node *node);
+void universal (Node *root, int (*callback)(Node *node));
+void practice_2 (void);
+
+void cmp_swap_Int (void *x, void *y);
+void sort (void *first, int cnt, size_t len_element,
+        void (*callback) (void *x, void *y));
+void practice_4 (void);
+
 void test_practice (void);
