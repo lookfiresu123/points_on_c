@@ -17,8 +17,8 @@
  */
 #include <stdlib.h>
 
-#define DO_PRACTICE 0
-#define DO_PROBLEM 1
+#define DO_PRACTICE 1
+#define DO_PROBLEM 0
 
 #if DO_PRACTICE
 #include "../header/practice.h"

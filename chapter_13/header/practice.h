@@ -16,3 +16,25 @@
  * =====================================================================================
  */
 
+typedef struct Count_Character {
+    int count_cntrl;
+    int count_space;
+    int count_digit;
+    int count_lower;
+    int count_upper;
+    int count_punct;
+    int count_print;
+} Type_Cnt;
+
+typedef struct Rate_Character {
+    double rate_cntrl;
+    double rate_space;
+    double rate_digit;
+    double rate_lower;
+    double rate_upper;
+    double rate_punct;
+    double rate_print;
+} Type_Rate;
+
+void practice_1 (void);
+void test_practice (void);
