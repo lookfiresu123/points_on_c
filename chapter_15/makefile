@@ -9,7 +9,7 @@ main : $(objects_problem)
 main.o : problem.h practice.h
 	gcc -c -g -Wall source/main.c -o main.o
 # problem.c
-problem.o : test1.h test2.h
+problem.o :
 	gcc -c -g -Wall source/problem.c -o problem.o
 # practice.c
 # practice.o : practice.h

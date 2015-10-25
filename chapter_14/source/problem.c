@@ -17,8 +17,11 @@
  */
 #include <stdlib.h>
 #include <stdio.h>
+#include "../header/test1.h"
+#include "../header/test2.h"
 
-#define DO_PROBLEM_1 1
+#define DO_PROBLEM_1 0
+#define DO_PROBLEM_2 1
 
 #define FACTORIAL(rst, n)   \
         int i;              \
@@ -36,8 +39,25 @@ int problem_1 (void) {
     return result;
 }
 
+int problem_2 (void) {
+    Year_Time year_time = {
+        .year = 2015,
+        .month = 10,
+        .day = 25,
+        .day_time.hour = 18,
+        .day_time.minute = 24,
+        .day_time.seconds = 59
+    };
+    int a[10];
+    int *p = NULL;
+    return 0;
+}
+
 void test_problem (void) {
 #if DO_PROBLEM_1
     problem_1();
+#endif
+#if DO_PROBLEM_2
+    problem_2();
 #endif
 }
