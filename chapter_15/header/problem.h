@@ -19,5 +19,11 @@
 #define _PROBLEM_H 1
 int problem_1 (void);
 
+int problem_2 (void);
+
+int problem_3 (void);
+
+long problem_4 (void);
+
 int test_problem (void);
 #endif
