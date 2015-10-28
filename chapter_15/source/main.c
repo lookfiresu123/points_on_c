@@ -20,8 +20,8 @@
 #include "../header/problem.h"
 #include "../header/practice.h"
 
-#define DO_PROBLEM 1
-#define DO_PRACTICE 0
+#define DO_PROBLEM 0
+#define DO_PRACTICE 1
 
 int main (void) {
 #if DO_PROBLEM

@@ -26,7 +26,7 @@
 #define CHECK_OPEN_STREAM(x)        \
     {                               \
         if (x == NULL) {            \
-            perror(x);              \
+            perror("fopen");        \
             exit(EXIT_FAILURE);     \
         }                           \
     }

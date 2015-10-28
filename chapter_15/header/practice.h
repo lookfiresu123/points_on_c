@@ -17,5 +17,11 @@
  */
 #ifndef _PRACTICE_H
 #define _PRACTICE_H 1
+    int practice_1 (void);
+
+    int practice_2 (void);
+
+    int practice_4 (void);
+
     int test_practice (void);
 #endif
