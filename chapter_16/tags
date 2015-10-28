@@ -1,0 +1,34 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CARD	header/problem.h	/^    struct CARD {$/;"	s
+CARD_COUNT	source/problem.c	59;"	d	file:
+Card	header/problem.h	/^    typedef struct CARD Card;$/;"	t	typeref:struct:CARD
+DO_PRACTICE	source/main.c	24;"	d	file:
+DO_PROBLEM	source/main.c	23;"	d	file:
+DO_PROBLEM_1	source/problem.c	24;"	d	file:
+FALSE	source/problem.c	27;"	d	file:
+NODE	header/problem.h	/^    struct NODE {$/;"	s
+Node	header/problem.h	/^    typedef struct NODE Node;$/;"	t	typeref:struct:NODE
+PLAYER	header/problem.h	/^    struct PLAYER {$/;"	s
+Player	header/problem.h	/^    typedef struct PLAYER Player;$/;"	t	typeref:struct:PLAYER
+TRUE	source/problem.c	26;"	d	file:
+_PROBLEM_H	header/problem.h	19;"	d
+card_player	header/problem.h	/^        Card *card_player[26];$/;"	m	struct:PLAYER
+digit	header/problem.h	/^        char *digit;$/;"	m	struct:CARD
+digit	header/problem.h	/^        char *digit;$/;"	m	struct:NODE
+get_cards	source/problem.c	/^void get_cards (Card **deck, Player *player, int player_num) {$/;"	f
+kind	header/problem.h	/^        char *kind;$/;"	m	struct:CARD
+list	header/problem.h	/^        Node *list[8];$/;"	m	struct:PLAYER
+main	source/main.c	/^int main (void) {$/;"	f
+name	header/problem.h	/^        char *name;$/;"	m	struct:PLAYER
+next	header/problem.h	/^        NODE *next;$/;"	m	struct:NODE
+objects_practice	makefile	/^objects_practice = main.o practice.o$/;"	m
+objects_problem	makefile	/^objects_problem = main.o problem.o$/;"	m
+problem_1	source/problem.c	/^int problem_1 (void) {$/;"	f
+set_cards	source/problem.c	/^void set_cards (Player one_player) {$/;"	f
+shuffle	source/problem.c	/^void shuffle (Card **deck, int n_cards) {$/;"	f
+test_problem	source/problem.c	/^int test_problem (void) {$/;"	f
