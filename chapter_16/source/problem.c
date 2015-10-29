@@ -18,11 +18,13 @@
 #include <stdlib.h>
 #include <time.h>
 #include <assert.h>
+#include <setjmp.h>
 #include <stdio.h>
 #include "../header/problem.h"
 
 #define DO_PROBLEM_1 0
-#define DO_PROBLEM_2 1
+#define DO_PROBLEM_2 0
+#define DO_PROBLEM_3 1
 
 #define TRUE 1
 #define FALSE 0
@@ -82,6 +84,8 @@ void set_cards (Player *one_player, char **digit) {
 
 #define CARD_COUNT 104
 int problem_1 (void) {
+    jmp_buf restart_problem_1;
+    setjmp(restart_problem_1);          // save the current state of registers into restart_problem_1
     Card *deck[CARD_COUNT];
     char *kind[4] = { "红桃", "黑桃", "方块", "梅花" };
     char *digit[13] = { "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"};
@@ -116,6 +120,11 @@ int problem_1 (void) {
     // 理牌
     for (i = 0 ; i < player_num ; i++)
         set_cards(&player[i], digit);
+
+    for (i = 0 ; i < player_num ; i++)
+        if (player[i].list[5] != NULL)
+            longjmp(restart_problem_1, 1);          // 不允许有人有5个相同牌的炸弹
+
     Node *current = NULL;
     for (i = 0 ; i < player_num ; i++) {
         printf("%s\n", player[i].name);
@@ -149,6 +158,8 @@ int problem_1 (void) {
 }
 
 void problem_2 (void) {
+    jmp_buf restart_problem_2;
+    setjmp(restart_problem_2);          // save the current state of registers into restart_problem_2
     clock_t temp = clock();         // 从程序开始执行起处理器时钟滴答的次数
     assert(temp != -1);
     double clock = ((double)temp) / CLOCKS_PER_SEC;         // 从程序开始执行起处理器所消耗的时间（毫秒）
@@ -164,12 +175,21 @@ void problem_2 (void) {
     struct tm *LTC = localtime(&current);       // 获得当前本地时间
 }
 
+int problem_3 (void) {
+    char *a = "dns";
+    char *ptr_a = getenv(a);
+    return 0;
+}
+
 int test_problem (void) {
 #if DO_PROBLEM_1
     problem_1();
 #endif
 #if DO_PROBLEM_2
     problem_2();
+#endif
+#if DO_PROBLEM_3
+    problem_3();
 #endif
     return 0;
 }

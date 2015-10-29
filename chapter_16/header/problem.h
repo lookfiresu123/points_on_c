@@ -44,6 +44,9 @@
     int problem_1 (void);
 
     void problem_2 (void);
+
+    int problem_3 (void);
+
     int test_problem (void);
 #endif
 
