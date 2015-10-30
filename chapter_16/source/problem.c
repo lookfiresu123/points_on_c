@@ -24,7 +24,8 @@
 
 #define DO_PROBLEM_1 0
 #define DO_PROBLEM_2 0
-#define DO_PROBLEM_3 1
+#define DO_PROBLEM_3 0
+#define DO_PROBLEM_4 1
 
 #define TRUE 1
 #define FALSE 0
@@ -181,6 +182,17 @@ int problem_3 (void) {
     return 0;
 }
 
+int r_compare (void const *a, void const *b) {
+    return strcmp( ((Record *)a)->key, ((Record *)b)->key );
+}
+
+int problem_4 (void) {
+    Record array[50];
+    /* fill the array with 50 elements */
+    qsort( array, 50, sizeof(Record), r_compare );
+    return EXIT_SUCCESS;
+}
+
 int test_problem (void) {
 #if DO_PROBLEM_1
     problem_1();
@@ -190,6 +202,9 @@ int test_problem (void) {
 #endif
 #if DO_PROBLEM_3
     problem_3();
+#endif
+#if DO_PROBLEM_4
+    problem_4();
 #endif
     return 0;
 }

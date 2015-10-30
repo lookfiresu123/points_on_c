@@ -21,6 +21,7 @@
     typedef struct CARD Card;
     typedef struct PLAYER Player;
     typedef struct NODE Node;
+    typedef struct RECORD Record;
 
     struct CARD {
         char *digit;
@@ -38,6 +39,11 @@
         struct NODE *next;
     };
 
+    struct RECORD {
+        char key[10];
+        int other_data;
+    };
+
     void shuffle (Card **deck, int n_cards);
     void get_cards (Card **deck, Player *player, int player_num);
     void set_cards (Player *one_player, char **digit);
@@ -46,6 +52,9 @@
     void problem_2 (void);
 
     int problem_3 (void);
+
+    int r_compare (void const *a, void const *b);
+    int problem_4 (void);
 
     int test_problem (void);
 #endif

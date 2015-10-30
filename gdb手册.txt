@@ -60,6 +60,8 @@
     objdump -t a.out/a.o > objdump
     查看对象文件的汇编代码：
     objdump -Sl --no-show-raw-insn a.out/a.o > objdump
+    查看文件内存分布情况：
+    objdump -s a.out > objdump
 18、查看链接信息：
     gcc -M a.c b.c c.c > main.linker.map
 
