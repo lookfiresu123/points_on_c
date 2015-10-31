@@ -40,7 +40,7 @@
     };
 
     struct RECORD {
-        char key[10];
+        char *key;
         int other_data;
     };
 
@@ -55,6 +55,8 @@
 
     int r_compare (void const *a, void const *b);
     int problem_4 (void);
+
+    int problem_5 (void);
 
     int test_problem (void);
 #endif
