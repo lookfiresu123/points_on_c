@@ -18,7 +18,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
-#include "stack.h"
+#include "stack_static.h"
 
 bool is_empty (int top_element) {
     return top_element == -1 ? true : false;
@@ -51,7 +51,7 @@ STACK_TYPE top (Stack *self) {
         return (STACK_TYPE)0;
 }
 
-int test_stack (void) {
+int test_stack_static (void) {
     Stack stack_example = {
         .top_element = -1,
         ._is_full = is_full,

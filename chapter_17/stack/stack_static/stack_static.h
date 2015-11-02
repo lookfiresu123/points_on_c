@@ -15,6 +15,8 @@
  *
  * =====================================================================================
  */
+#ifndef _STACK_STATIC_H
+#define _STACK_STATIC_H 1
 #include <stdbool.h>
 
 #define STACK_TYPE int
@@ -38,4 +40,5 @@ struct STACK {
     bool (*_is_full) (int _top_element);
 };
 
-int test_stack (void);
+int test_stack_static (void);
+#endif
