@@ -38,7 +38,7 @@ QUEUE_TYPE delete_queue (Queue *self) {
     }
     else {
         QUEUE_TYPE ret = self->queue_array[self->front];
-        self->front = (self->front - 1) % ARRAY_SIZE ;
+        self->front = (self->front + 1) % ARRAY_SIZE ;
         return ret;
     }
 }
