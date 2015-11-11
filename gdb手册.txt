@@ -70,5 +70,7 @@
     按顺序添加gdb调试命令
     在终端中输入gdb a.out
     在之后终端界面里的(gdb)后面输入source XX.sh
+20、调试c++程序：
+    g++ -g -Wall -std=c++14 -D_GLIBCXX_DEBUG test.c -o test
 
 
