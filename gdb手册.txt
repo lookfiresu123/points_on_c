@@ -64,4 +64,11 @@
     objdump -s a.out > objdump
 18、查看链接信息：
     gcc -M a.c b.c c.c > main.linker.map
+19、编写gdb脚本：
+    创建脚本文件XX.sh，chmod a+x XX.sh
+    用命令file a.out指定目标文件a.out
+    按顺序添加gdb调试命令
+    在终端中输入gdb a.out
+    在之后终端界面里的(gdb)后面输入source XX.sh
+
 
