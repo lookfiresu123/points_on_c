@@ -72,5 +72,17 @@
     在之后终端界面里的(gdb)后面输入source XX.sh
 20、调试c++程序：
     g++ -g -Wall -std=c++14 -D_GLIBCXX_DEBUG test.c -o test
-
+21、使用valgrind工具测试程序是否存在内存泄漏：
+    sudo apt-get install valgrind
+    valgrind --tool=memcheck --leak-check=yes ./a.out
+22、启动内核转储：
+    ulimit -c unlimited
+    sudo vim /etc/sysctl.conf
+    add "kernel.core_pattern = /home/lookfiresu/core/%t-%e-%p-%c.core" （这样生成的core文件就存储在了指定目录中）
+    sudo sysctl -p
+    使用：执行文件"./a.out"，会生成core文件，之后键入命令"gdb -c 目标core文件 ./a.out"
+23、attach到进程：
+    ./a.out
+    gdb
+    attach pid （可以使用命令"ps -aux | grep a.out"获得进程号）
 
