@@ -1,5 +1,5 @@
 " Modeline and Notes {
-" vim: set sw=4 ts=4 sts=4 et tw=78 foldmarker={,} foldlevel=0 foldmethod=marker spell:
+set sw=4 ts=4 sts=4 et tw=78 foldmarker={,} foldlevel=0 foldmethod=indent nospell smarttab smartindent lbr sm selection=inclusive wildmenu fo+=mB mouse=v
 "
 "                    __ _ _____              _
 "         ___ _ __  / _/ |___ /      __   __(_)_ __ ___
@@ -39,7 +39,7 @@
             return has('unix') && !has('macunix') && !has('win32unix')
         endfunction
         silent function! WINDOWS()
-            return  (has('win16') || has('win32') || has('win64'))
+            return  (has('win32') || has('win64'))
         endfunction
     " }
 
@@ -143,7 +143,7 @@
     if !exists('g:spf13_no_restore_cursor')
         function! ResCur()
             if line("'\"") <= line("$")
-                normal! g`"
+                silent! normal! g`"
                 return 1
             endif
         endfunction
@@ -283,6 +283,22 @@
         let maplocalleader = '_'
     else
         let maplocalleader=g:spf13_localleader
+    endif
+
+    " The default mappings for editing and applying the spf13 configuration
+    " are <leader>ev and <leader>sv respectively. Change them to your preference
+    " by adding the following to your .vimrc.before.local file:
+    "   let g:spf13_edit_config_mapping='<leader>ec'
+    "   let g:spf13_apply_config_mapping='<leader>sc'
+    if !exists('g:spf13_edit_config_mapping')
+        let s:spf13_edit_config_mapping = '<leader>ev'
+    else
+        let s:spf13_edit_config_mapping = g:spf13_edit_config_mapping
+    endif
+    if !exists('g:spf13_apply_config_mapping')
+        let s:spf13_apply_config_mapping = '<leader>sv'
+    else
+        let s:spf13_apply_config_mapping = g:spf13_apply_config_mapping
     endif
 
     " Easier moving in tabs and windows
@@ -442,6 +458,29 @@
 
 " Plugins {
 
+    " GoLang {
+        if count(g:spf13_bundle_groups, 'go')
+            let g:go_highlight_functions = 1
+            let g:go_highlight_methods = 1
+            let g:go_highlight_structs = 1
+            let g:go_highlight_operators = 1
+            let g:go_highlight_build_constraints = 1
+            let g:go_fmt_command = "goimports"
+            let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+            let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+            au FileType go nmap <Leader>s <Plug>(go-implements)
+            au FileType go nmap <Leader>i <Plug>(go-info)
+            au FileType go nmap <Leader>e <Plug>(go-rename)
+            au FileType go nmap <leader>r <Plug>(go-run)
+            au FileType go nmap <leader>b <Plug>(go-build)
+            au FileType go nmap <leader>t <Plug>(go-test)
+            au FileType go nmap <Leader>gd <Plug>(go-doc)
+            au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+            au FileType go nmap <leader>co <Plug>(go-coverage)
+        endif
+        " }
+
+
     " TextObj Sentence {
         if count(g:spf13_bundle_groups, 'writing')
             augroup textobj_sentence
@@ -496,7 +535,7 @@
             hi PmenuThumb  guifg=#F8F8F8 guibg=#8A95A7 gui=NONE ctermfg=lightgray ctermbg=darkcyan cterm=NONE
 
             " Some convenient mappings
-            inoremap <expr> <Esc>      pumvisible() ? "\<C-e>" : "\<Esc>"
+            "inoremap <expr> <Esc>      pumvisible() ? "\<C-e>" : "\<Esc>"
             if exists('g:spf13_map_cr_omni_complete')
                 inoremap <expr> <CR>     pumvisible() ? "\<C-y>" : "\<CR>"
             endif
@@ -587,7 +626,7 @@
 
     " PyMode {
         " Disable if python support not present
-        if !has('python')
+        if !has('python') && !has('python3')
             let g:pymode = 0
         endif
 
@@ -608,15 +647,15 @@
                 \ 'dir':  '\.git$\|\.hg$\|\.svn$',
                 \ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$' }
 
-            " On Windows use "dir" as fallback command.
-            if WINDOWS()
-                let s:ctrlp_fallback = 'dir %s /-n /b /s /a-d'
-            elseif executable('ag')
+            if executable('ag')
                 let s:ctrlp_fallback = 'ag %s --nocolor -l -g ""'
             elseif executable('ack-grep')
                 let s:ctrlp_fallback = 'ack-grep %s --nocolor -f'
             elseif executable('ack')
                 let s:ctrlp_fallback = 'ack %s --nocolor -f'
+            " On Windows use "dir" as fallback command.
+            elseif WINDOWS()
+                let s:ctrlp_fallback = 'dir %s /-n /b /s /a-d'
             else
                 let s:ctrlp_fallback = 'find %s -type f'
             endif
@@ -647,6 +686,11 @@
         endif
     "}
 
+    " Rainbow {
+        if isdirectory(expand("~/.vim/bundle/rainbow/"))
+            let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
+        endif
+    "}
 
     " Fugitive {
         if isdirectory(expand("~/.vim/bundle/vim-fugitive/"))
@@ -668,11 +712,6 @@
     " YouCompleteMe {
         if count(g:spf13_bundle_groups, 'youcompleteme')
             let g:acp_enableAtStartup = 0
-            let g:ycm_auto_trigger = 1
-            let g:ycm_filetype_whitelist = { '*': 1  }
-            let g:ycm_min_num_of_chars_for_completion = 1
-            let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
-            let g:ycm_confirm_extra_conf = 1
 
             " enable completion from tags
             let g:ycm_collect_identifiers_from_tags_files = 1
@@ -715,7 +754,7 @@
     " neocomplete {
         if count(g:spf13_bundle_groups, 'neocomplete')
             let g:acp_enableAtStartup = 0
-            let g:neocomplete#enable_at_startup = 0
+            let g:neocomplete#enable_at_startup = 1
             let g:neocomplete#enable_smart_case = 1
             let g:neocomplete#enable_auto_delimiter = 1
             let g:neocomplete#max_list = 15
@@ -1023,6 +1062,8 @@
         endif
     " }
 
+
+
 " }
 
 " GUI Settings {
@@ -1145,6 +1186,48 @@
     " e.g. Grep current file for <search_term>: Shell grep -Hn <search_term> %
     " }
 
+    function! s:IsSpf13Fork()
+        let s:is_fork = 0
+        let s:fork_files = ["~/.vimrc.fork", "~/.vimrc.before.fork", "~/.vimrc.bundles.fork"]
+        for fork_file in s:fork_files
+            if filereadable(expand(fork_file, ":p"))
+                let s:is_fork = 1
+                break
+            endif
+        endfor
+        return s:is_fork
+    endfunction
+     
+    function! s:ExpandFilenameAndExecute(command, file)
+        execute a:command . " " . expand(a:file, ":p")
+    endfunction
+     
+    function! s:EditSpf13Config()
+        call <SID>ExpandFilenameAndExecute("tabedit", "~/.vimrc")
+        call <SID>ExpandFilenameAndExecute("vsplit", "~/.vimrc.before")
+        call <SID>ExpandFilenameAndExecute("vsplit", "~/.vimrc.bundles")
+     
+        execute bufwinnr(".vimrc") . "wincmd w"
+        call <SID>ExpandFilenameAndExecute("split", "~/.vimrc.local")
+        wincmd l
+        call <SID>ExpandFilenameAndExecute("split", "~/.vimrc.before.local")
+        wincmd l
+        call <SID>ExpandFilenameAndExecute("split", "~/.vimrc.bundles.local")
+     
+        if <SID>IsSpf13Fork()
+            execute bufwinnr(".vimrc") . "wincmd w"
+            call <SID>ExpandFilenameAndExecute("split", "~/.vimrc.fork")
+            wincmd l
+            call <SID>ExpandFilenameAndExecute("split", "~/.vimrc.before.fork")
+            wincmd l
+            call <SID>ExpandFilenameAndExecute("split", "~/.vimrc.bundles.fork")
+        endif
+     
+        execute bufwinnr(".vimrc.local") . "wincmd w"
+    endfunction
+     
+    execute "noremap " . s:spf13_edit_config_mapping " :call <SID>EditSpf13Config()<CR>"
+    execute "noremap " . s:spf13_apply_config_mapping . " :source ~/.vimrc<CR>"
 " }
 
 " Use fork vimrc if available {
@@ -1168,22 +1251,19 @@
 " }
 
 Bundle "Valloric/YouCompleteMe"
+"let g:ycm_global_ycm_extra_conf = ''
+let g:ycm_confirm_extra_conf = 0
 
 Bundle "HenningM/cvim-pathogen"
 
 "Bundle "altercation/vim-colors-solarized"
 syntax enable
-set background=light " Assume a dark background
-colorscheme solarized
+set background=dark " Assume a dark background
+colorscheme molokai
+"colorscheme solarized
 "colorscheme Tomorrow-Night-Eighties
 
 Bundle "vim-scripts/Conque-GDB"
-
-Bundle "artur-shaik/vim-javacomplete2"
-autocmd FileType java set omnifunc=javacomplete#Complete
-let g:JavaComplete_Home = $HOME . '/.vim/bundle/vim-javacomplete2'
-"globpath('/home/ryujin/.vim/bundle/vim-javacomplete2/libs/javavi/target/classes', "**/*.class" , 1, 1)
-let $CLASSPATH .= '.:' . $HOME . '/.vim/bundle/vim-javacomplete2/lib/javavi/target/classes'
 
 Bundle "shawncplus/phpcomplete.vim"
 let g:phpcomplete_relax_static_constraint = 1
@@ -1228,3 +1308,35 @@ nnoremap  <leader>fe :call CscopeFind('e', expand('<cword>'))<CR>
 nnoremap  <leader>ff :call CscopeFind('f', expand('<cword>'))<CR>
 " i: Find files #including this file
 nnoremap  <leader>fi :call CscopeFind('i', expand('<cword>'))<CR>"
+
+Bundle "Konfekt/FastFold"
+
+"set foldmethod=indent
+"set foldenable
+
+Bundle "tpope/vim-fireplace"
+
+Bundle "venantius/vim-eastwood"
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_w = 1
+"let g:syntastic_always_populate_loc_list = 1
+
+Bundle "wannesm/wmgraphviz.vim"
+
+set nospell
+let g:syntastic_cpp_compiler = 'g++'
+let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libc++'
+
+Bundle "severin-lemaignan/vim-minimap"
+let g:minimap_highlight='Title'
+
+Bundle "octol/vim-cpp-enhanced-highlight"
+let g:cpp_class_scope_highlight = 1
+let g:cpp_experimental_template_highlight = 1
+let c_no_curly_error=1
