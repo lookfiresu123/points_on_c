@@ -1,3 +1,0 @@
-$	gdb手册.txt	/^    main : $(objects)$/
-f	gdb手册.txt	17
-std	lldb手册.md	2
