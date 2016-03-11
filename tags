@@ -1,3 +1,261 @@
-$	gdb手册.txt	/^    main : $(objects)$/
-f	gdb手册.txt	17
-std	lldb手册.md	2
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BITCLEAR	chapter_6/source/practice.c	10;"	d	file:
+BITMASK	chapter_6/source/practice.c	7;"	d	file:
+BITNSLOTS	chapter_6/source/practice.c	12;"	d	file:
+BITSET	chapter_6/source/practice.c	9;"	d	file:
+BITSLOT	chapter_6/source/practice.c	8;"	d	file:
+BITTEST	chapter_6/source/practice.c	11;"	d	file:
+CUP	chapter_3/header/practice.h	/^enum Liquid { OUNCE = 1, CUP = 8, PINT = 16,QUART = 32, GALLON = 128 };$/;"	e	enum:Liquid
+DO_COMPARE_ARRAY_POINT	TEST/test_6.c	14;"	d	file:
+DO_DISASEMBLE_SWITCH	TEST/test_6.c	15;"	d	file:
+DO_DOUBLE_ARRAY	TEST/test_6.c	16;"	d	file:
+DO_IMPLEMENT_STRRPBRK	chapter_9/source/problem.c	24;"	d	file:
+DO_IMPLEMENT_STRRSTR	chapter_9/source/problem.c	23;"	d	file:
+DO_IMPLEMENT_STRSTR	chapter_9/source/problem.c	22;"	d	file:
+DO_PRACTICE	chapter_9/source/main.c	23;"	d	file:
+DO_PRACTICE_1	chapter_8/source/practice.c	12;"	d	file:
+DO_PRACTICE_2	chapter_8/source/practice.c	13;"	d	file:
+DO_PRACTICE_3	chapter_8/source/practice.c	14;"	d	file:
+DO_PRACTICE_4	chapter_8/source/practice.c	15;"	d	file:
+DO_PRACTICE_5	chapter_8/source/practice.c	16;"	d	file:
+DO_PRACTICE_6	chapter_8/source/practice.c	17;"	d	file:
+DO_PRACTICE_7	chapter_8/source/practice.c	18;"	d	file:
+DO_PRACTICE_8	chapter_8/source/practice.c	19;"	d	file:
+DO_PROBLEM	chapter_9/source/main.c	22;"	d	file:
+DO_TEST_PRACTICE	chapter_8/source/main.c	13;"	d	file:
+DO_TEST_PROBLEM	chapter_8/source/main.c	12;"	d	file:
+Day	chapter_3/header/test.h	/^enum Day { Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday };/;"	g
+Eratosthenes	chapter_6/source/practice.c	/^void Eratosthenes(char string[],int result[]){\/\/筛选出MAX个质数$/;"	f
+FAILURE	chapter_6/source/practice.c	14;"	d	file:
+FALSE	chapter_6/source/practice.c	18;"	d	file:
+Fibonacci	chapter_7/source/problem.c	/^int Fibonacci(int i){$/;"	f
+Friday	chapter_3/header/test.h	/^enum Day { Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday };/;"	e	enum:Day
+GALLON	chapter_3/header/practice.h	/^enum Liquid { OUNCE = 1, CUP = 8, PINT = 16,QUART = 32, GALLON = 128 };$/;"	e	enum:Liquid
+LEN	chapter_6/source/practice.c	15;"	d	file:
+Liquid	chapter_3/header/practice.h	/^enum Liquid { OUNCE = 1, CUP = 8, PINT = 16,QUART = 32, GALLON = 128 };$/;"	g
+MATRIX	chapter_8/header/practice.h	/^struct MATRIX {$/;"	s
+MAX	chapter_1/source/practice_2.c	4;"	d	file:
+MAX	chapter_1/source/practice_3.c	5;"	d	file:
+MAX	chapter_1/source/practice_4.c	5;"	d	file:
+MAX	chapter_6/source/practice.c	16;"	d	file:
+MAX_COLS	chapter_1/source/1-1.c	4;"	d	file:
+MAX_INPUT	chapter_1/source/1-1.c	5;"	d	file:
+MAX_NUM	chapter_1/source/practice_2.c	5;"	d	file:
+Monday	chapter_3/header/test.h	/^enum Day { Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday };/;"	e	enum:Day
+NICKEL	chapter_3/header/practice.h	/^enum coin { PENNY,NICKEL };$/;"	e	enum:coin
+NUM	chapter_1/source/practice_4.c	6;"	d	file:
+NUMS_QUEEN	chapter_8/header/practice.h	11;"	d
+OUNCE	chapter_3/header/practice.h	/^enum Liquid { OUNCE = 1, CUP = 8, PINT = 16,QUART = 32, GALLON = 128 };$/;"	e	enum:Liquid
+PENNY	chapter_3/header/practice.h	/^enum coin { PENNY,NICKEL };$/;"	e	enum:coin
+PINT	chapter_3/header/practice.h	/^enum Liquid { OUNCE = 1, CUP = 8, PINT = 16,QUART = 32, GALLON = 128 };$/;"	e	enum:Liquid
+PROBLEM_18	chapter_8/source/problem.c	12;"	d	file:
+PROBLEM_4	chapter_8/source/problem.c	11;"	d	file:
+QUART	chapter_3/header/practice.h	/^enum Liquid { OUNCE = 1, CUP = 8, PINT = 16,QUART = 32, GALLON = 128 };$/;"	e	enum:Liquid
+SIZE	TEST/test_6.c	12;"	d	file:
+SIZE	chapter_8/source/problem.c	10;"	d	file:
+SUCCESS	chapter_6/source/practice.c	13;"	d	file:
+Saturday	chapter_3/header/test.h	/^enum Day { Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday };/;"	e	enum:Day
+Sqrt	chapter_4/source/practice.c	/^int Sqrt(int parameter){$/;"	f
+Sunday	chapter_3/header/test.h	/^enum Day { Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday };/;"	e	enum:Day
+Switch	chapter_5/source/practice.c	/^unsigned int Switch(unsigned int value_D,unsigned int value_B[]){$/;"	f
+TRUE	chapter_6/source/practice.c	17;"	d	file:
+Thursday	chapter_3/header/test.h	/^enum Day { Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday };/;"	e	enum:Day
+Tuesday	chapter_3/header/test.h	/^enum Day { Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday };/;"	e	enum:Day
+Wednesday	chapter_3/header/test.h	/^enum Day { Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday };/;"	e	enum:Day
+array_offset	chapter_8/source/practice.c	/^int array_offset(int arrayinfo[], ...) {$/;"	f
+array_offset2	chapter_8/source/practice.c	/^int array_offset2(int arrayinfo[], ...) {$/;"	f
+ascii_to_integer	chapter_7/source/practice.c	/^int ascii_to_integer(char *string){$/;"	f
+assign_bit	chapter_5/source/practice.c	/^void assign_bit(char bit_array[],unsigned bit_number,int value){$/;"	f
+bit_16	chapter_5/source/practice.c	8;"	d	file:
+bit_size	chapter_5/source/practice.c	7;"	d	file:
+byte_size	chapter_5/source/practice.c	6;"	d	file:
+clear_bit	chapter_5/source/practice.c	/^void clear_bit(char bit_array[],unsigned bit_number){$/;"	f
+coin	chapter_3/header/practice.h	/^enum coin { PENNY,NICKEL };$/;"	g
+compare	chapter_6/source/practice.c	/^int compare(char source_one,char const *chars){$/;"	f
+compare_array_point	TEST/test_6.c	/^int compare_array_point(int x[],int y[],int numSize){$/;"	f
+copy_n	chapter_4/source/practice.c	/^void copy_n(char dst[],char src[],int n){$/;"	f
+count	chapter_7/source/problem.c	/^static int count = 0;$/;"	v	file:
+count_prime	chapter_6/source/practice.c	/^int count_prime(int start, int end){$/;"	f
+deblank	chapter_4/source/practice.c	/^void deblank(char string[]){$/;"	f
+del_substr	chapter_6/source/practice.c	/^int del_substr(char *str, char const *substr){$/;"	f
+delete	chapter_4/source/practice.c	/^void delete(char string[],int pos){$/;"	f
+delete	chapter_6/source/practice.c	/^int delete(char *str, char const *substr,char *address,char result[]){$/;"	f
+disasemble_switch	TEST/test_6.c	/^void disasemble_switch(void){$/;"	f
+double_array	TEST/test_6.c	/^void double_array(){$/;"	f
+encode	chapter_5/source/practice.c	12;"	d	file:
+expression	chapter_5/source/problem.c	/^int expression(void){$/;"	f
+f1	chapter_5/source/problem.c	/^int f1(int x){$/;"	f
+f2	chapter_5/source/problem.c	/^int f2(int x){$/;"	f
+f3	chapter_5/source/problem.c	/^int f3(int x,int y){$/;"	f
+faster_array	TEST/test_6.c	9;"	d	file:
+faster_point	TEST/test_6.c	10;"	d	file:
+find_char	chapter_6/source/practice.c	/^char *find_char(char const *source, char const *chars){$/;"	f
+func	TEST/test.c	/^int func(void){$/;"	f
+func	TEST/test_a.c	/^static int func(void){$/;"	f	file:
+func	chapter_5/source/problem.c	/^int func(void){$/;"	f
+func1	TEST/test.c	/^int func1(void){$/;"	f
+func1	TEST/test_a.c	/^static int func1(void){$/;"	f	file:
+fx	TEST/test_2.c	/^int fx(int *a){$/;"	f
+gcd	chapter_7/source/practice.c	/^int gcd(int m,int n){$/;"	f
+hermite	chapter_7/source/practice.c	/^int hermite(int n,int x){$/;"	f
+identity_matrix	chapter_8/source/practice.c	/^bool identity_matrix(int matrix[][10]) {$/;"	f
+identity_matrix_extern	chapter_8/source/practice.c	/^bool identity_matrix_extern(int *pos,struct MATRIX matrix_size) {$/;"	f
+if_else	chapter_5/source/problem.c	/^int if_else(void){$/;"	f
+implement_strrpbrk	chapter_9/source/problem.c	/^char *implement_strrpbrk (const char *s1, const char *s2) {$/;"	f
+implement_strrstr	chapter_9/source/problem.c	/^char *implement_strrstr (const char *s1, const char *s2) {$/;"	f
+implement_strstr	chapter_9/source/problem.c	/^char *implement_strstr (const char *s1, const char *s2) {$/;"	f
+initialize	chapter_8/source/practice.c	/^void initialize(int panic[][NUMS_QUEEN]) {$/;"	f
+int_size	chapter_5/source/practice.c	10;"	d	file:
+is_valid	chapter_8/source/practice.c	/^bool is_valid(int panic[][NUMS_QUEEN],int index_row,int index_column) {$/;"	f
+is_valid_column	chapter_8/source/practice.c	/^bool is_valid_column(int panic[][NUMS_QUEEN],int index_row,int index_column) {$/;"	f
+is_valid_oblique_left	chapter_8/source/practice.c	/^bool is_valid_oblique_left(int panic[][NUMS_QUEEN],int index_row,int index_column) {$/;"	f
+is_valid_oblique_right	chapter_8/source/practice.c	/^bool is_valid_oblique_right(int panic[][NUMS_QUEEN],int index_row,int index_column) {$/;"	f
+is_valid_row	chapter_8/source/practice.c	/^bool is_valid_row(int panic[][NUMS_QUEEN],int index_row,int index_column) {$/;"	f
+left_move	chapter_5/source/practice.c	/^void left_move(unsigned int value[],int step){$/;"	f
+length_dst	chapter_4/source/practice.c	7;"	d	file:
+length_src	chapter_4/source/practice.c	8;"	d	file:
+length_x	chapter_8/header/practice.h	/^    int length_x;\/\/row$/;"	m	struct:MATRIX
+length_y	chapter_8/header/practice.h	/^    int length_y;\/\/column$/;"	m	struct:MATRIX
+line_end	chapter_1/source/practice_1.c	4;"	d	file:
+main	TEST/test_1.c	/^int main(void){$/;"	f
+main	TEST/test_4.c	/^int main(void){$/;"	f
+main	TEST/test_6.c	/^int main(void){$/;"	f
+main	TEST/test_7.c	/^int main(void) {$/;"	f
+main	chapter_1/source/main.c	/^void main(void){$/;"	f
+main	chapter_2/source/main.c	/^void main(void){$/;"	f
+main	chapter_3/source/main.c	/^int main(void){$/;"	f
+main	chapter_4/source/main.c	/^int main(void){$/;"	f
+main	chapter_5/source/main.c	/^int main(void){$/;"	f
+main	chapter_6/source/main.c	/^int main(void){$/;"	f
+main	chapter_7/source/main.c	/^int main(){$/;"	f
+main	chapter_8/source/main.c	/^int main(void) {$/;"	f
+main	chapter_9/source/main.c	/^int main (void) {$/;"	f
+make_result	chapter_8/source/practice.c	/^void make_result(int panic[][NUMS_QUEEN],int index_row,int index_column) {$/;"	f
+matrix_mutiply	chapter_8/source/practice.c	/^void matrix_mutiply(int *m1,int *m2,int *r,int x,int y,int z) {$/;"	f
+max_list	chapter_7/source/practice.c	/^int max_list(int first,...){$/;"	f
+microsoft	TEST/test_3.c	4;"	d	file:
+objects	chapter_1/makefile	/^objects = main.o 1-1.o practice_1.o practice_2.o practice_3.o practice_4.o$/;"	m
+objects	chapter_2/makefile	/^objects = main.o practice_2.o$/;"	m
+objects	chapter_3/makefile	/^objects = main.o test_1.o test.o practice.o $/;"	m
+objects	chapter_4/makefile	/^objects = main.o practice.o $/;"	m
+objects	chapter_5/makefile	/^objects = main.o practice.o problem.o$/;"	m
+objects	chapter_6/makefile	/^objects = main.o practice.o$/;"	m
+objects	chapter_7/makefile	/^objects = main.o practice.o problem.o$/;"	m
+objects	chapter_8/makefile	/^objects = main.o practice.o problem.o$/;"	m
+objects_practice	chapter_9/makefile	/^objects_practice = main.o practice.o$/;"	m
+objects_problem	chapter_9/makefile	/^objects_problem = main.o problem.o$/;"	m
+output	TEST/test_2.c	/^int output(char str[],int length){$/;"	f
+practice_1	chapter_4/source/practice.c	/^int practice_1(void){$/;"	f
+practice_1	chapter_5/source/practice.c	/^int practice_1(void){$/;"	f
+practice_1	chapter_6/source/practice.c	/^int practice_1(void){$/;"	f
+practice_1	chapter_7/source/practice.c	/^int practice_1(void){$/;"	f
+practice_1	chapter_8/source/practice.c	/^int practice_1(void) {$/;"	f
+practice_12	chapter_3/source/practice.c	/^int practice_12(void){$/;"	f
+practice_14	chapter_3/source/practice.c	/^int practice_14(void){ \/\/查看汇编代码，发现共4个局部变量入栈，第一个a位于栈顶$/;"	f
+practice_2	chapter_4/source/practice.c	/^int practice_2(void){$/;"	f
+practice_2	chapter_5/source/practice.c	/^int practice_2(void){$/;"	f
+practice_2	chapter_6/source/practice.c	/^int practice_2(void){$/;"	f
+practice_2	chapter_7/source/practice.c	/^int practice_2(void){$/;"	f
+practice_2	chapter_8/source/practice.c	/^float practice_2(void) {$/;"	f
+practice_3	chapter_4/source/practice.c	/^int practice_3(void){$/;"	f
+practice_3	chapter_5/source/practice.c	/^unsigned int *practice_3(unsigned int value){$/;"	f
+practice_3	chapter_6/source/practice.c	/^int practice_3(void){$/;"	f
+practice_3	chapter_7/source/practice.c	/^int practice_3(void){$/;"	f
+practice_3	chapter_8/source/practice.c	/^bool practice_3(void) {$/;"	f
+practice_4	chapter_4/source/practice.c	/^int practice_4(void){$/;"	f
+practice_4	chapter_5/source/practice.c	/^int practice_4(void){$/;"	f
+practice_4	chapter_6/source/practice.c	/^int practice_4(void){$/;"	f
+practice_4	chapter_7/source/practice.c	/^int practice_4(void){$/;"	f
+practice_4	chapter_8/source/practice.c	/^bool practice_4(void) {$/;"	f
+practice_5	TEST/test_1.c	/^int practice_5(void){$/;"	f
+practice_5	chapter_4/source/practice.c	/^int practice_5(void){$/;"	f
+practice_5	chapter_5/source/practice.c	/^int practice_5(void){$/;"	f
+practice_5	chapter_6/source/practice.c	/^int practice_5(void){$/;"	f
+practice_5	chapter_7/source/practice.c	/^int practice_5(void){$/;"	f
+practice_5	chapter_8/source/practice.c	/^int practice_5(void) {$/;"	f
+practice_6	TEST/test_1.c	/^int practice_6(void){$/;"	f
+practice_6	chapter_3/source/practice.c	/^int practice_6(void){$/;"	f
+practice_6	chapter_4/source/practice.c	/^int practice_6(void){$/;"	f
+practice_6	chapter_6/source/practice.c	/^int practice_6(void){$/;"	f
+practice_6	chapter_8/source/practice.c	/^int practice_6(void) {$/;"	f
+practice_7	chapter_3/source/practice.c	/^int practice_7(void){$/;"	f
+practice_7	chapter_4/source/practice.c	/^int practice_7(void){$/;"	f
+practice_7	chapter_8/source/practice.c	/^int practice_7(void) {$/;"	f
+practice_8	chapter_8/source/practice.c	/^int practice_8(void) {$/;"	f
+practice_problem_225	chapter_3/source/test.c	/^static int practice_problem_225(void){$/;"	f	file:
+practice_problem_225	chapter_3/source/test_1.c	/^static int practice_problem_225(void){$/;"	f	file:
+practice_problem_226	chapter_3/source/test.c	/^int practice_problem_226(void){$/;"	f
+practice_problem_const	chapter_3/source/test.c	/^int practice_problem_const(void){$/;"	f
+print_integer	chapter_7/source/practice.c	/^void print_integer(int integer){$/;"	f
+print_out	chapter_8/source/practice.c	/^void print_out(int panic[][NUMS_QUEEN]) {$/;"	f
+problem_10	chapter_7/source/problem.c	/^void problem_10(int i){$/;"	f
+problem_18	chapter_8/source/problem.c	/^void problem_18(void) {$/;"	f
+problem_2	chapter_5/source/problem.c	/^int problem_2(void){$/;"	f
+problem_4	chapter_5/source/problem.c	/^int problem_4(void){$/;"	f
+problem_4	chapter_8/source/problem.c	/^bool problem_4(void) {$/;"	f
+problem_5	chapter_5/source/problem.c	/^bool problem_5(int year){$/;"	f
+problem_8	chapter_5/source/problem.c	/^int problem_8(int x){$/;"	f
+problem_9	chapter_5/source/problem.c	/^int problem_9(int array[],int array_size){$/;"	f
+read_column_numbers	chapter_1/source/1-1.c	/^int read_column_numbers(int column[], int max){$/;"	f
+rearrange	chapter_1/source/1-1.c	/^void rearrange(char *output,char const *input,int n_columns,int const columns[]){ \/\/const 表示函数不会修改其对应的变量$/;"	f
+reserse_string	chapter_6/source/practice.c	/^void reserse_string(char *string){$/;"	f
+reverse_bits	chapter_5/source/practice.c	/^unsigned int reverse_bits(unsigned int value_D,unsigned int value_B[]){$/;"	f
+same_fast	TEST/test_6.c	11;"	d	file:
+set_bit	chapter_5/source/practice.c	/^void set_bit(char bit_array[],unsigned bit_number){$/;"	f
+single_tax	chapter_8/source/practice.c	/^float single_tax(float income) {$/;"	f
+sizeof_enum	chapter_3/source/test.c	/^static int sizeof_enum(void){$/;"	f	file:
+store_bit_field	chapter_5/source/practice.c	/^int store_bit_field(int original_value,int value_to_store,unsigned starting_bit,unsigned ending_bit){$/;"	f
+str	chapter_1/source/practice_1.c	5;"	d	file:
+substr	chapter_4/source/practice.c	/^int substr(char dst[],char src[],int start,int len){$/;"	f
+swap	chapter_5/source/practice.c	18;"	d	file:
+test_10	TEST/test_2.c	/^int test_10(void){$/;"	f
+test_11	TEST/test_2.c	/^int test_11(void){$/;"	f
+test_12	TEST/test_2.c	/^int test_12(void){$/;"	f
+test_13	TEST/test_2.c	/^int test_13(void){$/;"	f
+test_14	TEST/test_2.c	/^int test_14(void){$/;"	f
+test_15	TEST/test_3.c	/^int test_15(void){$/;"	f
+test_16	TEST/test_3.c	/^int test_16(void){$/;"	f
+test_17	TEST/test_3.c	/^int test_17(void){$/;"	f
+test_18	TEST/test_3.c	/^int test_18(void){$/;"	f
+test_19	TEST/test_3.c	/^int test_19(void){$/;"	f
+test_1_1	chapter_1/source/1-1.c	/^int test_1_1(void){$/;"	f
+test_20	TEST/test_4.c	/^int test_20(void){$/;"	f
+test_21	TEST/test_4.c	/^int test_21(void){$/;"	f
+test_22	TEST/test_4.c	/^int test_22(int value,int n_bits){\/\/value是要校验的数，n_bits是value的有效位$/;"	f
+test_23	TEST/test_4.c	/^void test_23(int x,int y){$/;"	f
+test_24	TEST/test_4.c	/^void test_24(int *x,int *y){$/;"	f
+test_25	TEST/test_4.c	/^void test_25(unsigned int value){$/;"	f
+test_26	TEST/test_4.c	/^void test_26(){$/;"	f
+test_27	TEST/test_4.c	/^float test_27(int n_value, ...){\/\/在这个参数格式中，n_value为第一个参数$/;"	f
+test_3	TEST/test_1.c	/^int test_3(void){ \/\/每个函数的开始都要创建栈，结束都要消除栈$/;"	f
+test_4	TEST/test_1.c	/^int test_4(void){ \/\/每个函数的开始都要创建栈，结束都要消除栈$/;"	f
+test_5	TEST/test_1.c	/^void test_5(void){$/;"	f
+test_6	TEST/test_1.c	/^int test_6(void){$/;"	f
+test_7	TEST/test_1.c	/^int test_7(void){$/;"	f
+test_8	TEST/test_1.c	/^int test_8(void){$/;"	f
+test_9	TEST/test_1.c	/^void test_9(void){$/;"	f
+test_9	TEST/test_2.c	/^int test_9(void){$/;"	f
+test_bit	chapter_5/source/practice.c	/^bool test_bit(char bit_array[],unsigned bit_number){$/;"	f
+test_practice	chapter_3/source/practice.c	/^int test_practice(void){$/;"	f
+test_practice	chapter_4/source/practice.c	/^void test_practice(void){$/;"	f
+test_practice	chapter_5/source/practice.c	/^int test_practice(void){$/;"	f
+test_practice	chapter_6/source/practice.c	/^int test_practice(void){$/;"	f
+test_practice	chapter_7/source/practice.c	/^void test_practice(void){$/;"	f
+test_practice	chapter_8/source/practice.c	/^int test_practice(void) {$/;"	f
+test_practice_1	chapter_1/source/practice_1.c	/^void test_practice_1(void){$/;"	f
+test_practice_2	chapter_1/source/practice_2.c	/^void test_practice_2(void){$/;"	f
+test_practice_2	chapter_2/source/practice_2.c	/^void test_practice_2(void){$/;"	f
+test_practice_3	chapter_1/source/practice_3.c	/^void test_practice_3(void){$/;"	f
+test_practice_4	chapter_1/source/practice_4.c	/^void test_practice_4(void){$/;"	f
+test_problem	chapter_5/source/problem.c	/^int test_problem(void){$/;"	f
+test_problem	chapter_7/source/problem.c	/^void test_problem(void){$/;"	f
+test_problem	chapter_8/source/problem.c	/^int test_problem(void) {$/;"	f
+test_problem	chapter_9/source/problem.c	/^void test_problem (void) {$/;"	f
+test_test	chapter_3/source/test.c	/^int test_test(void){$/;"	f
+test_test_1	chapter_3/source/test_1.c	/^int test_test_1(void){$/;"	f
+
