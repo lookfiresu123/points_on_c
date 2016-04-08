@@ -4,40 +4,179 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ALLOC	chapter_11/source/problem.c	/^MEM *ALLOC (size_t size) {$/;"	f
+ALL_PAY	chapter_10/header/types.h	/^    enum SALE_TYPE {ALL_PAY, LEASE, CREDIT} sale_type;       \/* sale's type *\/$/;"	e	enum:__anon10::SALE_TYPE
+ARRAY_SIZE	chapter_17/queue/queue_static/queue_static.h	25;"	d
+Array_Count	chapter_9/source/practice.c	/^} Array_Count;$/;"	t	typeref:struct:Count	file:
+Array_Rate	chapter_9/source/practice.c	/^} Array_Rate;$/;"	t	typeref:struct:Rate	file:
+BACKWARD	chapter_13/header/practice.h	/^typedef enum { NEW, DELETE, FORWARD, BACKWARD, SEARCH, EDIT } Trans_type;$/;"	e	enum:__anon24
+BINARY_TREE	chapter_17/tree/binary_tree/binary_tree.h	/^struct BINARY_TREE {$/;"	s
 BITCLEAR	chapter_6/source/practice.c	10;"	d	file:
 BITMASK	chapter_6/source/practice.c	7;"	d	file:
 BITNSLOTS	chapter_6/source/practice.c	12;"	d	file:
 BITSET	chapter_6/source/practice.c	9;"	d	file:
 BITSLOT	chapter_6/source/practice.c	8;"	d	file:
 BITTEST	chapter_6/source/practice.c	11;"	d	file:
+BRANCH	chapter_10/header/types.h	/^} BRANCH;$/;"	t	typeref:struct:__anon13
+BUFFER_SIZE	chapter_15/source/problem.c	84;"	d	file:
+BUFFER_SIZE	chapter_17/stack/stack_list/stack_list.h	23;"	d
+BUFFER_SIZE	chapter_17/stack/stack_static/stack_static.h	23;"	d
+BUF_SIZE	chapter_15/source/practice.c	57;"	d	file:
+BUF_SIZE	chapter_15/source/practice.c	70;"	d	file:
+BUF_SIZE	chapter_15/source/practice.c	72;"	d	file:
+BinaryTree	print-tree/binary_tree_pretty_print.h	/^  BinaryTree(int val) : left(NULL), right(NULL), data(val) { }$/;"	f	struct:BinaryTree
+BinaryTree	print-tree/binary_tree_pretty_print.h	/^struct BinaryTree {$/;"	s
+Binary_tree	chapter_17/tree/binary_tree/binary_tree.h	/^typedef struct BINARY_TREE Binary_tree;$/;"	t	typeref:struct:BINARY_TREE
+CARD	chapter_16/header/problem.h	/^    struct CARD {$/;"	s
+CARD_COUNT	chapter_16/source/problem.c	87;"	d	file:
+CHECK_CLOSE_STREAM	chapter_15/source/practice.c	33;"	d	file:
+CHECK_CLOSE_STREAM	chapter_15/source/problem.c	34;"	d	file:
+CHECK_OPEN_STREAM	chapter_15/source/practice.c	25;"	d	file:
+CHECK_OPEN_STREAM	chapter_15/source/problem.c	26;"	d	file:
+CREDIT	chapter_10/header/types.h	/^    enum SALE_TYPE {ALL_PAY, LEASE, CREDIT} sale_type;       \/* sale's type *\/$/;"	e	enum:__anon10::SALE_TYPE
 CUP	chapter_3/header/practice.h	/^enum Liquid { OUNCE = 1, CUP = 8, PINT = 16,QUART = 32, GALLON = 128 };$/;"	e	enum:Liquid
+Card	chapter_16/header/problem.h	/^    typedef struct CARD Card;$/;"	t	typeref:struct:CARD
+Count	chapter_9/source/practice.c	/^typedef struct Count {$/;"	s	file:
+Count_Character	chapter_13/header/practice.h	/^typedef struct Count_Character {$/;"	s
+Count_nodes	chapter_12/source/practice.c	/^int Count_nodes (Node *root) {$/;"	f
+DAY_TIME	chapter_14/header/test1.h	/^struct DAY_TIME {$/;"	s
+DBL_OP	chapter_10/header/types.h	/^} DBL_OP;$/;"	t	typeref:struct:__anon16
+DELETE	chapter_13/header/practice.h	/^typedef enum { NEW, DELETE, FORWARD, BACKWARD, SEARCH, EDIT } Trans_type;$/;"	e	enum:__anon24
 DO_COMPARE_ARRAY_POINT	TEST/test_6.c	14;"	d	file:
 DO_DISASEMBLE_SWITCH	TEST/test_6.c	15;"	d	file:
 DO_DOUBLE_ARRAY	TEST/test_6.c	16;"	d	file:
 DO_IMPLEMENT_STRRPBRK	chapter_9/source/problem.c	24;"	d	file:
 DO_IMPLEMENT_STRRSTR	chapter_9/source/problem.c	23;"	d	file:
 DO_IMPLEMENT_STRSTR	chapter_9/source/problem.c	22;"	d	file:
-DO_PRACTICE	chapter_9/source/main.c	23;"	d	file:
+DO_PRACTICE	chapter_10/source/main.c	22;"	d	file:
+DO_PRACTICE	chapter_11/source/main.c	23;"	d	file:
+DO_PRACTICE	chapter_12/source/main.c	22;"	d	file:
+DO_PRACTICE	chapter_13/source/main.c	20;"	d	file:
+DO_PRACTICE	chapter_14/source/main.c	21;"	d	file:
+DO_PRACTICE	chapter_15/source/main.c	24;"	d	file:
+DO_PRACTICE	chapter_16/source/main.c	25;"	d	file:
+DO_PRACTICE	chapter_9/source/main.c	24;"	d	file:
+DO_PRACTICE_1	chapter_10/source/practice.c	23;"	d	file:
+DO_PRACTICE_1	chapter_11/source/practice.c	22;"	d	file:
+DO_PRACTICE_1	chapter_12/source/practice.c	23;"	d	file:
+DO_PRACTICE_1	chapter_13/source/practice.c	25;"	d	file:
+DO_PRACTICE_1	chapter_15/source/practice.c	21;"	d	file:
+DO_PRACTICE_1	chapter_16/source/practice.c	22;"	d	file:
 DO_PRACTICE_1	chapter_8/source/practice.c	12;"	d	file:
+DO_PRACTICE_1	chapter_9/source/practice.c	24;"	d	file:
+DO_PRACTICE_10	chapter_9/source/practice.c	33;"	d	file:
+DO_PRACTICE_11	chapter_9/source/practice.c	34;"	d	file:
+DO_PRACTICE_12	chapter_9/source/practice.c	35;"	d	file:
+DO_PRACTICE_13	chapter_9/source/practice.c	36;"	d	file:
+DO_PRACTICE_14	chapter_9/source/practice.c	37;"	d	file:
+DO_PRACTICE_15	chapter_9/source/practice.c	38;"	d	file:
+DO_PRACTICE_16	chapter_9/source/practice.c	39;"	d	file:
+DO_PRACTICE_17	chapter_9/source/practice.c	40;"	d	file:
+DO_PRACTICE_2	chapter_10/source/practice.c	24;"	d	file:
+DO_PRACTICE_2	chapter_11/source/practice.c	23;"	d	file:
+DO_PRACTICE_2	chapter_12/source/practice.c	24;"	d	file:
+DO_PRACTICE_2	chapter_13/source/practice.c	26;"	d	file:
+DO_PRACTICE_2	chapter_15/source/practice.c	22;"	d	file:
+DO_PRACTICE_2	chapter_16/source/practice.c	23;"	d	file:
 DO_PRACTICE_2	chapter_8/source/practice.c	13;"	d	file:
+DO_PRACTICE_2	chapter_9/source/practice.c	25;"	d	file:
+DO_PRACTICE_3	chapter_10/source/practice.c	25;"	d	file:
+DO_PRACTICE_3	chapter_11/source/practice.c	24;"	d	file:
+DO_PRACTICE_3	chapter_12/source/practice.c	25;"	d	file:
+DO_PRACTICE_3	chapter_16/source/practice.c	24;"	d	file:
 DO_PRACTICE_3	chapter_8/source/practice.c	14;"	d	file:
+DO_PRACTICE_3	chapter_9/source/practice.c	26;"	d	file:
+DO_PRACTICE_4	chapter_12/source/practice.c	26;"	d	file:
+DO_PRACTICE_4	chapter_13/source/practice.c	27;"	d	file:
+DO_PRACTICE_4	chapter_15/source/practice.c	23;"	d	file:
 DO_PRACTICE_4	chapter_8/source/practice.c	15;"	d	file:
+DO_PRACTICE_4	chapter_9/source/practice.c	27;"	d	file:
+DO_PRACTICE_5	chapter_12/source/practice.c	27;"	d	file:
 DO_PRACTICE_5	chapter_8/source/practice.c	16;"	d	file:
+DO_PRACTICE_5	chapter_9/source/practice.c	28;"	d	file:
+DO_PRACTICE_6	chapter_12/source/practice.c	28;"	d	file:
 DO_PRACTICE_6	chapter_8/source/practice.c	17;"	d	file:
+DO_PRACTICE_6	chapter_9/source/practice.c	29;"	d	file:
+DO_PRACTICE_7	chapter_12/source/practice.c	29;"	d	file:
 DO_PRACTICE_7	chapter_8/source/practice.c	18;"	d	file:
+DO_PRACTICE_7	chapter_9/source/practice.c	30;"	d	file:
 DO_PRACTICE_8	chapter_8/source/practice.c	19;"	d	file:
-DO_PROBLEM	chapter_9/source/main.c	22;"	d	file:
+DO_PRACTICE_8	chapter_9/source/practice.c	31;"	d	file:
+DO_PRACTICE_9	chapter_9/source/practice.c	32;"	d	file:
+DO_PROBLEM	chapter_10/source/main.c	21;"	d	file:
+DO_PROBLEM	chapter_11/source/main.c	22;"	d	file:
+DO_PROBLEM	chapter_12/source/main.c	21;"	d	file:
+DO_PROBLEM	chapter_13/source/main.c	21;"	d	file:
+DO_PROBLEM	chapter_14/source/main.c	20;"	d	file:
+DO_PROBLEM	chapter_15/source/main.c	23;"	d	file:
+DO_PROBLEM	chapter_16/source/main.c	24;"	d	file:
+DO_PROBLEM	chapter_9/source/main.c	23;"	d	file:
+DO_PROBLEM_1	chapter_10/source/problem.c	23;"	d	file:
+DO_PROBLEM_1	chapter_11/source/problem.c	22;"	d	file:
+DO_PROBLEM_1	chapter_12/source/problem.c	24;"	d	file:
+DO_PROBLEM_1	chapter_13/source/problem.c	23;"	d	file:
+DO_PROBLEM_1	chapter_14/source/problem.c	23;"	d	file:
+DO_PROBLEM_1	chapter_15/source/problem.c	21;"	d	file:
+DO_PROBLEM_1	chapter_16/source/problem.c	25;"	d	file:
+DO_PROBLEM_2	chapter_10/source/problem.c	24;"	d	file:
+DO_PROBLEM_2	chapter_11/source/problem.c	23;"	d	file:
+DO_PROBLEM_2	chapter_12/source/problem.c	25;"	d	file:
+DO_PROBLEM_2	chapter_13/source/problem.c	24;"	d	file:
+DO_PROBLEM_2	chapter_14/source/problem.c	24;"	d	file:
+DO_PROBLEM_2	chapter_15/source/problem.c	22;"	d	file:
+DO_PROBLEM_2	chapter_16/source/problem.c	26;"	d	file:
+DO_PROBLEM_3	chapter_10/source/problem.c	25;"	d	file:
+DO_PROBLEM_3	chapter_11/source/problem.c	24;"	d	file:
+DO_PROBLEM_3	chapter_12/source/problem.c	26;"	d	file:
+DO_PROBLEM_3	chapter_15/source/problem.c	23;"	d	file:
+DO_PROBLEM_3	chapter_16/source/problem.c	27;"	d	file:
+DO_PROBLEM_4	chapter_10/source/problem.c	26;"	d	file:
+DO_PROBLEM_4	chapter_11/source/problem.c	25;"	d	file:
+DO_PROBLEM_4	chapter_15/source/problem.c	24;"	d	file:
+DO_PROBLEM_4	chapter_16/source/problem.c	28;"	d	file:
+DO_PROBLEM_5	chapter_10/source/problem.c	27;"	d	file:
+DO_PROBLEM_5	chapter_11/source/problem.c	26;"	d	file:
+DO_PROBLEM_5	chapter_16/source/problem.c	29;"	d	file:
+DO_PROBLEM_6	chapter_11/source/problem.c	27;"	d	file:
+DO_PROBLEM_7	chapter_11/source/problem.c	28;"	d	file:
+DO_QUEUE_DYNAMIC	chapter_17/queue/main.c	21;"	d	file:
+DO_QUEUE_LIST	chapter_17/queue/main.c	22;"	d	file:
+DO_QUEUE_STATIC	chapter_17/queue/main.c	20;"	d	file:
+DO_STACK_DYNAMIC	chapter_17/stack/main.c	21;"	d	file:
+DO_STACK_LIST	chapter_17/stack/main.c	22;"	d	file:
+DO_STACK_STATIC	chapter_17/stack/main.c	20;"	d	file:
 DO_TEST_PRACTICE	chapter_8/source/main.c	13;"	d	file:
 DO_TEST_PROBLEM	chapter_8/source/main.c	12;"	d	file:
 Day	chapter_3/header/test.h	/^enum Day { Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday };/;"	g
+Day_Time	chapter_14/header/test1.h	/^typedef struct DAY_TIME Day_Time;$/;"	t	typeref:struct:DAY_TIME
+EDIT	chapter_13/header/practice.h	/^typedef enum { NEW, DELETE, FORWARD, BACKWARD, SEARCH, EDIT } Trans_type;$/;"	e	enum:__anon24
+EXISTED	chapter_12/source/problem.c	/^static int EXISTED = 0;$/;"	v	file:
 Eratosthenes	chapter_6/source/practice.c	/^void Eratosthenes(char string[],int result[]){\/\/筛选出MAX个质数$/;"	f
+Ex	chapter_10/header/types.h	/^typedef struct Ex {$/;"	s
+Ex	chapter_10/header/types.h	/^} Ex;$/;"	t	typeref:struct:Ex
+Ex2	chapter_10/header/types.h	/^} Ex2;$/;"	t	typeref:struct:__anon3
+Ex3	chapter_10/header/types.h	/^} Ex3;$/;"	t	typeref:struct:__anon4
+FACTORIAL	chapter_14/source/problem.c	26;"	d	file:
 FAILURE	chapter_6/source/practice.c	14;"	d	file:
+FALSE	chapter_12/source/practice.c	33;"	d	file:
+FALSE	chapter_12/source/problem.c	28;"	d	file:
+FALSE	chapter_16/source/problem.c	32;"	d	file:
 FALSE	chapter_6/source/practice.c	18;"	d	file:
+FFLUSH_OTHER	chapter_15/source/practice.c	41;"	d	file:
+FFLUSH_OTHER	chapter_15/source/problem.c	42;"	d	file:
+FORWARD	chapter_13/header/practice.h	/^typedef enum { NEW, DELETE, FORWARD, BACKWARD, SEARCH, EDIT } Trans_type;$/;"	e	enum:__anon24
 Fibonacci	chapter_7/source/problem.c	/^int Fibonacci(int i){$/;"	f
 Friday	chapter_3/header/test.h	/^enum Day { Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday };/;"	e	enum:Day
 GALLON	chapter_3/header/practice.h	/^enum Liquid { OUNCE = 1, CUP = 8, PINT = 16,QUART = 32, GALLON = 128 };$/;"	e	enum:Liquid
+Getnode_Int	chapter_13/source/practice.c	/^int Getnode_Int (Node *node) {$/;"	f
+Init_index_table	chapter_12/source/problem.c	/^void Init_index_table (Node_char **table) {$/;"	f
+Insert_string	chapter_12/source/problem.c	/^int Insert_string (Node_char *table, char *string) {$/;"	f
+Invrec	chapter_11/header/problem.h	/^} Invrec;$/;"	t	typeref:struct:__anon21
+LEASE	chapter_10/header/types.h	/^    enum SALE_TYPE {ALL_PAY, LEASE, CREDIT} sale_type;       \/* sale's type *\/$/;"	e	enum:__anon10::SALE_TYPE
 LEN	chapter_6/source/practice.c	15;"	d	file:
 Liquid	chapter_3/header/practice.h	/^enum Liquid { OUNCE = 1, CUP = 8, PINT = 16,QUART = 32, GALLON = 128 };$/;"	g
+Long_way_call	chapter_10/header/types.h	/^} Long_way_call;$/;"	t	typeref:struct:__anon6
+MALLOC	chapter_11/header/problem.h	21;"	d
 MATRIX	chapter_8/header/practice.h	/^struct MATRIX {$/;"	s
 MAX	chapter_1/source/practice_2.c	4;"	d	file:
 MAX	chapter_1/source/practice_3.c	5;"	d	file:
@@ -45,49 +184,250 @@ MAX	chapter_1/source/practice_4.c	5;"	d	file:
 MAX	chapter_6/source/practice.c	16;"	d	file:
 MAX_COLS	chapter_1/source/1-1.c	4;"	d	file:
 MAX_INPUT	chapter_1/source/1-1.c	5;"	d	file:
+MAX_LINE_LENGTH	chapter_15/source/problem.c	64;"	d	file:
 MAX_NUM	chapter_1/source/practice_2.c	5;"	d	file:
+MEM	chapter_11/header/problem.h	/^} MEM;$/;"	t	typeref:struct:__anon18
+MISC	chapter_10/header/types.h	/^} MISC;$/;"	t	typeref:struct:__anon12
 Monday	chapter_3/header/test.h	/^enum Day { Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday };/;"	e	enum:Day
+NEW	chapter_13/header/practice.h	/^typedef enum { NEW, DELETE, FORWARD, BACKWARD, SEARCH, EDIT } Trans_type;$/;"	e	enum:__anon24
 NICKEL	chapter_3/header/practice.h	/^enum coin { PENNY,NICKEL };$/;"	e	enum:coin
+NODE	chapter_12/header/problem.h	/^typedef struct NODE {$/;"	s
+NODE	chapter_13/header/node.h	/^typedef struct NODE {$/;"	s
+NODE	chapter_16/header/problem.h	/^    struct NODE {$/;"	s
+NODE_CHAR	chapter_12/header/problem.h	/^typedef struct NODE_CHAR {$/;"	s
+NODE_SIZE	chapter_12/source/practice.c	31;"	d	file:
+NODE_STRING	chapter_12/header/problem.h	/^typedef struct NODE_STRING {$/;"	s
+NODE_TWO_WAY	chapter_12/header/problem.h	/^typedef struct NODE_TWO_WAY {$/;"	s
 NUM	chapter_1/source/practice_4.c	6;"	d	file:
 NUMS_QUEEN	chapter_8/header/practice.h	11;"	d
+Node	chapter_12/header/problem.h	/^} Node;$/;"	t	typeref:struct:NODE
+Node	chapter_13/header/node.h	/^} Node;$/;"	t	typeref:struct:NODE
+Node	chapter_16/header/problem.h	/^    typedef struct NODE Node;$/;"	t	typeref:struct:NODE
+Node_char	chapter_12/header/problem.h	/^} Node_char;$/;"	t	typeref:struct:NODE_CHAR
+Node_string	chapter_12/header/problem.h	/^} Node_string;$/;"	t	typeref:struct:NODE_STRING
+Node_two_way	chapter_12/header/problem.h	/^} Node_two_way;$/;"	t	typeref:struct:NODE_TWO_WAY
+OBJECT_TREE	chapter_17/tree/binary_tree/binary_tree.h	/^struct OBJECT_TREE {$/;"	s
+ORDER_DECREMENT	chapter_11/source/problem.c	31;"	d	file:
+ORDER_INCREMENT	chapter_11/source/problem.c	30;"	d	file:
 OUNCE	chapter_3/header/practice.h	/^enum Liquid { OUNCE = 1, CUP = 8, PINT = 16,QUART = 32, GALLON = 128 };$/;"	e	enum:Liquid
+Object_tree	chapter_17/tree/binary_tree/binary_tree.h	/^typedef struct OBJECT_TREE Object_tree;$/;"	t	typeref:struct:OBJECT_TREE
+PART	chapter_11/header/problem.h	/^    enum {PART, SUBASSY} type;$/;"	e	enum:__anon21::__anon22
 PENNY	chapter_3/header/practice.h	/^enum coin { PENNY,NICKEL };$/;"	e	enum:coin
 PINT	chapter_3/header/practice.h	/^enum Liquid { OUNCE = 1, CUP = 8, PINT = 16,QUART = 32, GALLON = 128 };$/;"	e	enum:Liquid
+PLAYER	chapter_16/header/problem.h	/^    struct PLAYER {$/;"	s
+PRINT	chapter_14/source/problem.c	31;"	d	file:
 PROBLEM_18	chapter_8/source/problem.c	12;"	d	file:
 PROBLEM_4	chapter_8/source/problem.c	11;"	d	file:
+Partinfo	chapter_11/header/problem.h	/^} Partinfo;$/;"	t	typeref:struct:__anon19
+Player	chapter_16/header/problem.h	/^    typedef struct PLAYER Player;$/;"	t	typeref:struct:PLAYER
 QUART	chapter_3/header/practice.h	/^enum Liquid { OUNCE = 1, CUP = 8, PINT = 16,QUART = 32, GALLON = 128 };$/;"	e	enum:Liquid
+QUEUE	chapter_17/queue/queue_static/queue_static.h	/^struct QUEUE {$/;"	s
+QUEUE_SIZE	chapter_17/queue/queue_static/queue_static.h	24;"	d
+QUEUE_TYPE	chapter_17/queue/queue_static/queue_static.h	23;"	d
+Queue	chapter_17/queue/queue_static/queue_static.h	/^typedef struct QUEUE Queue;$/;"	t	typeref:struct:QUEUE
+RECORD	chapter_16/header/problem.h	/^    struct RECORD {$/;"	s
+REG_SRC	chapter_10/header/types.h	/^} REG_SRC;$/;"	t	typeref:struct:__anon15
+Rate	chapter_9/source/practice.c	/^typedef struct Rate {$/;"	s	file:
+Rate_Character	chapter_13/header/practice.h	/^typedef struct Rate_Character {$/;"	s
+Record	chapter_16/header/problem.h	/^    typedef struct RECORD Record;$/;"	t	typeref:struct:RECORD
+SALE_TYPE	chapter_10/header/types.h	/^    enum SALE_TYPE {ALL_PAY, LEASE, CREDIT} sale_type;       \/* sale's type *\/$/;"	g	struct:__anon10
+SEARCH	chapter_13/header/practice.h	/^typedef enum { NEW, DELETE, FORWARD, BACKWARD, SEARCH, EDIT } Trans_type;$/;"	e	enum:__anon24
+SGL_OP	chapter_10/header/types.h	/^} SGL_OP;$/;"	t	typeref:struct:__anon14
 SIZE	TEST/test_6.c	12;"	d	file:
 SIZE	chapter_8/source/problem.c	10;"	d	file:
+STACK	chapter_17/stack/stack_dynamic/stack_dynamic.h	/^struct STACK {$/;"	s
+STACK	chapter_17/stack/stack_list/stack_list.h	/^struct STACK {$/;"	s
+STACK	chapter_17/stack/stack_static/stack_static.h	/^struct STACK {$/;"	s
+STACK_NODE	chapter_17/stack/stack_list/stack_list.h	/^struct STACK_NODE {$/;"	s
+STACK_TYPE	chapter_17/stack/stack_dynamic/stack_dynamic.h	22;"	d
+STACK_TYPE	chapter_17/stack/stack_list/stack_list.h	22;"	d
+STACK_TYPE	chapter_17/stack/stack_static/stack_static.h	22;"	d
+SUBASSY	chapter_11/header/problem.h	/^    enum {PART, SUBASSY} type;$/;"	e	enum:__anon21::__anon22
+SUBASSYPART	chapter_11/header/problem.h	/^    struct SUBASSYPART {$/;"	s	struct:__anon20
+SUCCESS	chapter_12/source/problem.c	/^static int SUCCESS = 1;$/;"	v	file:
 SUCCESS	chapter_6/source/practice.c	13;"	d	file:
+Sale	chapter_10/header/types.h	/^} Sale;$/;"	t	typeref:struct:__anon10
 Saturday	chapter_3/header/test.h	/^enum Day { Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday };/;"	e	enum:Day
 Sqrt	chapter_4/source/practice.c	/^int Sqrt(int parameter){$/;"	f
+Stack	chapter_17/stack/stack_dynamic/stack_dynamic.h	/^typedef struct STACK Stack;$/;"	t	typeref:struct:STACK
+Stack	chapter_17/stack/stack_list/stack_list.h	/^typedef struct STACK Stack;$/;"	t	typeref:struct:STACK
+Stack	chapter_17/stack/stack_static/stack_static.h	/^typedef struct STACK Stack;$/;"	t	typeref:struct:STACK
+Stack_node	chapter_17/stack/stack_list/stack_list.h	/^typedef struct STACK_NODE Stack_node;$/;"	t	typeref:struct:STACK_NODE
+Subassyinfo	chapter_11/header/problem.h	/^} Subassyinfo;$/;"	t	typeref:struct:__anon20
 Sunday	chapter_3/header/test.h	/^enum Day { Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday };/;"	e	enum:Day
 Switch	chapter_5/source/practice.c	/^unsigned int Switch(unsigned int value_D,unsigned int value_B[]){$/;"	f
+TRANSACTION	chapter_13/header/practice.h	/^typedef struct TRANSACTION {$/;"	s
+TRUE	chapter_12/source/practice.c	32;"	d	file:
+TRUE	chapter_12/source/problem.c	29;"	d	file:
+TRUE	chapter_16/source/problem.c	31;"	d	file:
 TRUE	chapter_6/source/practice.c	17;"	d	file:
+Telephone_info	chapter_10/header/types.h	/^} Telephone_info;$/;"	t	typeref:struct:__anon5
 Thursday	chapter_3/header/test.h	/^enum Day { Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday };/;"	e	enum:Day
+Trans_type	chapter_13/header/practice.h	/^typedef enum { NEW, DELETE, FORWARD, BACKWARD, SEARCH, EDIT } Trans_type;$/;"	t	typeref:enum:__anon24
+Transaction	chapter_13/header/practice.h	/^} Transaction;$/;"	t	typeref:struct:TRANSACTION
+Transaction_all_pay	chapter_10/header/types.h	/^} Transaction_all_pay;$/;"	t	typeref:struct:__anon8
+Transaction_credit	chapter_10/header/types.h	/^} Transaction_credit;$/;"	t	typeref:struct:__anon9
+Transaction_lease	chapter_10/header/types.h	/^} Transaction_lease;$/;"	t	typeref:struct:__anon7
 Tuesday	chapter_3/header/test.h	/^enum Day { Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday };/;"	e	enum:Day
+Type_Cnt	chapter_13/header/practice.h	/^} Type_Cnt;$/;"	t	typeref:struct:Count_Character
+Type_Rate	chapter_13/header/practice.h	/^} Type_Rate;$/;"	t	typeref:struct:Rate_Character
+UNUSE_MEM	chapter_11/source/problem.c	/^void UNUSE_MEM (MEM *ptr) {$/;"	f
+USE_MEM	chapter_11/source/problem.c	/^void USE_MEM (MEM *ptr) {$/;"	f
+VALUE_TYPE	chapter_17/tree/binary_tree/binary_tree.h	21;"	d
 Wednesday	chapter_3/header/test.h	/^enum Day { Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday };/;"	e	enum:Day
+YEAR_TIME	chapter_14/header/test2.h	/^struct YEAR_TIME {$/;"	s
+Year_Time	chapter_14/header/test2.h	/^typedef struct YEAR_TIME Year_Time;$/;"	t	typeref:struct:YEAR_TIME
+_BINARY_TREE_H	chapter_17/tree/binary_tree/binary_tree.h	19;"	d
+_H_BINARY_TREE_PRETTY_PRINT	print-tree/binary_tree_pretty_print.h	2;"	d
+_PRACTICE_H	chapter_15/header/practice.h	19;"	d
+_PRACTICE_H	chapter_16/header/practice.h	19;"	d
+_PROBLEM_H	chapter_15/header/problem.h	19;"	d
+_PROBLEM_H	chapter_16/header/problem.h	19;"	d
+_QUEUE_STATIC_H	chapter_17/queue/queue_static/queue_static.h	19;"	d
+_STACK_DYNAMIC_H	chapter_17/stack/stack_dynamic/stack_dynamic.h	19;"	d
+_STACK_LIST_H	chapter_17/stack/stack_list/stack_list.h	19;"	d
+_STACK_STATIC_H	chapter_17/stack/stack_static/stack_static.h	19;"	d
+_TEST1_H	chapter_14/header/test1.h	19;"	d
+_TEST2_H	chapter_14/header/test2.h	21;"	d
+_add	chapter_13/source/function.c	/^double _add (double x, double y) {$/;"	f
+_create_stack	chapter_17/stack/stack_dynamic/stack_dynamic.h	/^    void (*_create_stack) (Stack *_self, int _buffer_size);$/;"	m	struct:STACK
+_delete_queue	chapter_17/queue/queue_static/queue_static.h	/^    QUEUE_TYPE (*_delete_queue) (Queue *_self);$/;"	m	struct:QUEUE
+_delete_tree	chapter_17/tree/binary_tree/binary_tree.h	/^    void (*_delete_tree) (Object_tree *self);$/;"	m	struct:BINARY_TREE
+_destroy_stack	chapter_17/stack/stack_dynamic/stack_dynamic.h	/^    void (*_destroy_stack) (Stack *_self);$/;"	m	struct:STACK
+_distroy	chapter_17/stack/stack_list/stack_list.h	/^    void (*_distroy) (Stack *_self);$/;"	m	struct:STACK
+_div	chapter_13/source/function.c	/^double _div (double x, double y) {$/;"	f
+_first	chapter_17/queue/queue_static/queue_static.h	/^    QUEUE_TYPE (*_first) (Queue *_self);$/;"	m	struct:QUEUE
+_free_tree	chapter_17/tree/binary_tree/binary_tree.h	/^    void (*_free_tree) (Object_tree *self);$/;"	m	struct:BINARY_TREE
+_insert_node	chapter_17/tree/binary_tree/binary_tree.h	/^    void (*_insert_node) (Object_tree **_self, VALUE_TYPE _value, Object_tree *parent);$/;"	m	struct:BINARY_TREE
+_insert_queue	chapter_17/queue/queue_static/queue_static.h	/^    void (*_insert_queue) (Queue *_self, QUEUE_TYPE _value);$/;"	m	struct:QUEUE
+_is_empty	chapter_17/queue/queue_static/queue_static.h	/^    bool (*_is_empty) (Queue *_self);$/;"	m	struct:QUEUE
+_is_empty	chapter_17/stack/stack_dynamic/stack_dynamic.h	/^    bool (*_is_empty) (int _top_element);$/;"	m	struct:STACK
+_is_empty	chapter_17/stack/stack_list/stack_list.h	/^    bool (*_is_empty) (Stack_node *_list);$/;"	m	struct:STACK
+_is_empty	chapter_17/stack/stack_static/stack_static.h	/^    bool (*_is_empty) (int _top_element);$/;"	m	struct:STACK
+_is_full	chapter_17/queue/queue_static/queue_static.h	/^    bool (*_is_full) (Queue *_self);$/;"	m	struct:QUEUE
+_is_full	chapter_17/stack/stack_dynamic/stack_dynamic.h	/^    bool (*_is_full) (Stack *_self, int _top_element);$/;"	m	struct:STACK
+_is_full	chapter_17/stack/stack_list/stack_list.h	/^    bool (*_is_full) (Stack_node *_list);$/;"	m	struct:STACK
+_is_full	chapter_17/stack/stack_static/stack_static.h	/^    bool (*_is_full) (int _top_element);$/;"	m	struct:STACK
+_mul	chapter_13/source/function.c	/^double _mul (double x, double y) {$/;"	f
+_pop	chapter_17/stack/stack_dynamic/stack_dynamic.h	/^    STACK_TYPE (*_pop) (Stack *_self);$/;"	m	struct:STACK
+_pop	chapter_17/stack/stack_list/stack_list.h	/^    STACK_TYPE (*_pop) (Stack *_self);$/;"	m	struct:STACK
+_pop	chapter_17/stack/stack_static/stack_static.h	/^    STACK_TYPE (*_pop) (Stack *_self);$/;"	m	struct:STACK
+_print_tree	chapter_17/tree/binary_tree/binary_tree.h	/^    void (*_print_tree) (Object_tree *_self);$/;"	m	struct:BINARY_TREE
+_push	chapter_17/stack/stack_dynamic/stack_dynamic.h	/^    void (*_push) (Stack *_self, STACK_TYPE _value);$/;"	m	struct:STACK
+_push	chapter_17/stack/stack_list/stack_list.h	/^    void (*_push) (Stack *_self, STACK_TYPE _value);$/;"	m	struct:STACK
+_push	chapter_17/stack/stack_static/stack_static.h	/^    void (*_push) (Stack *_self, STACK_TYPE _value);$/;"	m	struct:STACK
+_sub	chapter_13/source/function.c	/^double _sub (double x, double y) {$/;"	f
+_top	chapter_17/stack/stack_dynamic/stack_dynamic.h	/^    STACK_TYPE (* _top) (Stack *_self);$/;"	m	struct:STACK
+_top	chapter_17/stack/stack_list/stack_list.h	/^    STACK_TYPE (* _top) (Stack *_self);$/;"	m	struct:STACK
+_top	chapter_17/stack/stack_static/stack_static.h	/^    STACK_TYPE (* _top) (Stack *_self);$/;"	m	struct:STACK
+a	chapter_10/header/types.h	/^	char a;$/;"	m	struct:__anon4
+a	chapter_10/header/types.h	/^    int a;$/;"	m	struct:Ex
+a	chapter_10/header/types.h	/^    int a;$/;"	m	struct:__anon3
+a	chapter_10/source/problem.c	/^    int a:2;$/;"	m	struct:__anon1	file:
+a	chapter_10/source/problem.c	/^    int a;$/;"	m	union:__anon2	file:
+actual_selling_price	chapter_10/header/types.h	/^    float actual_selling_price;$/;"	m	struct:__anon7
+actual_selling_price	chapter_10/header/types.h	/^    float actual_selling_price;$/;"	m	struct:__anon8
+actual_selling_price	chapter_10/header/types.h	/^    float actual_selling_price;$/;"	m	struct:__anon9
+addr	chapter_10/header/types.h	/^    unsigned int addr : 16;$/;"	m	struct:__anon17
+all_pay	chapter_10/header/types.h	/^        Transaction_all_pay all_pay;$/;"	m	union:__anon10::__anon11
+alloc	chapter_11/source/problem.c	/^void *alloc (size_t size) {$/;"	f
+area_num	chapter_10/header/types.h	/^    unsigned int area_num;$/;"	m	struct:__anon5
 array_offset	chapter_8/source/practice.c	/^int array_offset(int arrayinfo[], ...) {$/;"	f
 array_offset2	chapter_8/source/practice.c	/^int array_offset2(int arrayinfo[], ...) {$/;"	f
 ascii_to_integer	chapter_7/source/practice.c	/^int ascii_to_integer(char *string){$/;"	f
 assign_bit	chapter_5/source/practice.c	/^void assign_bit(char bit_array[],unsigned bit_number,int value){$/;"	f
+b	chapter_10/header/types.h	/^	short b;$/;"	m	struct:__anon4
+b	chapter_10/header/types.h	/^    char b[3];$/;"	m	struct:Ex
+b	chapter_10/header/types.h	/^    short b[2];$/;"	m	struct:__anon3
+b	chapter_10/source/problem.c	/^    float b;$/;"	m	union:__anon2	file:
+bank_name	chapter_10/header/types.h	/^    char bank_name[21];$/;"	m	struct:__anon9
 bit_16	chapter_5/source/practice.c	8;"	d	file:
 bit_size	chapter_5/source/practice.c	7;"	d	file:
+branch	chapter_10/header/types.h	/^    BRANCH branch;$/;"	m	struct:__anon17
+buffer	chapter_17/stack/stack_dynamic/stack_dynamic.h	/^    STACK_TYPE *buffer;$/;"	m	struct:STACK
+buffer	chapter_17/stack/stack_static/stack_static.h	/^    STACK_TYPE buffer[BUFFER_SIZE];$/;"	m	struct:STACK
+buffer_size	chapter_17/stack/stack_dynamic/stack_dynamic.h	/^    int buffer_size;$/;"	m	struct:STACK
 byte_size	chapter_5/source/practice.c	6;"	d	file:
+c	chapter_10/header/types.h	/^	int c;$/;"	m	struct:__anon4
+c	chapter_10/header/types.h	/^    Ex2 c;$/;"	m	struct:Ex
+c	chapter_10/source/problem.c	/^    char c;$/;"	m	union:__anon2	file:
+calculator	chapter_13/source/problem.c	/^double calculator (int op, double x, double y) {$/;"	f
+calloc	chapter_11/source/practice.c	26;"	d	file:
+card_player	chapter_16/header/problem.h	/^        Card *card_player[26];$/;"	m	struct:PLAYER
 clear_bit	chapter_5/source/practice.c	/^void clear_bit(char bit_array[],unsigned bit_number){$/;"	f
+cmp_swap_Int	chapter_13/source/practice.c	/^void cmp_swap_Int (void *x, void *y) {$/;"	f
 coin	chapter_3/header/practice.h	/^enum coin { PENNY,NICKEL };$/;"	g
+compare	chapter_13/source/practice.c	/^static int (*compare[7]) (int) = {$/;"	v	file:
 compare	chapter_6/source/practice.c	/^int compare(char source_one,char const *chars){$/;"	f
 compare_array_point	TEST/test_6.c	/^int compare_array_point(int x[],int y[],int numSize){$/;"	f
+compare_integers	TEST/test_7.c	/^int compare_integers (void const *a, void const *b) {$/;"	f
+compare_integers	chapter_11/source/problem.c	/^int compare_integers (void const *a, void const *b) {$/;"	f
+compare_ints	chapter_13/source/problem.c	/^int compare_ints (void const *x , void const *y) {$/;"	f
 copy_n	chapter_4/source/practice.c	/^void copy_n(char dst[],char src[],int n){$/;"	f
+cost	chapter_11/header/problem.h	/^    int cost;$/;"	m	struct:__anon19
 count	chapter_7/source/problem.c	/^static int count = 0;$/;"	v	file:
+count_chars	chapter_9/source/practice.c	/^int count_chars (char const *str, char const *chars) {$/;"	f
+count_cntrl	chapter_13/header/practice.h	/^    int count_cntrl;$/;"	m	struct:Count_Character
+count_cntrl	chapter_9/source/practice.c	/^    unsigned int count_cntrl;$/;"	m	struct:Count	file:
+count_digit	chapter_13/header/practice.h	/^    int count_digit;$/;"	m	struct:Count_Character
+count_digit	chapter_9/source/practice.c	/^    unsigned int count_digit;$/;"	m	struct:Count	file:
+count_lower	chapter_13/header/practice.h	/^    int count_lower;$/;"	m	struct:Count_Character
+count_lower	chapter_9/source/practice.c	/^    unsigned int count_lower;$/;"	m	struct:Count	file:
 count_prime	chapter_6/source/practice.c	/^int count_prime(int start, int end){$/;"	f
+count_print	chapter_13/header/practice.h	/^    int count_print;$/;"	m	struct:Count_Character
+count_print	chapter_9/source/practice.c	/^    unsigned int count_print;$/;"	m	struct:Count	file:
+count_punct	chapter_13/header/practice.h	/^    int count_punct;$/;"	m	struct:Count_Character
+count_punct	chapter_9/source/practice.c	/^    unsigned int count_punct;$/;"	m	struct:Count	file:
+count_space	chapter_13/header/practice.h	/^    int count_space;$/;"	m	struct:Count_Character
+count_space	chapter_9/source/practice.c	/^    unsigned int count_space;$/;"	m	struct:Count	file:
+count_sum	chapter_9/source/practice.c	/^    unsigned int count_sum;$/;"	m	struct:Count	file:
+count_unprint	chapter_9/source/practice.c	/^    unsigned int count_unprint;$/;"	m	struct:Count	file:
+count_upper	chapter_13/header/practice.h	/^    int count_upper;$/;"	m	struct:Count_Character
+count_upper	chapter_9/source/practice.c	/^    unsigned int count_upper;$/;"	m	struct:Count	file:
+create_list	chapter_12/source/problem.c	/^Node *create_list (int *point_array, int length_array) {$/;"	f
+create_list_two_way	chapter_12/source/problem.c	/^Node_two_way *create_list_two_way (int *point_array, int length_array) {$/;"	f
+create_stack	chapter_17/stack/stack_dynamic/stack_dynamic.c	/^void create_stack (Stack *self, int _buffer_size) {$/;"	f
+create_subassy_record	chapter_11/source/problem.c	/^Invrec *create_subassy_record (int n_parts) {$/;"	f
+credit	chapter_10/header/types.h	/^        Transaction_credit credit;$/;"	m	union:__anon10::__anon11
+customer_address	chapter_10/header/types.h	/^    char customer_address[41];$/;"	m	struct:__anon10
+customer_name	chapter_10/header/types.h	/^    char customer_name[21];$/;"	m	struct:__anon10
+d	chapter_10/header/types.h	/^	long int d;$/;"	m	struct:__anon4
+d	chapter_10/header/types.h	/^    struct Ex *d;$/;"	m	struct:Ex	typeref:struct:Ex::Ex
+data	print-tree/binary_tree_pretty_print.h	/^  int data;$/;"	m	struct:BinaryTree
+date	chapter_10/header/types.h	/^    char *date;$/;"	m	struct:__anon6
+day	chapter_14/header/test2.h	/^    unsigned int day;$/;"	m	struct:YEAR_TIME
+day_time	chapter_14/header/test2.h	/^    Day_Time day_time;$/;"	m	struct:YEAR_TIME
+dbl_op	chapter_10/header/types.h	/^    DBL_OP dbl_op;$/;"	m	struct:__anon17
 deblank	chapter_4/source/practice.c	/^void deblank(char string[]){$/;"	f
+decrypt	chapter_9/source/practice.c	/^void decrypt (char *data, char const *key) {$/;"	f
 del_substr	chapter_6/source/practice.c	/^int del_substr(char *str, char const *substr){$/;"	f
 delete	chapter_4/source/practice.c	/^void delete(char string[],int pos){$/;"	f
 delete	chapter_6/source/practice.c	/^int delete(char *str, char const *substr,char *address,char result[]){$/;"	f
+delete_queue	chapter_17/queue/queue_static/queue_static.c	/^QUEUE_TYPE delete_queue (Queue *self) {$/;"	f
+delete_tree	chapter_17/tree/binary_tree/binary_tree.c	/^void delete_tree (Object_tree *self) {$/;"	f
+destroy_stack	chapter_17/stack/stack_dynamic/stack_dynamic.c	/^void destroy_stack (Stack *self) {$/;"	f
+digit	chapter_16/header/problem.h	/^        char *digit;$/;"	m	struct:CARD
+digit	chapter_16/header/problem.h	/^        char *digit;$/;"	m	struct:NODE
 disasemble_switch	TEST/test_6.c	/^void disasemble_switch(void){$/;"	f
+discart_inventory_record	chapter_11/source/problem.c	/^void discart_inventory_record (Invrec *record) {$/;"	f
+distroy	chapter_17/stack/stack_list/stack_list.c	/^void distroy (Stack *self) {$/;"	f
+dll_insert	chapter_12/source/problem.c	/^int dll_insert (Node_two_way *root, int value) {$/;"	f
+dll_insert_advanced	chapter_12/source/problem.c	/^int dll_insert_advanced (Node_two_way *root, int value) {$/;"	f
+dll_insert_final	chapter_12/source/problem.c	/^int dll_insert_final (Node_two_way *root, int value) {$/;"	f
+dll_insert_practice	chapter_12/source/practice.c	/^int dll_insert_practice (register Node_two_way **first_ptr, register Node_two_way **last_ptr, int value) {$/;"	f
+dll_remove	chapter_12/source/practice.c	/^int dll_remove (Node_two_way *rootp, Node_two_way *node) {$/;"	f
+dollars	chapter_9/source/practice.c	/^void dollars (char *dest, char const *src) {$/;"	f
 double_array	TEST/test_6.c	/^void double_array(){$/;"	f
+down_payment	chapter_10/header/types.h	/^    float down_payment;$/;"	m	struct:__anon7
+down_payment	chapter_10/header/types.h	/^    float down_payment;$/;"	m	struct:__anon9
+dst_mode	chapter_10/header/types.h	/^    unsigned int dst_mode : 3;$/;"	m	struct:__anon14
+dst_mode	chapter_10/header/types.h	/^    unsigned int dst_mode : 3;$/;"	m	struct:__anon15
+dst_mode	chapter_10/header/types.h	/^    unsigned int dst_mode : 3;$/;"	m	struct:__anon16
+dst_reg	chapter_10/header/types.h	/^    unsigned int dst_reg : 3;$/;"	m	struct:__anon14
+dst_reg	chapter_10/header/types.h	/^    unsigned int dst_reg : 3;$/;"	m	struct:__anon15
+dst_reg	chapter_10/header/types.h	/^    unsigned int dst_reg : 3;$/;"	m	struct:__anon16
 encode	chapter_5/source/practice.c	12;"	d	file:
+encrypt	chapter_9/source/practice.c	/^void encrypt (char *data, char const *key) {$/;"	f
 expression	chapter_5/source/problem.c	/^int expression(void){$/;"	f
 f1	chapter_5/source/problem.c	/^int f1(int x){$/;"	f
 f2	chapter_5/source/problem.c	/^int f2(int x){$/;"	f
@@ -95,6 +435,9 @@ f3	chapter_5/source/problem.c	/^int f3(int x,int y){$/;"	f
 faster_array	TEST/test_6.c	9;"	d	file:
 faster_point	TEST/test_6.c	10;"	d	file:
 find_char	chapter_6/source/practice.c	/^char *find_char(char const *source, char const *chars){$/;"	f
+first	chapter_17/queue/queue_static/queue_static.c	/^QUEUE_TYPE first (Queue *self) {$/;"	f
+free_tree	chapter_17/tree/binary_tree/binary_tree.c	/^void free_tree (Object_tree *self) {$/;"	f
+front	chapter_17/queue/queue_static/queue_static.h	/^    size_t front;$/;"	m	struct:QUEUE
 func	TEST/test.c	/^int func(void){$/;"	f
 func	TEST/test_a.c	/^static int func(void){$/;"	f	file:
 func	chapter_5/source/problem.c	/^int func(void){$/;"	f
@@ -102,31 +445,72 @@ func1	TEST/test.c	/^int func1(void){$/;"	f
 func1	TEST/test_a.c	/^static int func1(void){$/;"	f	file:
 fx	TEST/test_2.c	/^int fx(int *a){$/;"	f
 gcd	chapter_7/source/practice.c	/^int gcd(int m,int n){$/;"	f
+get_cards	chapter_16/source/problem.c	/^void get_cards (Card **deck, Player *player, int player_num) {$/;"	f
 hermite	chapter_7/source/practice.c	/^int hermite(int n,int x){$/;"	f
+hour	chapter_14/header/test1.h	/^    unsigned int hour;$/;"	m	struct:DAY_TIME
 identity_matrix	chapter_8/source/practice.c	/^bool identity_matrix(int matrix[][10]) {$/;"	f
 identity_matrix_extern	chapter_8/source/practice.c	/^bool identity_matrix_extern(int *pos,struct MATRIX matrix_size) {$/;"	f
 if_else	chapter_5/source/problem.c	/^int if_else(void){$/;"	f
 implement_strrpbrk	chapter_9/source/problem.c	/^char *implement_strrpbrk (const char *s1, const char *s2) {$/;"	f
 implement_strrstr	chapter_9/source/problem.c	/^char *implement_strrstr (const char *s1, const char *s2) {$/;"	f
 implement_strstr	chapter_9/source/problem.c	/^char *implement_strstr (const char *s1, const char *s2) {$/;"	f
+index	chapter_12/header/problem.h	/^    char index;$/;"	m	struct:NODE_CHAR
+info	chapter_11/header/problem.h	/^    } info;$/;"	m	struct:__anon21	typeref:union:__anon21::__anon23
 initialize	chapter_8/source/practice.c	/^void initialize(int panic[][NUMS_QUEEN]) {$/;"	f
+insert_node	chapter_17/tree/binary_tree/binary_tree.c	/^void insert_node (Object_tree **self, VALUE_TYPE value, Object_tree *parent) {$/;"	f
+insert_queue	chapter_17/queue/queue_static/queue_static.c	/^void insert_queue (Queue *self, QUEUE_TYPE value) {$/;"	f
+intToString	print-tree/binary_tree_pretty_print.cpp	/^string intToString(int val) {$/;"	f
 int_size	chapter_5/source/practice.c	10;"	d	file:
+interest_rate	chapter_10/header/types.h	/^    float interest_rate;$/;"	m	struct:__anon9
+is_empty	chapter_17/queue/queue_static/queue_static.c	/^bool is_empty (Queue *self) {$/;"	f
+is_empty	chapter_17/stack/stack_dynamic/stack_dynamic.c	/^bool is_empty (int top_element) {$/;"	f
+is_empty	chapter_17/stack/stack_list/stack_list.c	/^bool is_empty (Stack_node *list) {$/;"	f
+is_empty	chapter_17/stack/stack_static/stack_static.c	/^bool is_empty (int top_element) {$/;"	f
+is_full	chapter_17/queue/queue_static/queue_static.c	/^bool is_full (Queue *self) {$/;"	f
+is_full	chapter_17/stack/stack_dynamic/stack_dynamic.c	/^bool is_full (Stack *self, int top_element) {$/;"	f
+is_full	chapter_17/stack/stack_list/stack_list.c	/^bool is_full (Stack_node *list) {$/;"	f
+is_full	chapter_17/stack/stack_static/stack_static.c	/^bool is_full (int top_element) {$/;"	f
 is_valid	chapter_8/source/practice.c	/^bool is_valid(int panic[][NUMS_QUEEN],int index_row,int index_column) {$/;"	f
 is_valid_column	chapter_8/source/practice.c	/^bool is_valid_column(int panic[][NUMS_QUEEN],int index_row,int index_column) {$/;"	f
 is_valid_oblique_left	chapter_8/source/practice.c	/^bool is_valid_oblique_left(int panic[][NUMS_QUEEN],int index_row,int index_column) {$/;"	f
 is_valid_oblique_right	chapter_8/source/practice.c	/^bool is_valid_oblique_right(int panic[][NUMS_QUEEN],int index_row,int index_column) {$/;"	f
 is_valid_row	chapter_8/source/practice.c	/^bool is_valid_row(int panic[][NUMS_QUEEN],int index_row,int index_column) {$/;"	f
+key	chapter_16/header/problem.h	/^        char *key;$/;"	m	struct:RECORD
+kind	chapter_16/header/problem.h	/^        char *kind;$/;"	m	struct:CARD
+lease	chapter_10/header/types.h	/^        Transaction_lease lease;$/;"	m	union:__anon10::__anon11
+lease_term	chapter_10/header/types.h	/^    int lease_term;$/;"	m	struct:__anon7
+left	chapter_17/tree/binary_tree/binary_tree.h	/^    Object_tree *left;$/;"	m	struct:OBJECT_TREE
+left	print-tree/binary_tree_pretty_print.h	/^  BinaryTree *left, *right;$/;"	m	struct:BinaryTree
 left_move	chapter_5/source/practice.c	/^void left_move(unsigned int value[],int step){$/;"	f
 length_dst	chapter_4/source/practice.c	7;"	d	file:
 length_src	chapter_4/source/practice.c	8;"	d	file:
 length_x	chapter_8/header/practice.h	/^    int length_x;\/\/row$/;"	m	struct:MATRIX
 length_y	chapter_8/header/practice.h	/^    int length_y;\/\/column$/;"	m	struct:MATRIX
+licensing_fee	chapter_10/header/types.h	/^    float licensing_fee;$/;"	m	struct:__anon8
+licensing_fee	chapter_10/header/types.h	/^    float licensing_fee;$/;"	m	struct:__anon9
 line_end	chapter_1/source/practice_1.c	4;"	d	file:
+list	chapter_12/header/problem.h	/^    Node_string *list;$/;"	m	struct:NODE_CHAR
+list	chapter_16/header/problem.h	/^        Node *list[9];      \/\/ 0~8$/;"	m	struct:PLAYER
+list	chapter_17/stack/stack_list/stack_list.h	/^    Stack_node *list;		\/\/ the top node of the stack$/;"	m	struct:STACK
+loan_duration	chapter_10/header/types.h	/^    int loan_duration;$/;"	m	struct:__anon9
+machine_inst	chapter_10/header/types.h	/^} machine_inst;$/;"	t	typeref:struct:__anon17
 main	TEST/test_1.c	/^int main(void){$/;"	f
 main	TEST/test_4.c	/^int main(void){$/;"	f
 main	TEST/test_6.c	/^int main(void){$/;"	f
 main	TEST/test_7.c	/^int main(void) {$/;"	f
+main	TEST/test_8.c	/^int main (void) {$/;"	f
 main	chapter_1/source/main.c	/^void main(void){$/;"	f
+main	chapter_10/source/main.c	/^int main (void) {$/;"	f
+main	chapter_11/source/main.c	/^int main (void) {$/;"	f
+main	chapter_12/source/main.c	/^int main (void) {$/;"	f
+main	chapter_13/source/main.c	/^int main (void) {$/;"	f
+main	chapter_14/source/main.c	/^int main (void) {$/;"	f
+main	chapter_14/source/test.c	/^int main (void) {$/;"	f
+main	chapter_15/source/main.c	/^int main (void) {$/;"	f
+main	chapter_16/source/main.c	/^int main (void) {$/;"	f
+main	chapter_17/queue/main.c	/^int main (void) {$/;"	f
+main	chapter_17/stack/main.c	/^int main (void) {$/;"	f
+main	chapter_17/tree/main.c	/^int main (void) {$/;"	f
 main	chapter_2/source/main.c	/^void main(void){$/;"	f
 main	chapter_3/source/main.c	/^int main(void){$/;"	f
 main	chapter_4/source/main.c	/^int main(void){$/;"	f
@@ -136,9 +520,42 @@ main	chapter_7/source/main.c	/^int main(){$/;"	f
 main	chapter_8/source/main.c	/^int main(void) {$/;"	f
 main	chapter_9/source/main.c	/^int main (void) {$/;"	f
 make_result	chapter_8/source/practice.c	/^void make_result(int panic[][NUMS_QUEEN],int index_row,int index_column) {$/;"	f
+malloc	chapter_11/header/problem.h	20;"	d
+malloc	chapter_11/source/problem.c	123;"	d	file:
+malloc	chapter_11/source/problem.c	159;"	d	file:
+malloc	chapter_11/source/problem.c	180;"	d	file:
+malloc	chapter_11/source/problem.c	41;"	d	file:
+malloc	chapter_11/source/problem.c	55;"	d	file:
+malloc	chapter_11/source/problem.c	82;"	d	file:
+manufacturer_seggested_retail_price	chapter_10/header/types.h	/^    float manufacturer_seggested_retail_price;$/;"	m	struct:__anon7
+manufacturer_seggested_retail_price	chapter_10/header/types.h	/^    float manufacturer_seggested_retail_price;$/;"	m	struct:__anon8
+manufacturer_seggested_retail_price	chapter_10/header/types.h	/^    float manufacturer_seggested_retail_price;$/;"	m	struct:__anon9
 matrix_mutiply	chapter_8/source/practice.c	/^void matrix_mutiply(int *m1,int *m2,int *r,int x,int y,int z) {$/;"	f
+maxHeight	print-tree/binary_tree_pretty_print.cpp	/^int maxHeight(BinaryTree *p) {$/;"	f
 max_list	chapter_7/source/practice.c	/^int max_list(int first,...){$/;"	f
 microsoft	TEST/test_3.c	4;"	d	file:
+minute	chapter_14/header/test1.h	/^    unsigned int minute;$/;"	m	struct:DAY_TIME
+misc	chapter_10/header/types.h	/^    MISC misc;$/;"	m	struct:__anon17
+model	chapter_10/header/types.h	/^    char model[21];$/;"	m	struct:__anon10
+month	chapter_14/header/test2.h	/^    unsigned int month;$/;"	m	struct:YEAR_TIME
+monthly_payment	chapter_10/header/types.h	/^    float monthly_payment;$/;"	m	struct:__anon7
+monthly_payment	chapter_10/header/types.h	/^    float monthly_payment;$/;"	m	struct:__anon9
+my_strcat	chapter_9/source/practice.c	/^char *my_strcat (char *dest, char *src, unsigned int size) {$/;"	f
+my_strcpy	chapter_9/source/practice.c	/^char *my_strcpy (char *dest, char *src, unsigned int size) {$/;"	f
+my_strcpy_end	chapter_9/source/practice.c	/^char *my_strcpy_end (char *dest, char *src) {$/;"	f
+my_strlen	chapter_9/source/practice.c	/^size_t my_strlen (char *str, unsigned int size) {$/;"	f
+my_strncat	chapter_9/source/practice.c	/^void my_strncat (char *dest, char *src, int dest_len) {$/;"	f
+my_strnchr	chapter_9/source/practice.c	/^char *my_strnchr (char const *str, int ch, int which) {$/;"	f
+my_strrchr	chapter_9/source/practice.c	/^char *my_strrchr (char const *str, int ch) {$/;"	f
+n_parts	chapter_11/header/problem.h	/^    int n_parts;$/;"	m	struct:__anon20
+name	chapter_16/header/problem.h	/^        char *name;$/;"	m	struct:PLAYER
+next	chapter_12/header/problem.h	/^    struct NODE *next;$/;"	m	struct:NODE	typeref:struct:NODE::NODE
+next	chapter_12/header/problem.h	/^    struct NODE_CHAR *next;$/;"	m	struct:NODE_CHAR	typeref:struct:NODE_CHAR::NODE_CHAR
+next	chapter_12/header/problem.h	/^    struct NODE_STRING *next;$/;"	m	struct:NODE_STRING	typeref:struct:NODE_STRING::NODE_STRING
+next	chapter_12/header/problem.h	/^    struct NODE_TWO_WAY *next;      \/\/ pointer to the next node$/;"	m	struct:NODE_TWO_WAY	typeref:struct:NODE_TWO_WAY::NODE_TWO_WAY
+next	chapter_13/header/node.h	/^    struct NODE *next;$/;"	m	struct:NODE	typeref:struct:NODE::NODE
+next	chapter_16/header/problem.h	/^        struct NODE *next;$/;"	m	struct:NODE	typeref:struct:NODE::NODE
+next	chapter_17/stack/stack_list/stack_list.h	/^	Stack_node *next;$/;"	m	struct:STACK_NODE
 objects	chapter_1/makefile	/^objects = main.o 1-1.o practice_1.o practice_2.o practice_3.o practice_4.o$/;"	m
 objects	chapter_2/makefile	/^objects = main.o practice_2.o$/;"	m
 objects	chapter_3/makefile	/^objects = main.o test_1.o test.o practice.o $/;"	m
@@ -147,72 +564,237 @@ objects	chapter_5/makefile	/^objects = main.o practice.o problem.o$/;"	m
 objects	chapter_6/makefile	/^objects = main.o practice.o$/;"	m
 objects	chapter_7/makefile	/^objects = main.o practice.o problem.o$/;"	m
 objects	chapter_8/makefile	/^objects = main.o practice.o problem.o$/;"	m
+objects_binary_tree	chapter_17/tree/makefile	/^objects_binary_tree = main.o binary_tree.o$/;"	m
+objects_practice	chapter_10/makefile	/^objects_practice = main.o practice.o$/;"	m
+objects_practice	chapter_11/makefile	/^objects_practice = main.o practice.o$/;"	m
+objects_practice	chapter_12/makefile	/^objects_practice = main.o practice.o problem.o$/;"	m
+objects_practice	chapter_13/makefile	/^objects_practice = main.o practice.o$/;"	m
+objects_practice	chapter_14/makefile	/^objects_practice = main.o practice.o$/;"	m
+objects_practice	chapter_15/makefile	/^objects_practice = main.o practice.o$/;"	m
+objects_practice	chapter_16/makefile	/^objects_practice = main.o practice.o$/;"	m
 objects_practice	chapter_9/makefile	/^objects_practice = main.o practice.o$/;"	m
+objects_problem	chapter_10/makefile	/^objects_problem = main.o problem.o$/;"	m
+objects_problem	chapter_11/makefile	/^objects_problem = main.o problem.o$/;"	m
+objects_problem	chapter_12/makefile	/^objects_problem = main.o problem.o$/;"	m
+objects_problem	chapter_13/makefile	/^objects_problem = main.o problem.o function.o$/;"	m
+objects_problem	chapter_14/makefile	/^objects_problem = main.o problem.o$/;"	m
+objects_problem	chapter_15/makefile	/^objects_problem = main.o problem.o$/;"	m
+objects_problem	chapter_16/makefile	/^objects_problem = main.o problem.o$/;"	m
 objects_problem	chapter_9/makefile	/^objects_problem = main.o problem.o$/;"	m
+objects_queue_static	chapter_17/queue/makefile	/^objects_queue_static = main.o queue_static.o$/;"	m
+objects_stack_dynamic	chapter_17/stack/makefile	/^objects_stack_dynamic = main.o stack_dynamic.o$/;"	m
+objects_stack_list	chapter_17/stack/makefile	/^objects_stack_list = main.o stack_list.o$/;"	m
+objects_stack_static	chapter_17/stack/makefile	/^objects_stack_static = main.o stack_static.o$/;"	m
+offset	chapter_10/header/types.h	/^    unsigned int offset : 8;$/;"	m	struct:__anon13
+opcode	chapter_10/header/types.h	/^    unsigned int opcode : 10;$/;"	m	struct:__anon14
+opcode	chapter_10/header/types.h	/^    unsigned int opcode : 16;$/;"	m	struct:__anon12
+opcode	chapter_10/header/types.h	/^    unsigned int opcode : 4;$/;"	m	struct:__anon16
+opcode	chapter_10/header/types.h	/^    unsigned int opcode : 7;$/;"	m	struct:__anon15
+opcode	chapter_10/header/types.h	/^    unsigned int opcode : 8;$/;"	m	struct:__anon13
+other_data	chapter_16/header/problem.h	/^        int other_data;$/;"	m	struct:RECORD
 output	TEST/test_2.c	/^int output(char str[],int length){$/;"	f
+palindrome	chapter_9/source/practice.c	/^int palindrome (char *string) {$/;"	f
+parent	chapter_17/tree/binary_tree/binary_tree.h	/^    Object_tree *parent;$/;"	m	struct:OBJECT_TREE
+part	chapter_11/header/problem.h	/^        Partinfo *part;$/;"	m	union:__anon21::__anon23
+part	chapter_11/header/problem.h	/^    } *part;$/;"	m	struct:__anon20	typeref:struct:__anon20::SUBASSYPART
+partno	chapter_11/header/problem.h	/^        char partno[10];$/;"	m	struct:__anon20::SUBASSYPART
+partno	chapter_11/header/problem.h	/^    char partno[10];$/;"	m	struct:__anon21
+pop	chapter_17/stack/stack_dynamic/stack_dynamic.c	/^STACK_TYPE pop (Stack *self) {$/;"	f
+pop	chapter_17/stack/stack_list/stack_list.c	/^STACK_TYPE pop (Stack *self) {$/;"	f
+pop	chapter_17/stack/stack_static/stack_static.c	/^STACK_TYPE pop (Stack *self) {$/;"	f
+practice_1	chapter_10/source/practice.c	/^Long_way_call *practice_1 (void) {$/;"	f
+practice_1	chapter_11/source/practice.c	/^int *practice_1 (void) {$/;"	f
+practice_1	chapter_12/source/practice.c	/^void practice_1 (void) {$/;"	f
+practice_1	chapter_13/source/practice.c	/^void practice_1 (void) {$/;"	f
+practice_1	chapter_15/source/practice.c	/^int practice_1 (void) {$/;"	f
+practice_1	chapter_16/source/practice.c	/^int practice_1 (void) {$/;"	f
 practice_1	chapter_4/source/practice.c	/^int practice_1(void){$/;"	f
 practice_1	chapter_5/source/practice.c	/^int practice_1(void){$/;"	f
 practice_1	chapter_6/source/practice.c	/^int practice_1(void){$/;"	f
 practice_1	chapter_7/source/practice.c	/^int practice_1(void){$/;"	f
 practice_1	chapter_8/source/practice.c	/^int practice_1(void) {$/;"	f
+practice_1	chapter_9/source/practice.c	/^void practice_1 (void) {$/;"	f
+practice_10	chapter_9/source/practice.c	/^void practice_10 (void) {$/;"	f
+practice_11	chapter_9/source/practice.c	/^int practice_11 (void) {$/;"	f
 practice_12	chapter_3/source/practice.c	/^int practice_12(void){$/;"	f
+practice_12	chapter_9/source/practice.c	/^void practice_12 (void) {$/;"	f
+practice_13	chapter_9/source/practice.c	/^void practice_13 (void) {$/;"	f
 practice_14	chapter_3/source/practice.c	/^int practice_14(void){ \/\/查看汇编代码，发现共4个局部变量入栈，第一个a位于栈顶$/;"	f
+practice_14	chapter_9/source/practice.c	/^void practice_14 (void) {$/;"	f
+practice_15	chapter_9/source/practice.c	/^void practice_15 (void) {$/;"	f
+practice_2	chapter_10/source/practice.c	/^Sale *practice_2 (void) {$/;"	f
+practice_2	chapter_11/source/practice.c	/^void practice_2 (void) {$/;"	f
+practice_2	chapter_12/source/practice.c	/^void practice_2 (void) {$/;"	f
+practice_2	chapter_13/source/practice.c	/^void practice_2 (void) {$/;"	f
+practice_2	chapter_15/source/practice.c	/^int practice_2 (void) {$/;"	f
+practice_2	chapter_16/source/practice.c	/^int practice_2 (void) {$/;"	f
 practice_2	chapter_4/source/practice.c	/^int practice_2(void){$/;"	f
 practice_2	chapter_5/source/practice.c	/^int practice_2(void){$/;"	f
 practice_2	chapter_6/source/practice.c	/^int practice_2(void){$/;"	f
 practice_2	chapter_7/source/practice.c	/^int practice_2(void){$/;"	f
 practice_2	chapter_8/source/practice.c	/^float practice_2(void) {$/;"	f
+practice_2	chapter_9/source/practice.c	/^void practice_2 (void) {$/;"	f
+practice_3	chapter_10/source/practice.c	/^machine_inst practice_3 (void) {$/;"	f
+practice_3	chapter_11/source/practice.c	/^char *practice_3 (void) {$/;"	f
+practice_3	chapter_12/source/practice.c	/^void practice_3 (void) {$/;"	f
+practice_3	chapter_16/source/practice.c	/^int practice_3 (void) {$/;"	f
 practice_3	chapter_4/source/practice.c	/^int practice_3(void){$/;"	f
 practice_3	chapter_5/source/practice.c	/^unsigned int *practice_3(unsigned int value){$/;"	f
 practice_3	chapter_6/source/practice.c	/^int practice_3(void){$/;"	f
 practice_3	chapter_7/source/practice.c	/^int practice_3(void){$/;"	f
 practice_3	chapter_8/source/practice.c	/^bool practice_3(void) {$/;"	f
+practice_3	chapter_9/source/practice.c	/^void practice_3 (void) {$/;"	f
+practice_4	chapter_12/source/practice.c	/^void practice_4 (void) {$/;"	f
+practice_4	chapter_13/source/practice.c	/^void practice_4 (void) {$/;"	f
+practice_4	chapter_15/source/practice.c	/^int practice_4 (void) {$/;"	f
 practice_4	chapter_4/source/practice.c	/^int practice_4(void){$/;"	f
 practice_4	chapter_5/source/practice.c	/^int practice_4(void){$/;"	f
 practice_4	chapter_6/source/practice.c	/^int practice_4(void){$/;"	f
 practice_4	chapter_7/source/practice.c	/^int practice_4(void){$/;"	f
 practice_4	chapter_8/source/practice.c	/^bool practice_4(void) {$/;"	f
+practice_4	chapter_9/source/practice.c	/^void practice_4 (void) {$/;"	f
 practice_5	TEST/test_1.c	/^int practice_5(void){$/;"	f
+practice_5	chapter_12/source/practice.c	/^void practice_5 (void) {$/;"	f
 practice_5	chapter_4/source/practice.c	/^int practice_5(void){$/;"	f
 practice_5	chapter_5/source/practice.c	/^int practice_5(void){$/;"	f
 practice_5	chapter_6/source/practice.c	/^int practice_5(void){$/;"	f
 practice_5	chapter_7/source/practice.c	/^int practice_5(void){$/;"	f
 practice_5	chapter_8/source/practice.c	/^int practice_5(void) {$/;"	f
+practice_5	chapter_9/source/practice.c	/^void practice_5 (void) {$/;"	f
 practice_6	TEST/test_1.c	/^int practice_6(void){$/;"	f
+practice_6	chapter_12/source/practice.c	/^void practice_6 (void) {$/;"	f
 practice_6	chapter_3/source/practice.c	/^int practice_6(void){$/;"	f
 practice_6	chapter_4/source/practice.c	/^int practice_6(void){$/;"	f
 practice_6	chapter_6/source/practice.c	/^int practice_6(void){$/;"	f
 practice_6	chapter_8/source/practice.c	/^int practice_6(void) {$/;"	f
+practice_6	chapter_9/source/practice.c	/^void practice_6 (void) {$/;"	f
 practice_7	chapter_3/source/practice.c	/^int practice_7(void){$/;"	f
 practice_7	chapter_4/source/practice.c	/^int practice_7(void){$/;"	f
 practice_7	chapter_8/source/practice.c	/^int practice_7(void) {$/;"	f
+practice_7	chapter_9/source/practice.c	/^void practice_7 (void) {$/;"	f
 practice_8	chapter_8/source/practice.c	/^int practice_8(void) {$/;"	f
+practice_8	chapter_9/source/practice.c	/^void practice_8 (void) {$/;"	f
+practice_9	chapter_9/source/practice.c	/^void practice_9 (void) {$/;"	f
 practice_problem_225	chapter_3/source/test.c	/^static int practice_problem_225(void){$/;"	f	file:
 practice_problem_225	chapter_3/source/test_1.c	/^static int practice_problem_225(void){$/;"	f	file:
 practice_problem_226	chapter_3/source/test.c	/^int practice_problem_226(void){$/;"	f
 practice_problem_const	chapter_3/source/test.c	/^int practice_problem_const(void){$/;"	f
+prepare_key	chapter_9/source/practice.c	/^int prepare_key (char *key) {$/;"	f
+prev	chapter_12/header/problem.h	/^    struct NODE_TWO_WAY *prev;      \/\/ pointer to the previous node$/;"	m	struct:NODE_TWO_WAY	typeref:struct:NODE_TWO_WAY::NODE_TWO_WAY
+printBranches	print-tree/binary_tree_pretty_print.cpp	/^void printBranches(int branchLen, int nodeSpaceLen, int startLen, int nodesInThisLevel, const deque<BinaryTree*>& nodesQueue, ostream& out) {$/;"	f
+printLeaves	print-tree/binary_tree_pretty_print.cpp	/^void printLeaves(int indentSpace, int level, int nodesInThisLevel, const deque<BinaryTree*>& nodesQueue, ostream& out) {$/;"	f
+printNodes	print-tree/binary_tree_pretty_print.cpp	/^void printNodes(int branchLen, int nodeSpaceLen, int startLen, int nodesInThisLevel, const deque<BinaryTree*>& nodesQueue, ostream& out) {$/;"	f
+printPretty	print-tree/binary_tree_pretty_print.cpp	/^void printPretty(BinaryTree *root, int level, int indentSpace, ostream& out) {$/;"	f
 print_integer	chapter_7/source/practice.c	/^void print_integer(int integer){$/;"	f
 print_out	chapter_8/source/practice.c	/^void print_out(int panic[][NUMS_QUEEN]) {$/;"	f
+print_tree	chapter_17/tree/binary_tree/binary_tree.c	/^void print_tree (Object_tree *self) {$/;"	f
+problem_1	chapter_10/source/problem.c	/^Ex3 problem_1 (void) {$/;"	f
+problem_1	chapter_11/source/problem.c	/^void problem_1 (void) {$/;"	f
+problem_1	chapter_12/source/problem.c	/^void problem_1 (void) {$/;"	f
+problem_1	chapter_13/source/problem.c	/^void problem_1 (void) {$/;"	f
+problem_1	chapter_14/source/problem.c	/^int problem_1 (void) {$/;"	f
+problem_1	chapter_15/source/problem.c	/^int problem_1 (void) {$/;"	f
+problem_1	chapter_16/source/problem.c	/^int problem_1 (void) {$/;"	f
 problem_10	chapter_7/source/problem.c	/^void problem_10(int i){$/;"	f
 problem_18	chapter_8/source/problem.c	/^void problem_18(void) {$/;"	f
+problem_2	chapter_10/source/problem.c	/^void problem_2 (void) {$/;"	f
+problem_2	chapter_11/source/problem.c	/^void problem_2 (void) {$/;"	f
+problem_2	chapter_12/source/problem.c	/^void problem_2 (void) {$/;"	f
+problem_2	chapter_13/source/problem.c	/^void problem_2 (void) {$/;"	f
+problem_2	chapter_14/source/problem.c	/^int problem_2 (void) {$/;"	f
+problem_2	chapter_15/source/problem.c	/^int problem_2 (void) {$/;"	f
+problem_2	chapter_16/source/problem.c	/^void problem_2 (void) {$/;"	f
 problem_2	chapter_5/source/problem.c	/^int problem_2(void){$/;"	f
+problem_3	chapter_10/source/problem.c	/^void problem_3 (void) {$/;"	f
+problem_3	chapter_11/source/problem.c	/^void problem_3 (void) {$/;"	f
+problem_3	chapter_12/source/problem.c	/^void problem_3 (void) {$/;"	f
+problem_3	chapter_15/source/problem.c	/^int problem_3 (void) {$/;"	f
+problem_3	chapter_16/source/problem.c	/^int problem_3 (void) {$/;"	f
+problem_4	chapter_10/source/problem.c	/^void problem_4 (void) {$/;"	f
+problem_4	chapter_11/source/problem.c	/^int problem_4 (void) {$/;"	f
+problem_4	chapter_15/source/problem.c	/^long problem_4 (void) {$/;"	f
+problem_4	chapter_16/source/problem.c	/^int problem_4 (void) {$/;"	f
 problem_4	chapter_5/source/problem.c	/^int problem_4(void){$/;"	f
 problem_4	chapter_8/source/problem.c	/^bool problem_4(void) {$/;"	f
+problem_5	chapter_10/source/problem.c	/^void problem_5 (void) {$/;"	f
+problem_5	chapter_11/source/problem.c	/^void problem_5 (void) {$/;"	f
+problem_5	chapter_16/source/problem.c	/^int problem_5 (void) {$/;"	f
 problem_5	chapter_5/source/problem.c	/^bool problem_5(int year){$/;"	f
+problem_6	chapter_11/source/problem.c	/^char *problem_6 (void) {$/;"	f
+problem_7	chapter_11/source/problem.c	/^void problem_7 (void) {$/;"	f
 problem_8	chapter_5/source/problem.c	/^int problem_8(int x){$/;"	f
 problem_9	chapter_5/source/problem.c	/^int problem_9(int array[],int array_size){$/;"	f
+ptr_mem	chapter_11/header/problem.h	/^    void *ptr_mem;          \/\/ used to malloc a memory area$/;"	m	struct:__anon18
+push	chapter_17/stack/stack_dynamic/stack_dynamic.c	/^void push (Stack *self, STACK_TYPE value) {$/;"	f
+push	chapter_17/stack/stack_list/stack_list.c	/^void push (Stack *self, STACK_TYPE value) {$/;"	f
+push	chapter_17/stack/stack_static/stack_static.c	/^void push (Stack *self, STACK_TYPE value) {$/;"	f
+quan	chapter_11/header/problem.h	/^        short quan;$/;"	m	struct:__anon20::SUBASSYPART
+quan	chapter_11/header/problem.h	/^    int quan;$/;"	m	struct:__anon21
+queue_array	chapter_17/queue/queue_static/queue_static.h	/^    QUEUE_TYPE queue_array[ARRAY_SIZE];$/;"	m	struct:QUEUE
+r_compare	chapter_16/source/problem.c	/^int r_compare (void const *a, void const *b) {$/;"	f
+rate_cntrl	chapter_13/header/practice.h	/^    double rate_cntrl;$/;"	m	struct:Rate_Character
+rate_cntrl	chapter_9/source/practice.c	/^    float rate_cntrl;$/;"	m	struct:Rate	file:
+rate_digit	chapter_13/header/practice.h	/^    double rate_digit;$/;"	m	struct:Rate_Character
+rate_digit	chapter_9/source/practice.c	/^    float rate_digit;$/;"	m	struct:Rate	file:
+rate_lower	chapter_13/header/practice.h	/^    double rate_lower;$/;"	m	struct:Rate_Character
+rate_lower	chapter_9/source/practice.c	/^    float rate_lower;$/;"	m	struct:Rate	file:
+rate_print	chapter_13/header/practice.h	/^    double rate_print;$/;"	m	struct:Rate_Character
+rate_print	chapter_9/source/practice.c	/^    float rate_print;$/;"	m	struct:Rate	file:
+rate_punct	chapter_13/header/practice.h	/^    double rate_punct;$/;"	m	struct:Rate_Character
+rate_punct	chapter_9/source/practice.c	/^    float rate_punct;$/;"	m	struct:Rate	file:
+rate_space	chapter_13/header/practice.h	/^    double rate_space;$/;"	m	struct:Rate_Character
+rate_space	chapter_9/source/practice.c	/^    float rate_space;$/;"	m	struct:Rate	file:
+rate_sum	chapter_9/source/practice.c	/^    float rate_sum;$/;"	m	struct:Rate	file:
+rate_unprint	chapter_9/source/practice.c	/^    float rate_unprint;$/;"	m	struct:Rate	file:
+rate_upper	chapter_13/header/practice.h	/^    double rate_upper;$/;"	m	struct:Rate_Character
+rate_upper	chapter_9/source/practice.c	/^    float rate_upper;$/;"	m	struct:Rate	file:
 read_column_numbers	chapter_1/source/1-1.c	/^int read_column_numbers(int column[], int max){$/;"	f
+rear	chapter_17/queue/queue_static/queue_static.h	/^    size_t rear;$/;"	m	struct:QUEUE
 rearrange	chapter_1/source/1-1.c	/^void rearrange(char *output,char const *input,int n_columns,int const columns[]){ \/\/const 表示函数不会修改其对应的变量$/;"	f
+ref_count	chapter_11/header/problem.h	/^    int ref_count;      \/\/ 32-bits integer, equal to int in 32\/64-bit system$/;"	m	struct:__anon18
+reg_src	chapter_10/header/types.h	/^    REG_SRC reg_src;$/;"	m	struct:__anon17
 reserse_string	chapter_6/source/practice.c	/^void reserse_string(char *string){$/;"	f
 reverse_bits	chapter_5/source/practice.c	/^unsigned int reverse_bits(unsigned int value_D,unsigned int value_B[]){$/;"	f
+right	chapter_17/tree/binary_tree/binary_tree.h	/^    Object_tree *right;$/;"	m	struct:OBJECT_TREE
+right	print-tree/binary_tree_pretty_print.h	/^  BinaryTree *left, *right;$/;"	m	struct:BinaryTree
+root	chapter_17/tree/binary_tree/binary_tree.h	/^    Object_tree *root;$/;"	m	struct:BINARY_TREE
+sale_type	chapter_10/header/types.h	/^    enum SALE_TYPE {ALL_PAY, LEASE, CREDIT} sale_type;       \/* sale's type *\/$/;"	m	struct:__anon10	typeref:enum:__anon10::SALE_TYPE
+sales_tax	chapter_10/header/types.h	/^    float sales_tax;$/;"	m	struct:__anon8
+sales_tax	chapter_10/header/types.h	/^    float sales_tax;$/;"	m	struct:__anon9
 same_fast	TEST/test_6.c	11;"	d	file:
+search_for_value	chapter_12/source/practice.c	/^Node *search_for_value (Node *root, int value) {$/;"	f
+search_list	chapter_13/source/problem.c	/^Node *search_list ( Node *node, void const *value,$/;"	f
+seconds	chapter_14/header/test1.h	/^    unsigned int seconds;$/;"	m	struct:DAY_TIME
+security_deposit	chapter_10/header/types.h	/^    float security_deposit;$/;"	m	struct:__anon7
 set_bit	chapter_5/source/practice.c	/^void set_bit(char bit_array[],unsigned bit_number){$/;"	f
+set_cards	chapter_16/source/problem.c	/^void set_cards (Player *one_player, char **digit) {$/;"	f
+sgl_op	chapter_10/header/types.h	/^    SGL_OP sgl_op;$/;"	m	struct:__anon17
+shuffle	chapter_16/source/problem.c	/^void shuffle (Card **deck, int n_cards) {$/;"	f
 single_tax	chapter_8/source/practice.c	/^float single_tax(float income) {$/;"	f
 sizeof_enum	chapter_3/source/test.c	/^static int sizeof_enum(void){$/;"	f	file:
+sll_insert	chapter_12/source/problem.c	/^int sll_insert (Node **root, Node *current, int new_value) {$/;"	f
+sll_insert_advanced	chapter_12/source/problem.c	/^int sll_insert_advanced (Node **root, int new_value) {$/;"	f
+sll_insert_final	chapter_12/source/problem.c	/^int sll_insert_final (register Node **linkp, int new_value) {$/;"	f
+sll_remove	chapter_12/source/practice.c	/^int sll_remove (Node **rootp, Node *node) {$/;"	f
+sll_reverse	chapter_12/source/practice.c	/^Node *sll_reverse (Node *first) {$/;"	f
+sort	chapter_13/source/practice.c	/^void sort (void *first, int cnt, size_t len_element,$/;"	f
+src_mode	chapter_10/header/types.h	/^    unsigned int src_mode : 3;$/;"	m	struct:__anon16
+src_reg	chapter_10/header/types.h	/^    unsigned int src_reg : 3;$/;"	m	struct:__anon15
+src_reg	chapter_10/header/types.h	/^    unsigned int src_reg : 3;$/;"	m	struct:__anon16
+station_code	chapter_10/header/types.h	/^    unsigned int station_code;$/;"	m	struct:__anon5
 store_bit_field	chapter_5/source/practice.c	/^int store_bit_field(int original_value,int value_to_store,unsigned starting_bit,unsigned ending_bit){$/;"	f
 str	chapter_1/source/practice_1.c	5;"	d	file:
+strdup	chapter_11/source/problem.c	/^char *strdup (char const *string) {$/;"	f
+string	chapter_12/header/problem.h	/^    char *string;$/;"	m	struct:NODE_STRING
+subassy	chapter_11/header/problem.h	/^        Subassyinfo *subassy;$/;"	m	union:__anon21::__anon23
 substr	chapter_4/source/practice.c	/^int substr(char dst[],char src[],int start,int len){$/;"	f
+supplier	chapter_11/header/problem.h	/^    int supplier;$/;"	m	struct:__anon19
 swap	chapter_5/source/practice.c	18;"	d	file:
+switch_station	chapter_10/header/types.h	/^    unsigned int switch_station;$/;"	m	struct:__anon5
+tail_insert_node	chapter_12/source/practice.c	/^Node **tail_insert_node (Node **pos_tail, int value) {$/;"	f
+telephone_call	chapter_10/header/types.h	/^    Telephone_info *telephone_call;$/;"	m	struct:__anon6
+telephone_pay	chapter_10/header/types.h	/^    Telephone_info *telephone_pay;$/;"	m	struct:__anon6
+telephone_use	chapter_10/header/types.h	/^    Telephone_info *telephone_use;$/;"	m	struct:__anon6
 test_10	TEST/test_2.c	/^int test_10(void){$/;"	f
 test_11	TEST/test_2.c	/^int test_11(void){$/;"	f
 test_12	TEST/test_2.c	/^int test_12(void){$/;"	f
@@ -231,7 +813,7 @@ test_23	TEST/test_4.c	/^void test_23(int x,int y){$/;"	f
 test_24	TEST/test_4.c	/^void test_24(int *x,int *y){$/;"	f
 test_25	TEST/test_4.c	/^void test_25(unsigned int value){$/;"	f
 test_26	TEST/test_4.c	/^void test_26(){$/;"	f
-test_27	TEST/test_4.c	/^float test_27(int n_value, ...){\/\/在这个参数格式中，n_value为第一个参数$/;"	f
+test_27	TEST/test_4.c	/^float test_27(int n_value, ...){\/\/在这个参数格式中，n_value为可变参数的前一个参数$/;"	f
 test_3	TEST/test_1.c	/^int test_3(void){ \/\/每个函数的开始都要创建栈，结束都要消除栈$/;"	f
 test_4	TEST/test_1.c	/^int test_4(void){ \/\/每个函数的开始都要创建栈，结束都要消除栈$/;"	f
 test_5	TEST/test_1.c	/^void test_5(void){$/;"	f
@@ -240,21 +822,58 @@ test_7	TEST/test_1.c	/^int test_7(void){$/;"	f
 test_8	TEST/test_1.c	/^int test_8(void){$/;"	f
 test_9	TEST/test_1.c	/^void test_9(void){$/;"	f
 test_9	TEST/test_2.c	/^int test_9(void){$/;"	f
+test_binary_tree	chapter_17/tree/binary_tree/binary_tree.c	/^int test_binary_tree (void) {$/;"	f
 test_bit	chapter_5/source/practice.c	/^bool test_bit(char bit_array[],unsigned bit_number){$/;"	f
+test_practice	chapter_10/source/practice.c	/^void test_practice (void) {$/;"	f
+test_practice	chapter_11/source/practice.c	/^void test_practice (void) {$/;"	f
+test_practice	chapter_12/source/practice.c	/^void test_practice (void) {$/;"	f
+test_practice	chapter_13/source/practice.c	/^void test_practice (void) {$/;"	f
+test_practice	chapter_15/source/practice.c	/^int test_practice (void) {$/;"	f
+test_practice	chapter_16/source/practice.c	/^int test_practice (void) {$/;"	f
 test_practice	chapter_3/source/practice.c	/^int test_practice(void){$/;"	f
 test_practice	chapter_4/source/practice.c	/^void test_practice(void){$/;"	f
 test_practice	chapter_5/source/practice.c	/^int test_practice(void){$/;"	f
 test_practice	chapter_6/source/practice.c	/^int test_practice(void){$/;"	f
 test_practice	chapter_7/source/practice.c	/^void test_practice(void){$/;"	f
 test_practice	chapter_8/source/practice.c	/^int test_practice(void) {$/;"	f
+test_practice	chapter_9/source/practice.c	/^void test_practice (void) {$/;"	f
 test_practice_1	chapter_1/source/practice_1.c	/^void test_practice_1(void){$/;"	f
 test_practice_2	chapter_1/source/practice_2.c	/^void test_practice_2(void){$/;"	f
 test_practice_2	chapter_2/source/practice_2.c	/^void test_practice_2(void){$/;"	f
 test_practice_3	chapter_1/source/practice_3.c	/^void test_practice_3(void){$/;"	f
 test_practice_4	chapter_1/source/practice_4.c	/^void test_practice_4(void){$/;"	f
+test_problem	chapter_10/source/problem.c	/^void test_problem (void) {$/;"	f
+test_problem	chapter_11/source/problem.c	/^void test_problem (void) {$/;"	f
+test_problem	chapter_12/source/problem.c	/^void test_problem (void) {$/;"	f
+test_problem	chapter_13/source/problem.c	/^void test_problem (void) {$/;"	f
+test_problem	chapter_14/source/problem.c	/^void test_problem (void) {$/;"	f
+test_problem	chapter_15/source/problem.c	/^int test_problem (void) {$/;"	f
+test_problem	chapter_16/source/problem.c	/^int test_problem (void) {$/;"	f
 test_problem	chapter_5/source/problem.c	/^int test_problem(void){$/;"	f
 test_problem	chapter_7/source/problem.c	/^void test_problem(void){$/;"	f
 test_problem	chapter_8/source/problem.c	/^int test_problem(void) {$/;"	f
 test_problem	chapter_9/source/problem.c	/^void test_problem (void) {$/;"	f
+test_queue_static	chapter_17/queue/queue_static/queue_static.c	/^int test_queue_static(void) {$/;"	f
+test_stack_dynamic	chapter_17/stack/stack_dynamic/stack_dynamic.c	/^int test_stack_dynamic (void) {$/;"	f
+test_stack_list	chapter_17/stack/stack_list/stack_list.c	/^int test_stack_list (void) {$/;"	f
+test_stack_static	chapter_17/stack/stack_static/stack_static.c	/^int test_stack_static (void) {$/;"	f
 test_test	chapter_3/source/test.c	/^int test_test(void){$/;"	f
 test_test_1	chapter_3/source/test_1.c	/^int test_test_1(void){$/;"	f
+time	chapter_10/header/types.h	/^    char *time;$/;"	m	struct:__anon6
+top	chapter_17/stack/stack_dynamic/stack_dynamic.c	/^STACK_TYPE top (Stack *self) {$/;"	f
+top	chapter_17/stack/stack_list/stack_list.c	/^STACK_TYPE top (Stack *self) {$/;"	f
+top	chapter_17/stack/stack_static/stack_static.c	/^STACK_TYPE top (Stack *self) {$/;"	f
+top_element	chapter_17/stack/stack_dynamic/stack_dynamic.h	/^    int top_element;        \/\/ empty: top_element = -1, full: top_element = BUFFER_SIZE-1$/;"	m	struct:STACK
+top_element	chapter_17/stack/stack_static/stack_static.h	/^    int top_element;        \/\/ empty: top_element = -1, full: top_element = BUFFER_SIZE-1$/;"	m	struct:STACK
+transaction	chapter_10/header/types.h	/^    } transaction;$/;"	m	struct:__anon10	typeref:union:__anon10::__anon11
+type	chapter_11/header/problem.h	/^    enum {PART, SUBASSY} type;$/;"	m	struct:__anon21	typeref:enum:__anon21::__anon22
+type	chapter_13/header/practice.h	/^    Trans_type type;$/;"	m	struct:TRANSACTION
+universal	chapter_13/source/practice.c	/^void universal (Node *root, int (*callback)(Node *node)) {$/;"	f
+value	chapter_12/header/problem.h	/^    int value;$/;"	m	struct:NODE
+value	chapter_12/header/problem.h	/^    int value;$/;"	m	struct:NODE_TWO_WAY
+value	chapter_13/header/node.h	/^    int value;$/;"	m	struct:NODE
+value	chapter_17/stack/stack_list/stack_list.h	/^	STACK_TYPE value;$/;"	m	struct:STACK_NODE
+value	chapter_17/tree/binary_tree/binary_tree.h	/^    int value;$/;"	m	struct:OBJECT_TREE
+x	chapter_10/source/problem.c	/^} x;$/;"	v	typeref:struct:__anon1
+y	chapter_10/source/problem.c	/^} y;$/;"	v	typeref:union:__anon2
+year	chapter_14/header/test2.h	/^    unsigned int year;$/;"	m	struct:YEAR_TIME
