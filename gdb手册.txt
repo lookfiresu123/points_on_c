@@ -85,4 +85,5 @@
     ./a.out
     gdb
     attach pid （可以使用命令"ps -aux | grep a.out"获得进程号）
-
+24、查看类层级
+    g++/gcc -fdump-class-hierarchy XXX.h
