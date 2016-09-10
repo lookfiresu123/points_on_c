@@ -1,5 +1,5 @@
 " Modeline and Notes {
-set sw=4 ts=4 sts=4 et tw=78 foldmarker={,} foldlevel=0 foldmethod=indent nospell smarttab smartindent lbr sm selection=inclusive wildmenu fo+=mB mouse=v
+set sw=4 ts=4 sts=4 et tw=78 foldmarker={,} foldlevel=0 foldmethod=indent nospell smarttab smartindent lbr sm selection=inclusive wildmenu fo+=mB mouse=v dictionary+=/usr/share/dict/words
 "
 "                    __ _ _____              _
 "         ___ _ __  / _/ |___ /      __   __(_)_ __ ___
@@ -1257,13 +1257,25 @@ let g:ycm_confirm_extra_conf = 0
 Bundle "HenningM/cvim-pathogen"
 
 "Bundle "altercation/vim-colors-solarized"
+Bundle "vim-airline/vim-airline-themes"
+Bundle "joshdick/onedark.vim"
+Bundle "dracula/vim"
 syntax enable
 set background=dark " Assume a dark background
-colorscheme molokai
-"colorscheme solarized
+"set background=light " Assume a light background
+"colorscheme molokai
+colorscheme onedark
+"colorscheme dracula
 "colorscheme Tomorrow-Night-Eighties
+"colorscheme solarized
 
 Bundle "vim-scripts/Conque-GDB"
+
+Bundle "artur-shaik/vim-javacomplete2"
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+let g:JavaComplete_LibsPath="/usr/lib/jvm/java-1.8.0-openjdk-amd64/lib"
+filetype plugin indent on
+syntax on
 
 Bundle "shawncplus/phpcomplete.vim"
 let g:phpcomplete_relax_static_constraint = 1
@@ -1340,3 +1352,18 @@ Bundle "octol/vim-cpp-enhanced-highlight"
 let g:cpp_class_scope_highlight = 1
 let g:cpp_experimental_template_highlight = 1
 let c_no_curly_error=1
+
+Bundle "Shougo/vimproc.vim", {
+\ 'build' : {
+\     'windows' : 'tools\\update-dll-mingw',
+\     'cygwin' : 'make -f make_cygwin.mak',
+\     'mac' : 'make',
+\     'linux' : 'make',
+\     'unix' : 'gmake',
+\    },
+\ }
+
+Bundle "Shougo/vimshell.vim"
+
+Bundle "dyng/ctrlsf.vim"
+Bundle "MattesGroeger/vim-bookmarks"

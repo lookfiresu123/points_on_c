@@ -1,0 +1,88 @@
+[global_config]
+[keybindings]
+[profiles]
+  [[default]]
+    background_image = None
+    background_color = "#fdf6e3"
+    foreground_color = "#657b83"
+  [[chalc]]
+    background_color = "#2d2d2d"
+    background_image = None
+    cursor_color = "#e0dddd"
+    foreground_color = "#d4d4d4"
+    palette = "#646464:#F58E8E:#A9D3AB:#FED37E:#7AABD4:#D6ADD5:#79D4D5:#D4D4D4:#646464:#F58E8E:#A9D3AB:#FED37E:#7AABD4:#D6ADD5:#79D4D5:#D4D4D4"
+  [[dracula]]
+    background_color = "#282a36"
+    background_image = None
+    cursor_color = "#efefed"
+    foreground_color = "#f8f8f2"
+    palette = "#204a87:#ff5555:#50fa7b:#ffb86c:#bd93f9:#bd93f9:#8be9fd:#6272a4:#204a87:#ff79c6:#50fa7b:#f1fa8c:#bd93f9:#bd93f9:#8be9fd:#6272a4"
+  [[elic]]
+  background_color = "#4a453e"
+  background_image = None
+  cursor_color = "#eeecec"
+  foreground_color = "#f2f2f2"
+  palette = "#303030:#e1321a:#6ab017:#ffc005:#729FCF:#ec0048:#f2f2f2:#2aa7e7:#5d5d5d:#ff361e:#7bc91f:#ffd00a:#0071ff:#ff1d62:#4bb8fd:#a020f0"
+  [[flat]]
+   background_color = "#1f2d3a"
+   background_image = None
+   cursor_color = "#13c5a2"
+   foreground_color = "#1abc9c"
+   palette = "#2c3e50:#c0392b:#27ae60:#f39c12:#2980b9:#8e44ad:#16a085:#bdc3c7:#34495e:#e74c3c:#2ecc71:#f1c40f:#3498db:#9b59b6:#2AA198:#ecf0f1"
+  [[freya]]
+  background_color = "#252e32"
+  background_image = None
+  cursor_color = "#839496"
+  foreground_color = "#94a3a5"
+  palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#ec0048:#2aa198:#94a3a5:#586e75:#cb4b16:#859900:#b58900:#268bd2:#d33682:#2aa198:#6c71c4"
+  [[material-colors]]
+    background_color = "#1E282C"
+    background_image = None
+    cursor_color = "#657B83"
+    foreground_color = "#C3C7D1"
+    palette = "#073641:#EB606B:#C3E88D:#F7EB95:#80CBC3:#FF2490:#AEDDFF:#FFFFFF:#002B36:#EB606B:#C3E88D:#F7EB95:#7DC6BF:#6C71C3:#34434D:#FFFFFF"
+  [[monokai_dark]]
+    background_color = "#272822"
+    background_image = None
+    cursor_color = "#ffffff"
+    foreground_color = "#f8f8f2"
+    palette = "#75715e:#f92672:#a6e22e:#f4bf75:#66d9ef:#ae81ff:#2aa198:#f9f8f5:#272822:#f92672:#a6e22e:#f4bf75:#66d9ef:#ae81ff:#2aa198:#f9f8f5"
+  [[ocean-dark]]
+    background_color = "#1c1f27"
+    background_image = None
+    cursor_color = "#a0a4b2"
+    foreground_color = "#979cac"
+    palette = "#4F4F4F:#AF4B57:#AFD383:#E5C079:#7D90A4:#A4799D:#85A6A5:#EEEDEE:#7B7B7B:#AF4B57:#CEFFAB:#FFFECC:#B5DCFE:#FB9BFE:#DFDFFD:#FEFFFE"
+  [[one-dark]]
+    background_color = "#1e2127"
+    background_image = None
+    cursor_color = "#676c76"
+    foreground_color = "#5c6370"
+    palette = "#000000:#e06c75:#98c379:#d19a66:#61afef:#c678dd:#56b6c2:#abb2bf:#5c6370:#e06c75:#98c379:#d19a66:#61afef:#c678dd:#56b6c2:#fffefe"
+  [[pali]]
+    background_color = "#232e37"
+    background_image = None
+    cursor_color = "#e3ecf5"
+    foreground_color = "#d9e6f2"
+    palette = "#0a0a0a:#ab8f74:#74ab8f:#8fab74:#8f74ab:#ab748f:#748fab:#f2f2f2:#5d5d5d:#ff1d62:#9cc3af:#ffd00a:#af9cc3:#ff1d62:#4bb8fd:#a020f0"
+  [[smyck]]
+  background_color = "#242424"
+  background_image = None
+  cursor_color = "#f8f6f6"
+  foreground_color = "#f7f7f7"
+  palette = "#000000:#C75646:#8EB33B:#D0B03C:#72B3CC:#C8A0D1:#218693:#B0B0B0:#5D5D5D:#E09690:#CDEE69:#FFE377:#9CD9F0:#FBB1F9:#77DFD8:#F7F7F7"
+  [[tomorrow-night-eighties]]
+    background_color = "#2c2c2c"
+    background_image = None
+    cursor_color = "#d8d8d8"
+    foreground_color = "#cccccc"
+    palette = "#000000:#F27779:#99CC99:#FFCC66:#6699CC:#CC99CC:#66CCCC:#FFFEFE:#000000:#F17779:#99CC99:#FFCC66:#6699CC:#CC99CC:#66CCCC:#FFFEFE"
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]
