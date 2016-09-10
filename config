@@ -2,9 +2,11 @@
 [keybindings]
 [profiles]
   [[default]]
+    background_color = "#282a36"
     background_image = None
-    background_color = "#fdf6e3"
-    foreground_color = "#657b83"
+    cursor_color = "#efefed"
+    foreground_color = "#f8f8f2"
+    palette = "#204a87:#ff5555:#50fa7b:#ffb86c:#bd93f9:#bd93f9:#8be9fd:#6272a4:#204a87:#ff79c6:#50fa7b:#f1fa8c:#bd93f9:#bd93f9:#8be9fd:#6272a4"
   [[chalc]]
     background_color = "#2d2d2d"
     background_image = None
